@@ -1,0 +1,25 @@
+#mainContactCont {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+#contactPhoto {
+  width: 100%;
+  background-position-y: 40%;
+  min-height: 500px;
+  background-size: cover;
+}
+
+.contactText {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  color: cornsilk;
+  padding: 40px;
+  font-size: 38px;
+  font-style: italic;
+}

@@ -1,0 +1,71 @@
+#mainPricingCont {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#pricingMainPhoto {
+  background-size: contain;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  color: black;
+  font-size: 28px;
+  font-family: Indie Flower, cursive;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: blurPic 4s ease-out;
+}
+
+.mainPricingPic {
+  width: 33.3%;
+  height: 18rem;
+}
+
+#tablePricingCont {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.pricingTable {
+  width: 50%;
+  color: oldlace;
+  box-sizing: border-box;
+  text-align: justify;
+  font: italic 20px Roboto, cursive;
+  border: 2px double cornsilk;
+  border-collapse: collapse;
+  animation: bounceIn 1.5s ease;
+}
+
+.pricingTable th {
+  border: 1px solid cornsilk;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.pricingTable td {
+  border: 1px solid cornsilk;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+@keyframes blurPic {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(none);
+  }
+}

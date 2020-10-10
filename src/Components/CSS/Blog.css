@@ -1,0 +1,81 @@
+.mainBlogCont {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+#blogPhoto {
+  background-image: url(../../static/Blog/blog10.jpg);
+  background-size: cover;
+  width: 100%;
+  background-position-y: center;
+  min-height: 27rem;
+}
+
+#blogPostCont {
+  width: 100%;
+  background-color: #111;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.blogPost {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  width: 80%;
+  height: 20rem;
+  border-radius: 18px;
+  color: white;
+  font: 1.2rem/1.5rem Roboto, cursive;
+  margin: 20px 0px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.blogPostActive {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  width: 80%;
+  height: 30rem;
+  border-radius: 18px;
+  color: white;
+  font: 1.2rem/1.5rem Roboto, cursive;
+  margin: 20px 0px;
+  padding: 20px;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 300ms ease-in-out;
+}
+
+.postTitle {
+  width: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.postContent {
+  width: 90%;
+  text-align: justify;
+  max-height: 80%;
+  overflow-y: hidden;
+}
+
+.postContentActive {
+  width: 100%;
+  text-align: justify;
+  max-height: 80%;
+  overflow-y: auto;
+  padding: 0px 20px;
+}

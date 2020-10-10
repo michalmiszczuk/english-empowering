@@ -1,0 +1,98 @@
+.addLessonCont {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  width: 22rem;
+  min-height: 30rem;
+  background-color: oldlace;
+  border-radius: 100px;
+  padding: 30px 0px 40px 0px;
+}
+
+#closeIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 180px;
+  color: black;
+  cursor: pointer;
+}
+
+#addLessonTitle {
+  color: black;
+  font-family: Roboto, cursive;
+  font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.datesSelector {
+  width: 60%;
+  height: 4rem;
+  background-color: #333;
+  font-size: 18px;
+  color: oldlace;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: 500ms ease-in;
+  cursor: pointer;
+  padding-top: 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.datesSelectorFull {
+  width: 60%;
+  height: 18rem;
+  background-color: #333;
+  font-size: 18px;
+  color: oldlace;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: 500ms ease-in;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.datesList {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  width: 100%;
+  transition: 200ms ease-in;
+  opacity: 0;
+  margin-top: 0.5rem;
+  overflow: auto;
+  padding: 0px 7px;
+}
+
+.datesListExpanded {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  width: 100%;
+  transition: 700ms ease-in;
+  margin-top: 0.5rem;
+  overflow-y: auto;
+  /* background-color: #444; */
+  padding: 0px 15px;
+}
+
+.oneDateSelect {
+  width: 100%;
+  margin-top: 5px;
+  transition: 200ms ease-in;
+}
+
+:hover.oneDateSelect {
+  background-color: skyblue;
+  cursor: pointer;
+  transition: 200ms ease-in;
+}

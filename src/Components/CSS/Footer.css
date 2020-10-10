@@ -1,0 +1,59 @@
+#footerCont {
+  width: 100%;
+  min-height: 10rem;
+  color: cornsilk;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  text-decoration: none;
+}
+
+.footerLinks {
+  text-decoration: none;
+  color: cornsilk;
+}
+
+.footerIcon {
+  position: relative;
+}
+
+.footerIcon::before,
+.footerIcon::after {
+  --scale: 0;
+  --arrow-size: 20px;
+  --tooltip-color: #333;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 200ms transform;
+  transform-origin: bottom center;
+}
+
+.footerIcon::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  padding: 0.5rem;
+  width: max-content;
+  border-radius: 0.3rem;
+  background-color: var(--tooltip-color);
+  text-align: center;
+}
+
+.footerIcon:hover::before,
+.footerIcon:hover::after {
+  --scale: 1;
+}
+
+.footerIcon::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}

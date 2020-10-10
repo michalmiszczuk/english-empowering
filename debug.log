@@ -1,0 +1,5 @@
+[0825/202553.590:ERROR:process_info.cc(329)] VirtualQueryEx: Odmowa dostêpu. (0x5)
+[0825/202553.591:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0825/202553.591:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Podjêto próbê uzyskania dostêpu do procesu koñcz¹cego dzia³anie. (0xc000010a)
+[0920/155152.002:ERROR:process_reader_win.cc(123)] NtOpenThread: {Odmowa dostêpu} Proces za¿¹da³ dostêpu do obiektu, ale prawa dostêpu nie zosta³y przyznane. (0xc0000022)
+[0920/155152.006:ERROR:exception_snapshot_win.cc(99)] thread ID 10580 not found in process
