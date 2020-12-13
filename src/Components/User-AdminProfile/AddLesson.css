@@ -1,0 +1,23 @@
+.add-lesson-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  width: 22rem;
+  min-height: auto;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem 0rem 3rem 0rem;
+  position: relative;
+}
+
+#close-icon {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  width: 20px;
+  height: 20px;
+  color: black;
+  cursor: pointer;
+}

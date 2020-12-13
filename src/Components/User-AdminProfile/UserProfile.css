@@ -1,0 +1,79 @@
+.main-content-users {
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.left-user-profile-desktop {
+  width: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  /* border: 1px solid red; */
+}
+
+.left-user-profile-phone {
+  display: none;
+}
+
+.res-lessons-container {
+  width: 39.5%;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  /* border: 1px solid blue; */
+}
+
+.res-header {
+  font-size: 1.2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: Roboto;
+}
+
+@media (max-width: 700px) {
+  .main-content-users {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    padding-bottom: 1rem;
+  }
+
+  .left-user-profile-desktop {
+    display: none;
+  }
+
+  .reserved-lessons-desktop {
+    display: none;
+  }
+
+  .left-user-profile-phone {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  .res-lessons-container {
+    width: 39.5%;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    /* border: 1px solid blue; */
+  }
+
+  .res-header {
+    font-size: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: Roboto;
+  }
+}

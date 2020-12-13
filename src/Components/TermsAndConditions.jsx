@@ -1,6 +1,6 @@
 import React from 'react';
 import regulamin from '../static/regulamin.jpg'
-import NavBar from './NavBar';
+import NavBar from './common/NavBar';
 
 function TermsAndConditions(props) {
     return (

@@ -1,0 +1,99 @@
+#contact-photo {
+  width: 100%;
+  background-position-y: 40%;
+  height: 26rem;
+  background-size: cover;
+  background-image: url(../static/Blog/blog8.jpg);
+}
+
+.contact-text-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  color: white;
+  padding: 4rem 0rem;
+  text-align: center;
+}
+
+.contact-text {
+  font-size: 1.5rem;
+  font-style: italic;
+  background-image: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
+  /* z-index: 1;
+  opacity: 1; */
+  color: transparent;
+  background-clip: text;
+  position: relative;
+  /* animation: loading-opacity-first 5s ease infinite; */
+  /* animation: loading-opacity-second 5s ease infinite 2.5s; */
+}
+
+/* .contact-text:hover {
+  transition: 1s linear;
+} */
+
+@media (max-width: 700px) {
+  #contact-photo {
+    width: 100%;
+    background-position-y: 40%;
+    height: 16rem;
+    background-size: cover;
+    background-image: url(../static/Blog/blog8.jpg);
+  }
+
+  .contactText {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    color: cornsilk;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+  }
+}
+
+@keyframes loading-opacity-first {
+  0%,
+  100% {
+    background: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+    opacity: 1;
+  }
+  50% {
+    background: linear-gradient(30deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 20%);
+    background-clip: text;
+    color: transparent;
+    opacity: 0.5;
+    transition: opacity 5s linear;
+    z-index: -1;
+  }
+}
+
+@keyframes loading-opacity-second {
+  0%,
+  100% {
+    background: linear-gradient(30deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 20%);
+    background-clip: text;
+    color: transparent;
+    opacity: 1;
+    transition: opacity 5s linear;
+    z-index: -1;
+  }
+  50% {
+    background: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+    opacity: 0.5;
+  }
+}

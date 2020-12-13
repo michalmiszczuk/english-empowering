@@ -1,53 +1,33 @@
 import React from 'react';
+import "./inputField.css"
 
-function InputField({ name, label, error, type, onChange }) {
+function InputField({ name, label, error, type, onChange, value, addDayForm }) {
+
+    const checkError = () => {
+        if (error) {
+            const { error: errors } = error
+            if (!errors) return null;
+            if (!error.value[value]) return null
+            if (errors) return errors.message
+        }
+        return null
+    }
+
+    let msg = checkError()
 
     return (
-        <div style={styles.mainDiv}>
-            <label style={styles.label} htmlFor={name}>{label}</label>
+        <div className={addDayForm ? "input-field-container add-day-form" : "input-field-container"}>
+            <label id="input-label" className={msg ? "error-background" : null} htmlFor={name}>{label}</label>
             <input autoFocus
-                style={styles.inputField}
+                className="input-field"
                 id={name}
                 name={name}
                 type={type}
                 onChange={onChange}
             />
+            {msg && !addDayForm && <div className="error-message">{msg}</div>}
         </div>
     );
 }
 
 export default InputField;
-
-const styles = {
-    mainDiv: {
-        display: "flex",
-        flexFlow: "column wrap",
-        justifyContent: "center",
-        alignItems: "center",
-        alignContent: "center",
-        backgroundColor: "#333",
-        width: 220,
-        height: 90,
-        margin: 10,
-        color: "white",
-        fontFamily: "Roboto, cursive",
-        fontWeight: 100,
-        fontSize: 18,
-        borderRadius: 70,
-        paddingBottom: 15,
-    },
-    label: {
-        marginBottom: 5,
-    },
-    inputField: {
-        backgroundColor: "cornsilk",
-        height: 30,
-        width: 100,
-        fontFamily: "Roboto, cursive",
-        fontWeight: "bold",
-        fontSize: 18,
-        outline: "none",
-        borderRadius: 20,
-        textAlign: "center",
-    }
-}

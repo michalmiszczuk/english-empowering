@@ -1,0 +1,27 @@
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes header-appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#text {
+  animation: bounceIn 1s;
+}
+
+@media (max-width: 700px) {
+}

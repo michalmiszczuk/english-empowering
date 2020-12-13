@@ -1,0 +1,9 @@
+.reserve-text {
+  width: 100%;
+  text-align: center;
+  margin: 1rem;
+}
+
+.mark-error {
+  background-color: salmon;
+}

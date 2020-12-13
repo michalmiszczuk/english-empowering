@@ -1,8 +1,0 @@
-.mainButton {
-  transition: all 1s ease;
-  border-radius: 70px 10px 70px 10px;
-}
-
-.mainButton:hover {
-  border-radius: 50px;
-}

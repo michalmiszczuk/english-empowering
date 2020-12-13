@@ -1,0 +1,16 @@
+.yes-no-buttons {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .yes-no-buttons {
+    align-items: center;
+    border: 1px solid red;
+    margin-bottom: 0rem;
+  }
+}

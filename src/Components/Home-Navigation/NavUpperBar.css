@@ -1,0 +1,97 @@
+.upper-bar {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  flex-flow: row;
+  margin-top: 10px;
+  padding-right: 1.5rem;
+  padding-left: 1rem;
+}
+
+.main-text {
+  color: transparent;
+  margin-right: auto;
+  background-size: 100%;
+  background: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
+  background-clip: text;
+  font-family: Indie Flower;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.menu-button {
+  margin-right: auto;
+}
+
+#welcome-msg {
+  width: 15%;
+  height: 3.5rem;
+  color: white;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: Marcellus SC;
+}
+
+#logo {
+  margin-right: auto;
+  width: 4rem;
+  height: 3rem;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+
+.main-text-phone {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .upper-bar {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0rem 0.5remnp;
+  }
+
+  #logo {
+    margin-right: auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    opacity: 0.9;
+  }
+
+  .main-text {
+    display: none;
+  }
+
+  .menu-button {
+  }
+
+  #welcome-msg {
+    height: 1.5rem;
+    width: 20%;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+    font-family: Marcellus SC;
+  }
+
+  .main-text-phone {
+    display: initial;
+    margin-left: auto;
+    color: transparent;
+    margin-right: auto;
+    background-size: 100%;
+    background: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
+    background-clip: text;
+    font-size: 1.5rem;
+    font-family: Indie Flower;
+  }
+}

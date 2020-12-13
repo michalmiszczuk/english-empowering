@@ -1,0 +1,90 @@
+.input-field-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #666;
+  width: 90%;
+  margin: 10px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 100;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 1rem 0 2rem 0;
+}
+
+.add-day-form {
+  flex-flow: row wrap;
+  height: 25%;
+  font-size: 0.8rem;
+  padding-top: 1.5rem;
+}
+
+.error-background {
+  background-color: salmon;
+}
+
+#input-label {
+  margin-bottom: 5px;
+}
+
+.input-field {
+  background-color: white;
+  width: 80%;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.error-message {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  height: fit-content;
+  background-color: salmon;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .input-field-container {
+    width: 90%;
+    margin: 10px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+    font-size: 0.7rem;
+    border-radius: 10px;
+    padding: 0.5rem 0rem 0.8rem 0rem;
+  }
+
+  .input-field {
+    width: 80%;
+    font-weight: bold;
+    font-size: 0.7rem;
+  }
+
+  .error-message {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    background-color: salmon;
+    color: white;
+    font-size: 0.6rem;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+  }
+}

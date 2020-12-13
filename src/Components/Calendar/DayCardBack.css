@@ -1,0 +1,24 @@
+.day-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  color: black;
+  padding-top: 0.3rem;
+}
+
+.day-card-back {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 700px) {
+  .reserve-text {
+    font-size: 0.7rem;
+  }
+}

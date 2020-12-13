@@ -1,0 +1,157 @@
+#user-selector-title {
+  width: 25%;
+  margin-left: 2rem;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.user-selector {
+  width: 25%;
+  height: 3rem;
+  background-color: #333;
+  font-size: 18px;
+  color: white;
+  margin-left: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 500ms ease-in;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.user-selector-full {
+  width: 25%;
+  height: 12rem;
+  background-color: #555;
+  font-size: 1rem;
+  color: white;
+  margin-left: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transition: 500ms ease-in;
+  cursor: pointer;
+  padding: 10px;
+}
+
+:hover.user-selector {
+  background-color: #555;
+}
+
+.users-list {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  transition: 500ms ease-in;
+  opacity: 0;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.users-list-expanded {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  transition: 500ms ease-in;
+  margin-top: 0.5rem;
+}
+
+.one-user-select {
+  width: 100%;
+  transition: 200ms ease-in;
+}
+
+:hover.one-user-select {
+  background-color: skyblue;
+  cursor: pointer;
+  transition: 200ms ease-in;
+}
+
+@media (max-width: 700px) {
+  .user-selector-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  #user-selector-title {
+    width: 40%;
+    margin-left: 0rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .user-selector {
+    width: 40%;
+    height: 3rem;
+    font-size: 1rem;
+    margin-left: 0rem;
+    transition: 500ms ease-in;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+  }
+
+  .user-selector-full {
+    width: 40%;
+    overflow-y: scroll;
+    font-size: 1rem;
+    margin-left: 0rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    transition: 500ms ease-in;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .users-list {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    transition: 500ms ease-in;
+    opacity: 0;
+    margin-top: 0.5rem;
+  }
+
+  .users-list-expanded {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    transition: 500ms ease-in;
+    margin-top: 0.5rem;
+  }
+
+  .one-user-select {
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: 200ms ease-in;
+  }
+
+  /* :hover.one-user-select {
+    background-color: skyblue;
+    cursor: pointer;
+    transition: 200ms ease-in;
+  } */
+}

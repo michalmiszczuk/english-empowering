@@ -1,8 +1,9 @@
 import React from 'react';
+import './FooterText.css'
 
-function FooterText({ text, color: c, fontSize: fs }) {
+function FooterText({ text }) {
     return (
-        <div style={{ color: c, fontSize: fs, fontFamily: "Marcellus SC" }}>
+        <div className="footer-text">
             {text}
         </div>
     );

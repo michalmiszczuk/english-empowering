@@ -1,0 +1,19 @@
+.hour-button {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: green;
+  height: 100%;
+  color: white;
+  border-radius: 50px;
+  transition: 100ms ease-in-out;
+}
+
+.hour-button:hover {
+  transform: scale(1.1);
+  background-color: lightgreen;
+  cursor: pointer;
+}

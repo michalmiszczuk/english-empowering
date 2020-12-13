@@ -1,0 +1,31 @@
+#pricing-main-photo {
+  background-size: contain;
+  width: 100%;
+  color: black;
+  font-family: Indie Flower, cursive;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: blurPic 2s ease;
+}
+
+.main-pricing-pic {
+  width: 33.3%;
+  height: 15rem;
+}
+
+@media (max-width: 700px) {
+  .main-pricing-pic {
+    width: 33.3%;
+    height: 7rem;
+  }
+}
+
+@keyframes blurPic {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(none);
+  }
+}

@@ -1,48 +1,55 @@
 import React from 'react';
 import InputField from './InputField';
-import Button from '../Button';
+import Button from '../common/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import "../CSS/NavigationSite.css"
+import { useState } from 'react';
+import "../Home-Navigation/NavigationSite.css"
+import './register-login-forms.css'
+import { saveUser } from '../../services/userServices'
+import { Link } from 'react-router-dom';
+import { validateRegister } from '../../Validation/joiValidation';
 
-function RegisterForm({ iconClick }) {
+function RegisterForm({ iconClick, refreshUser }) {
+    const [email, setEmail] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [secondName, setSecondName] = useState('')
+    const [phone, setPhone] = useState('')
+    const [password, setPassword] = useState('')
+
+    const userToSave = { email: email, name: firstName, surname: secondName, phone: phone, password: password }
+
+    const onRegisterSubmit = async () => {
+        try {
+            await saveUser(userToSave)
+            refreshUser()
+            window.location = "/"
+        }
+        catch (ex) {
+            console.log(ex)
+        }
+
+    }
+
+    const [emailError, phoneError, firstNameError, secondNameError, passwordError]
+        = validateRegister(email, phone, firstName, secondName, password)
+
+    const checkErrors = emailError.error || phoneError.error || firstNameError.error || secondNameError.error || passwordError.error
+
     return (
-        <div className="registerContainer" style={styles.container}>
-            <FontAwesomeIcon icon={faTimes} style={styles.closeIcon} onClick={iconClick} />
-            <text style={styles.text}>Register</text>
-            <InputField name={"email"} label={"Email :"}></InputField>
-            <InputField name={"first name"} label={"First Name :"}></InputField>
-            <InputField name={"second name"} label={"Second Name :"}></InputField>
-            <InputField name={"password"} label={"Password :"} type={"password"}></InputField>
-            <Button width={200} height={80} text="Register me !" backgroundColor={"sienna"} marginTop={10} />
+        <div className="register-login-container">
+            <div className="register-login-forms register-form">
+                <Link to="/"><FontAwesomeIcon className="close-icon" icon={faTimes} onClick={iconClick} /></Link>
+                <div className="form-title">Zarejestruj</div>
+                <InputField name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"}></InputField>
+                <InputField name={"phone"} label={"Telefon :"} onChange={(event) => setPhone(event.target.value)} error={phoneError} value={"phone"}></InputField>
+                <InputField name={"first name"} label={"Imię :"} onChange={(event) => setFirstName(event.target.value)} error={firstNameError} value={"firstName"}></InputField>
+                <InputField name={"second name"} label={"Nazwisko :"} onChange={(event) => setSecondName(event.target.value)} error={secondNameError} value={"secondName"}></InputField>
+                <InputField name={"password"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"}></InputField>
+                <Button text="Zarejestruj !" btnClass="login-register-buttons" onClick={checkErrors ? null : onRegisterSubmit} validError={checkErrors} />
+            </div>
         </div>
     );
 }
 
 export default RegisterForm
-
-const styles = {
-    container: {
-        display: "flex",
-        flexFlow: "column wrap",
-        justifyContent: "center",
-        alignItems: "center",
-        width: 400,
-        height: 700,
-        backgroundColor: "moccasin",
-        borderRadius: 100,
-        marginLeft: 100,
-    },
-    closeIcon: {
-        width: 20,
-        height: 20,
-        marginLeft: 250,
-        color: "black",
-        cursor: "pointer"
-    },
-    text: {
-        color: "black",
-        fontFamily: "Indie Flower, cursive",
-        fontSize: 40,
-    }
-}
