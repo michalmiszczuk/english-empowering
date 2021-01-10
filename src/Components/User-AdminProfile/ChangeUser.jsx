@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './ChangeUser.css'
 
-function ChangeUser({ users, user, handleChangeUser, }) {
+function ChangeUser({ users, user, onChangeUser, }) {
+
+    const usersToRender = users.filter(user => !user.isAdmin)
 
     const [showUsersList, setShowUsersList] = useState(false);
 
@@ -11,7 +13,7 @@ function ChangeUser({ users, user, handleChangeUser, }) {
             <div className={showUsersList ? "user-selector-full" : "user-selector"} onClick={() => setShowUsersList(!showUsersList)}>
                 {showUsersList ? null : <div className="user-name-surname2">{user.name} {user.surname}</div>}
                 <div className={showUsersList ? "users-list-expanded" : "users-list"}>
-                    {users.map(user => <div key={user._id} onClick={() => handleChangeUser(user)} className="one-user-select">{user.name} {user.surname}</div>)}
+                    {usersToRender.map(user => <div key={user._id} onClick={() => onChangeUser(user)} className="one-user-select">{user.name} {user.surname}</div>)}
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserContext } from "../../hooks/UserContext"
+import { UserContext } from "../../contexts/UserContext"
 
 import DayCardContainer from './DayCardContainer';
 import LessonsContainer from './LessonsContainer';

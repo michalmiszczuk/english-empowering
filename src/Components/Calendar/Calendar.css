@@ -1,13 +1,15 @@
-#daysDiv {
+#days-div {
   width: 100%;
   box-sizing: border-box;
   padding: 1rem;
-  margin: 0rem 0rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.show-add-day {
+@media (min-width: 1800px) {
+  #days-div {
+    padding: 3rem 3rem;
+  }
 }

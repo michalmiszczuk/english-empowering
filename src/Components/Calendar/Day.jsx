@@ -3,15 +3,17 @@ import React, { useState, useContext } from 'react';
 import DayCardFront from './DayCardFront.jsx';
 import DayCardBack from './DayCardBack.jsx';
 
-import { UserContext } from "../../hooks/UserContext"
+import { UserContext } from "../../contexts/UserContext"
 
 import setCalenderLessons from '../../utils/setCalendarLessons.js';
 import sortTime from '../../utils/sortTime.js';
 import "./Day.css"
 import { reserveLesson } from '../../services/userServices.js';
+import { ToastContext } from '../../contexts/ToastContext.js';
+import { toMonthDayString, } from '../../utils/toDateString.js';
+import { LoadingContext } from '../../contexts/LoadingContext.js';
 
 function Day({ classes, date, refreshLessons }) {
-
 
     const [lessonTime, setLessonTime] = useState('')
     const [lessonId, setLessonId] = useState('')
@@ -21,14 +23,21 @@ function Day({ classes, date, refreshLessons }) {
     const { user, refreshUser } = useContext(UserContext)
     const [currentDay, setCurrentDay] = useState()
 
+    const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
+
     const lessonsToRender = setCalenderLessons(classes, date)
     sortTime(lessonsToRender)
 
     const handleReserve = async () => {
+        setIsLoading(true)
         await reserveLesson(classes, lessonId, user)
         setRotated(false)
+        const date = toMonthDayString(currentDay)
+        showToast('success', `Zarezerwowałeś lekcję na ${lessonTime} dnia ${date}.`)
         refreshLessons()
         refreshUser()
+        setIsLoading(false)
     };
 
     const handleShowAddDay = () => {

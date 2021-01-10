@@ -4,7 +4,7 @@ import Button from '../../common/Button';
 
 function ReserveLessonButton(props) {
     return (
-        <Link to="calendar"><Button text="Zapisz mnie" /></Link>
+        <Link to="calendar"><Button text="Zapisz mnie" btnClass="reserve-button" /></Link>
     );
 }
 

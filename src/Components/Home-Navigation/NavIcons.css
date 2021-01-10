@@ -17,18 +17,6 @@
 
 @media (max-width: 700px) {
   .icons-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin-top: 0.5rem;
-    width: 100%;
-    overflow: hidden;
-    transition: 1.5s ease;
-    background-color: #333;
-  }
-
-  .hidden {
-    opacity: 0;
-    transition: 1s ease;
+    flex-flow: wrap;
   }
 }

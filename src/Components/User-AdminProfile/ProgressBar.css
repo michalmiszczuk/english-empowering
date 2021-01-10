@@ -31,28 +31,19 @@ th {
 
 @media (max-width: 700px) {
   .progress-bar-div {
-    width: 50%;
-    display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items: center;
     align-content: center;
-    font-family: Roboto;
     font-size: 0.8em;
     padding: 0rem;
     margin-bottom: 0.8rem;
-    box-sizing: border-box;
   }
 
   .progress-bar-table {
-    border: 1px solid white;
     width: 90%;
-    border-collapse: collapse;
-    cursor: pointer;
   }
 
   th {
     height: 2.2rem;
-    border: 1px groove white;
   }
 }

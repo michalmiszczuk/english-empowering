@@ -1,21 +1,22 @@
 import React from 'react';
+
 import ChangeUser from './ChangeUser';
 import DeleteUserButton from './DeleteUserButton';
-import PersonalInfo from './PersonalUserInfo';
 import UserProgress from './UserProgress';
+import PersonalInfo from './PersonalUserInfo';
 import './AdminUsersInfo.css'
 
-function AdminUsersInfo({ user, users, handleDeletePage, handleChangeUser, refreshUser }) {
+function AdminUsersInfo({ user, users, onShowDeletePage, onChangeUser, refreshUser }) {
     return (
         <div className="admin-users-info">
             <ChangeUser
                 user={user}
                 users={users}
-                handleChangeUser={handleChangeUser}
+                onChangeUser={onChangeUser}
             />
             <PersonalInfo user={user} />
             <UserProgress user={user} refreshUser={refreshUser} />
-            <DeleteUserButton onClick={handleDeletePage} />
+            <DeleteUserButton onClick={onShowDeletePage} />
         </div>
     );
 }

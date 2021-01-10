@@ -1,16 +1,18 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { UserContext } from "../../hooks/UserContext"
+import { UserContext } from "../../contexts/UserContext"
 
 import Day from './Day';
-import LoadingAnimation from '../common/LoadingAnimation';
 import MainContainer from '../common/MainContainer';
+
 import { getLessons } from "../../services/lessonServices"
 import get14days from "../../utils/getDates"
 import "./Calendar.css"
+import { LoadingContext } from '../../contexts/LoadingContext';
 
 function Calendar(props) {
 
     const { refreshUser } = useContext(UserContext)
+    const { setIsLoading } = useContext(LoadingContext)
     const [lessons, setLessons] = useState([])
 
 
@@ -23,23 +25,28 @@ function Calendar(props) {
         refreshLessons();
     }, [])
 
+
     const dates = get14days;
 
+    useEffect(() => {
+        if (lessons.length === 0) setIsLoading(true)
+        else setIsLoading(false)
+        return () => setIsLoading(false)
+    }, [lessons.length])
+
+
     return (
-        <>
-            {!lessons.length && <LoadingAnimation />}
-            <MainContainer navBar title="Kalendarz">
-                <div id="daysDiv">
-                    {dates.map(date => <Day
-                        key={date}
-                        date={date}
-                        classes={lessons}
-                        refreshLessons={refreshLessons}
-                        refreshUser={refreshUser}
-                    />)}
-                </div>
-            </MainContainer>
-        </>
+        <MainContainer navBar title="Kalendarz">
+            <div id="days-div">
+                {dates.map(date => <Day
+                    key={date}
+                    date={date}
+                    classes={lessons}
+                    refreshLessons={refreshLessons}
+                    refreshUser={refreshUser}
+                />)}
+            </div>
+        </MainContainer>
     );
 }
 

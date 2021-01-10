@@ -21,7 +21,7 @@
 }
 
 .nav-bottom-buttons-text {
-  color: black;
+  color: #111;
   font-size: 2rem;
   width: 100%;
   text-align: center;
@@ -29,23 +29,15 @@
 
 @media (max-width: 700px) {
   .navigation-learn-more {
-    background-image: url(../../static/london3.jpg);
-    background-size: 80%;
-    background-position: center;
-    background-position-y: 30%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: space-evenly;
-    width: 100%;
+    background-position-x: 0%;
+    background-size: contain;
+  }
+
+  .navigation-learn-more {
     height: 14rem;
-    margin-top: 2rem;
   }
   .nav-bottom-buttons-text {
-    color: black;
-    font-size: 1.5rem;
-    width: 100%;
-    text-align: center;
+    color: #000;
+    font-size: 1rem;
   }
 }

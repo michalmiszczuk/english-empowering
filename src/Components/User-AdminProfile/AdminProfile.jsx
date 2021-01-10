@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import AddLesson from './AddLesson';
 import AdminReservedView from './AdminReservedView';
+import AdminUsersInfo from './AdminUsersInfo';
 import DeleteUser from './DeleteUser';
 import LoadingAnimation from '../common/LoadingAnimation'
 import MainContainer from '../common/MainContainer';
@@ -9,7 +10,7 @@ import MainContainer from '../common/MainContainer';
 import { getUsers, getUser } from "../../services/userServices"
 import { getLessons } from '../../services/lessonServices'
 import "./AdminProfile.css"
-import AdminUsersInfo from './AdminUsersInfo';
+
 
 
 function AdminProfile(props) {
@@ -24,7 +25,7 @@ function AdminProfile(props) {
     async function refreshUsers() {
         const { data } = await getUsers()
         setUsers(data)
-        setUser(data[0])
+        setUser(data[1])
     }
 
     async function refreshUser() {
@@ -54,9 +55,10 @@ function AdminProfile(props) {
                 <AdminUsersInfo
                     user={user}
                     users={users}
-                    handleChangeUser={(user) => setUser(user)}
-                    handleDeletePage={() => setShowDeletePage(true)}
-                    refreshUser={refreshUser} />
+                    onChangeUser={(user) => setUser(user)}
+                    onShowDeletePage={() => setShowDeletePage(true)}
+                    refreshUser={refreshUser}
+                />
                 <div className="admin-lessons-container">
                     <AdminReservedView
                         users={users}
@@ -76,7 +78,7 @@ function AdminProfile(props) {
                             refreshUser={refreshUsers}
                         />
                     </div>}
-                    {showDeletePage && <div id="deletePage">
+                    {showDeletePage && <div id="delete-page">
                         <DeleteUser
                             onSubmitNo={() => setShowDeletePage(false)}
                             refreshUsers={refreshUsers}

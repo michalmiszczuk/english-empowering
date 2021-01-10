@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem 0rem;
 }
 
 #delete-button {
@@ -18,15 +18,15 @@
 
 @media (max-width: 700px) {
   #delete-button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     padding: 0rem;
   }
 
   #delete-button {
+    height: 2.5rem;
+    font-size: 0.7rem;
+  }
+
+  #delete-button:hover {
     background-color: crimson;
-    align-self: center;
-    transition: 0.3s ease;
   }
 }

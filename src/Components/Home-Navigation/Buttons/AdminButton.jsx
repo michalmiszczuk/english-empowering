@@ -4,7 +4,7 @@ import Button from '../../common/Button';
 
 function AdminButton({ noTextDec }) {
     return (
-        <Link style={noTextDec} to="/adminprofile"><Button text="Admin" /></Link>
+        <Link to="/adminprofile"><Button text="Admin" /></Link>
     );
 }
 

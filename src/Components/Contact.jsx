@@ -8,10 +8,10 @@ function Contact(props) {
             <div id="contact-photo" />
             <div className="contact-text-container">
                 <div className='contact-text'>
-                    <p>Feel free to contact me :) <br /><br />
-                 TEL: 579 870 405 <br /><br />
-                 E-mail: eng-empowering@gmail.com <br /><br />
-                https://www.facebook.com/athlarster</p>
+                    <div id="contact-1" className="contact-info">Feel free to contact me :)</div>
+                    <div id='contact-2' className="contact-info">TEL: 579 870 405 </div>
+                    <div id='contact-3' className="contact-info">E-mail: eng-empowering@gmail.com</div>
+                    <div id='contact-4' className="contact-info">https://www.facebook.com/athlarster</div>
                 </div>
             </div>
         </MainContainer>

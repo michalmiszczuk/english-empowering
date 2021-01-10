@@ -19,7 +19,15 @@
   padding: 3rem 0rem;
 }
 
-.register-form {
+.logo-forms-container {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.forms-logo {
+  width: 5rem;
+  height: 4rem;
 }
 
 .close-icon {
@@ -49,29 +57,15 @@
   }
 
   .register-login-forms {
-    display: flex;
-    position: relative;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 25rem;
-    height: fit-content;
-    background-color: white;
-    border-radius: 10px;
     padding: 2rem 1rem;
   }
 
-  .close-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    color: black;
-    cursor: pointer;
+  .forms-logo {
+    width: 3.5rem;
+    height: 2.5rem;
   }
+
   .form-title {
-    color: black;
-    font-family: serif;
     font-size: 1rem;
-    margin-bottom: 0.7rem;
   }
 }

@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ToastContext } from '../../contexts/ToastContext'
+
 import InputField from './InputField';
 import Button from './Button';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import getYearMonthDay from '../../utils/getYearMonthDay';
 import { saveLesson } from '../../services/lessonServices';
-import { toWeekDayString } from '../../utils/toDateString';
+import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
 import { validateTime } from '../../Validation/joiValidation';
+
+import getYearMonthDay from '../../utils/getYearMonthDay';
 import "./AddDayForm.css";
 
 
@@ -14,7 +18,7 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
 
     const [inputHour, setInputHour] = useState("")
     const [inputMinutes, setInputMinutes] = useState("")
-    const [errorMsg, setErrorMsg] = useState('')
+    const { showToast } = useContext(ToastContext)
 
     const [hoursError, minutesError] = validateTime(inputHour, inputMinutes)
 
@@ -25,10 +29,12 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
             const lessonSave = { date: newLessonTime, isReserved: false, isDisabled: false }
             await saveLesson(lessonSave)
             onAddLessonSubmit()
+            const date = toMonthDayString(currentDay)
+            showToast('success', `Dodano lekcję dnia ${date} na godzinę ${inputHour}.`)
         }
         catch (ex) {
             if (ex.response && ex.response.status === 400) {
-                setErrorMsg(ex.response.data)
+                showToast('error', ex.response.data)
             }
         }
     }
@@ -40,14 +46,15 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
         `add-day-form-cont niedziela` : `add-day-form-cont`;
 
     return (
-        <div className={checkWeekend}>
-            <FontAwesomeIcon icon={faTimes} onClick={iconClick} className="close-icon-add-day" />
-            <div className="add-dayform-title"> Dodaj lekcję</div>
-            <InputField addDayForm name={"Godzina:"} label={"Godzina:"} onChange={(event) => setInputHour(event.target.value)} error={hoursError} value={"inputHour"}></InputField>
-            {errorMsg && <div className="error-msg-day-form">{errorMsg}</div>}
-            <InputField addDayForm name={"Minuty:"} label={"Minuty:"} onChange={(event) => setInputMinutes(event.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
-            <Button text="Dodaj!" btnClass="secondary" onClick={submitAddLesson} />
-        </div>
+        <>
+            <div className={checkWeekend}>
+                <FontAwesomeIcon icon={faTimes} onClick={iconClick} className="close-icon-add-day" />
+                <div className="add-dayform-title"> Dodaj lekcję</div>
+                <InputField addDayForm name={"Godzina:"} label={"Godzina:"} onChange={(event) => setInputHour(event.target.value)} error={hoursError} value={"inputHour"}></InputField>
+                <InputField addDayForm name={"Minuty:"} label={"Minuty:"} onChange={(event) => setInputMinutes(event.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
+                <Button text="Dodaj!" btnClass="secondary" onClick={submitAddLesson} />
+            </div>
+        </>
     );
 }
 

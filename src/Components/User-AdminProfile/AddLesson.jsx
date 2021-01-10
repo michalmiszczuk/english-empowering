@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+
+import AddLessonScrollBar from './AddLessonScrollBar';
 import Button from '../common/Button';
 import InputField from '../common/InputField';
+
+import { addLessonToUser } from '../../services/userServices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-
 import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
-import AddLessonScrollBar from './AddLessonScrollBar';
-import "./AddLesson.css"
 import { validateTime } from '../../Validation/joiValidation';
-import { addLessonToUser } from '../../services/userServices';
+import "./AddLesson.css"
+import { ToastContext } from '../../contexts/ToastContext';
+import { LoadingContext } from '../../contexts/LoadingContext';
 
 
 function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPage }) {
@@ -16,6 +19,8 @@ function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPag
     const [inputHour, setInputHour] = useState("")
     const [inputMinutes, setInputMinutes] = useState("")
     const [chosenDate, setChosenDate] = useState("")
+    const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
 
     const date = new Date(chosenDate)
     const dateName = toMonthDayString(date)
@@ -24,10 +29,19 @@ function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPag
     const [hoursError, minutesError] = validateTime(inputHour, inputMinutes)
 
     const submitAddLesson = async () => {
-        await addLessonToUser(chosenDate, inputHour, inputMinutes, user)
-        setShowAddPage();
-        await refreshUser()
-        await refreshLessons()
+        try {
+            setIsLoading(true)
+            await addLessonToUser(chosenDate, inputHour, inputMinutes, user)
+            setShowAddPage();
+            const date = toMonthDayString(chosenDate)
+            showToast('success', `Dodano lekcję dnia ${date} na godzinę ${inputHour}:${inputMinutes}.`)
+            await refreshUser()
+            await refreshLessons()
+            setIsLoading(false)
+        } catch (ex) {
+            if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
+        }
+
     }
 
     return (

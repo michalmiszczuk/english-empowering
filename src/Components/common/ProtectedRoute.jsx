@@ -6,6 +6,7 @@ import { getCurrentUser } from '../../services/authServices';
 function ProtectedRoute({ path, component: Component, render }) {
     const user = getCurrentUser()
 
+
     return (
         <Route
             path={path}

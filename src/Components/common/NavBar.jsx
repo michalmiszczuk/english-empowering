@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import Button from './Button';
 import NavBarIcon from '../Home-Navigation/NavBarIcon'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
 import './NavBar.css'
 
 
-function NavBar({ name, handleSetMenu }) {
+function NavBar({ name, onSetMenu }) {
 
     return (
         <div className="nav-bar">
@@ -16,7 +17,7 @@ function NavBar({ name, handleSetMenu }) {
             </Link>
             <div className="nav-bar-text">{name}</div>
             <div className="nav-bar-menu-button" >
-                <Button onClick={handleSetMenu} width={45} height={45} borderradius="10px"><NavBarIcon /></Button>
+                <Button onClick={onSetMenu}><NavBarIcon /></Button>
             </div>
         </div>
     );

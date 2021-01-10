@@ -47,49 +47,25 @@
 
 @media (max-width: 700px) {
   .description-row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
     padding: 0rem 1rem;
     margin-bottom: 1rem;
   }
 
-  .row-reversed {
-    flex-flow: row-reverse;
-  }
-
   .description-text {
-    display: flex;
-    width: 50%;
-    color: white;
-    text-align: center;
-    font-size: 0.7rem;
-    box-sizing: border-box;
-    padding: 0rem 0rem 0rem 0rem;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    font-style: italic;
+    font-size: 0.55rem;
+    padding: 0rem;
   }
 
   .text-reversed {
     text-align: center;
-    padding: 0rem 0rem 0rem 2rem;
   }
 
   .picture-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     margin-top: 0.5rem;
   }
 
   .book-me-pic {
-    background-position: center;
-    background-size: cover;
-    border-radius: 20px;
     width: 7rem;
     height: 7rem;
   }

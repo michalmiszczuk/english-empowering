@@ -72,3 +72,18 @@
   cursor: pointer;
   transition: 200ms ease-in;
 }
+
+@media (max-width: 700px) {
+  #add-lesson-title {
+    font-size: 1.2rem;
+  }
+  .dates-selector,
+  .dates-selector-full {
+    font-size: 0.8rem;
+    height: 3rem;
+  }
+
+  .dates-selector-full {
+    height: 17rem;
+  }
+}

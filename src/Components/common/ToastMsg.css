@@ -1,0 +1,99 @@
+.error-message-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 12%;
+  z-index: 1;
+  animation: slide-in 1s;
+  background-color: rgb(252, 97, 80);
+  /* background-color: #555; */
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.success-message-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 12%;
+  z-index: 1;
+  animation: slide-in 1s;
+  background-color: green;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.error-info-timeout {
+  width: 50%;
+  height: 1rem;
+  background-color: #333;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.error-info-timeout::before {
+  position: absolute;
+  content: "";
+  left: 0.5rem;
+  top: 0.25rem;
+  width: 98%;
+  height: 50%;
+  border-radius: 1rem;
+  background-image: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
+  animation: timeout 3s ease-in forwards;
+}
+
+.close-icon-toast {
+  position: absolute;
+  right: 5%;
+  top: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .error-message-container {
+    height: 8%;
+    font-size: 0.7rem;
+  }
+
+  .info-message-container {
+    height: 8%;
+    font-size: 0.7rem;
+  }
+
+  .error-info-timeout {
+    height: 0.5rem;
+  }
+  .error-info-timeout::before {
+    top: 0.125rem;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-0rem);
+  }
+}
+
+@keyframes timeout {
+  0% {
+    width: 98%;
+  }
+  100% {
+    width: 0%;
+  }
+}

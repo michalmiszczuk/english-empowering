@@ -25,31 +25,15 @@
 .main-header-flag {
   width: 5rem;
   height: 3rem;
+  opacity: 0.8;
 }
 
 @media (max-width: 700px) {
   .navigation-main-header {
-    background: url(../../static/new1.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
     padding: 2.5rem 0rem;
-    color: cornsilk;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
     font: 1rem Indie Flower, cursive;
-    box-sizing: border-box;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-    transition: 2s ease;
-  }
-
-  #flag-cont {
-    width: 20%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
   }
 
   .main-header-flag {

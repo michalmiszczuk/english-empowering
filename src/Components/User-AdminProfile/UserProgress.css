@@ -31,10 +31,6 @@
   }
 
   .progress-tables {
-    width: 100%;
-    display: flex;
     max-height: 42rem;
-    flex-flow: column wrap;
-    margin-bottom: 1rem;
   }
 }

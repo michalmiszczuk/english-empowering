@@ -22,7 +22,7 @@ function DayCardBack({ currentDay, handleShowAddDay, lessonTime, onReserve, setR
     const handleSetCheckRules = () => {
         checkedRules ? setCheckedRules(false) : setCheckedRules(true);
     }
-    // console.log(currentDay)
+
     return (
         <div>
             {user && !showAddDay && <DayCardContainer date={currentDay} direction="back">

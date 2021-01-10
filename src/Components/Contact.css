@@ -20,80 +20,63 @@
 
 .contact-text {
   font-size: 1.5rem;
-  font-style: italic;
-  background-image: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
-  /* z-index: 1;
-  opacity: 1; */
-  color: transparent;
-  background-clip: text;
   position: relative;
-  /* animation: loading-opacity-first 5s ease infinite; */
-  /* animation: loading-opacity-second 5s ease infinite 2.5s; */
 }
 
-/* .contact-text:hover {
-  transition: 1s linear;
-} */
+.contact-info {
+  padding: 1rem 0rem;
+}
+
+#contact-1 {
+  animation: contact-show 10s infinite;
+}
+
+#contact-2 {
+  animation: contact-show 10s 2.5s infinite;
+}
+
+#contact-3 {
+  animation: contact-show 10s 5s infinite;
+}
+
+#contact-4 {
+  animation: contact-show 10s 7.5s infinite;
+}
 
 @media (max-width: 700px) {
   #contact-photo {
-    width: 100%;
-    background-position-y: 40%;
     height: 16rem;
-    background-size: cover;
-    background-image: url(../static/Blog/blog8.jpg);
   }
 
-  .contactText {
+  .contact-text {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
     width: 100%;
-    color: cornsilk;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
     text-align: center;
     font-size: 1rem;
     font-style: italic;
   }
-}
 
-@keyframes loading-opacity-first {
-  0%,
-  100% {
-    background: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
-    background-clip: text;
-    color: transparent;
-    z-index: 1;
-    opacity: 1;
+  .contact-info {
+    padding: 0.7rem 0rem;
   }
-  50% {
-    background: linear-gradient(30deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 20%);
-    background-clip: text;
-    color: transparent;
-    opacity: 0.5;
-    transition: opacity 5s linear;
-    z-index: -1;
+
+  #contact-1 {
+    width: 100%;
   }
 }
 
-@keyframes loading-opacity-second {
-  0%,
-  100% {
-    background: linear-gradient(30deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 20%);
-    background-clip: text;
-    color: transparent;
-    opacity: 1;
-    transition: opacity 5s linear;
-    z-index: -1;
+@keyframes contact-show {
+  0% {
+    transform: scale(1);
   }
-  50% {
-    background: linear-gradient(90deg, rgba(184, 0, 0, 1) 4%, rgba(196, 144, 0, 1) 73%);
-    background-clip: text;
-    color: transparent;
-    z-index: 1;
-    opacity: 0.5;
+  10% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1);
   }
 }

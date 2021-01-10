@@ -1,18 +1,25 @@
-import React from 'react';
-import { updateUser } from '../../services/userServices';
+import React, { useContext } from 'react';
+import { LoadingContext } from '../../contexts/LoadingContext';
+import { ToastContext } from '../../contexts/ToastContext';
+import { setProgressLevel } from '../../services/userServices';
 import ProgressBar from './ProgressBar';
 import './UserProgress.css'
 
 function UserProgress({ user, noPointer, refreshUser }) {
 
+    const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
+
     const handleSetLevel = async (title, level) => {
-        if (noPointer) return;
-        const newProgress = [...user.progress]
-        const currentBar = newProgress.find(bar => bar.title === title)
-        if (currentBar.currentLevel === level) level = 0;
-        currentBar.currentLevel = level
-        await updateUser(user._id, { ...user, progress: newProgress })
-        refreshUser()
+        try {
+            if (noPointer) return;
+            setIsLoading(true)
+            await setProgressLevel(user, title, level, noPointer)
+            refreshUser()
+            setIsLoading(false)
+        } catch (ex) {
+            if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
+        }
     }
 
     return (

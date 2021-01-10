@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import DeleteIcon from '../common/DeleteIcon';
 import './LessonsContainer.css'
-import { UserContext } from "../../hooks/UserContext"
+import { UserContext } from "../../contexts/UserContext"
 import { deleteLesson } from '../../services/lessonServices';
+import { ToastContext } from '../../contexts/ToastContext';
 
 
 
@@ -11,9 +12,16 @@ function LessonsContainer({ lessonsToRender, onLessonClick, refreshLessons }) {
     const { user } = useContext(UserContext)
     const isAdmin = user?.isAdmin
 
+    const { setMessage } = useContext(ToastContext)
+
     const handleDelete = async (item) => {
-        await deleteLesson(item._id)
-        refreshLessons()
+        try {
+            await deleteLesson(item._id)
+            refreshLessons()
+        } catch (ex) {
+            if (ex.response && ex.response.status === 404)
+                setMessage(ex.response.data)
+        }
     }
 
     return (

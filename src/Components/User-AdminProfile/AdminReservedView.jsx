@@ -1,20 +1,29 @@
-import React, { useState } from 'react';
-import './AdminReservedView.css'
+import React, { useContext, useState } from 'react';
+
 import DeleteIcon from '../common/DeleteIcon';
-import { cancelLesson } from '../../services/userServices';
-import setRenderedLessons from '../../utils/setRenderedLessons';
 import Button from '../common/Button';
+
+import setRenderedLessons from '../../utils/setRenderedLessons';
+import { cancelLesson } from '../../services/userServices';
+import './AdminReservedView.css'
+import { ToastContext } from '../../contexts/ToastContext';
+import { LoadingContext } from '../../contexts/LoadingContext';
 
 function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, refreshLessons, setShowAddPage }) {
 
     const [showAllLessons, setShowAllLessons] = useState(false);
+    const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
 
     const lessonsToRender = showAllLessons ? setRenderedLessons(lessons) : setRenderedLessons(user.reservedLessons)
 
     const handleCancelLesson = async (item) => {
-        const result = await cancelLesson(user, lessons, item)
+        setIsLoading(true)
+        await cancelLesson(user, lessons, item)
+        showToast('success', `Lekcja dnia ${item.days} o godzinie ${item.time} została anulowana.`)
         refreshUser()
         refreshLessons()
+        setIsLoading(false)
     }
 
     return (

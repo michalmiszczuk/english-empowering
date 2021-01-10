@@ -1,7 +1,8 @@
 #about-me-main-photo {
   width: 100%;
+  background-color: #333;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -12,22 +13,29 @@
 .first-row {
   display: flex;
   flex-flow: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   align-content: flex-start;
   width: 100%;
   margin: 2rem 0rem;
+  padding: 2rem 0rem;
+}
+
+.profil-pic {
+  height: 28rem;
 }
 
 .text-div {
   width: 60%;
   color: white;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: justify;
+  padding: 0rem 1rem;
 }
 
-.phone-photos {
+.phone-photos,
+.phone-photos-bottom {
   display: none;
 }
 
@@ -40,22 +48,19 @@
     height: 20vh;
   }
 
+  .profil-pic {
+    display: none;
+  }
+
   .first-row {
-    display: flex;
-    flex-flow: row;
     justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 100%;
-    margin: 2rem 0rem;
+    margin: 0rem;
   }
 
   .text-div {
-    width: 60%;
-    color: white;
-    box-sizing: border-box;
+    width: 80%;
     font-size: 0.6rem;
-    text-align: justify;
+    margin: 0rem;
   }
   .phone-photos {
     width: 100%;
@@ -66,7 +71,18 @@
   .phone-photos-bottom {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .main-pic {
+    height: 20rem;
+  }
+
+  .profil-pic {
+    height: 27rem;
   }
 }

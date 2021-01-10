@@ -3,8 +3,8 @@ import './PricingTable.css'
 
 function PricingTable(props) {
     return (
-        <div id="tablePricingCont">
-            <table className="pricingTable">
+        <div id="table-pricing-cont">
+            <table className="pricing-table">
                 <tbody >
                     <tr>
                         <th colSpan="2">Cennik</th>

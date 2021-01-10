@@ -3,11 +3,11 @@ import CancelLessonInfo from './CancelLessonInfo';
 import LessonsTable from './LessonsTable';
 import './UserReservedLessons.css'
 
-function ReservedLessonsView({ handleCancelLesson }) {
+function ReservedLessonsView({ onDelete }) {
     return (
         <div className="reserved-lessons-container">
             <div className="reserved-header">Zarezerwowane zajęcia</div>
-            <LessonsTable handleCancelLesson={handleCancelLesson} />
+            <LessonsTable onDelete={onDelete} />
             <CancelLessonInfo />
         </div>
     );

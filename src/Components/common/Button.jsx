@@ -5,9 +5,8 @@ function Button({ validError, text, onClick, children, btnClass, enable }) {
 
 
     return (
-        <div className={validError ? `main-button  ${btnClass} disabled` : `main-button ${btnClass}`} style={{
-            cursor: !validError ? "pointer" : "default"
-        }}
+        <div className={validError ? `main-button  ${btnClass} disabled` : `main-button ${btnClass}`}
+            style={{ cursor: !validError ? "pointer" : "default" }}
             onClick={!validError || enable ? onClick : null}
         >
             {text}
