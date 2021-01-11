@@ -43,6 +43,7 @@ function UserProfile(props) {
             showToast('success', `Lekcja dnia ${item.days} o godzinie ${item.time} została anulowana.`)
             setIsLoading(false)
         } catch (ex) {
+            setIsLoading(false)
             if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
         }
 

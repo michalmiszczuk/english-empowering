@@ -17,7 +17,7 @@ function InputField({ name, label, error, type, onChange, value, addDayForm }) {
 
     return (
         <div className={addDayForm ? "input-field-container add-day-form" : "input-field-container"}>
-            <label id="input-label" className={msg ? "error-background" : null} htmlFor={name}>{label}</label>
+            <label id="input-label" className={msg ? "error-background" : 'input-label'} htmlFor={name}>{label}</label>
             <input autoFocus
                 className="input-field"
                 id={name}

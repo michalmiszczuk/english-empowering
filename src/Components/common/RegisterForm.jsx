@@ -11,6 +11,7 @@ import './register-login-forms.css'
 import "../Home-Navigation/NavigationSite.css"
 import { ToastContext } from '../../contexts/ToastContext';
 import Logo from './Logo';
+import { LoadingContext } from '../../contexts/LoadingContext';
 
 function RegisterForm({ iconClick, refreshUser }) {
     const [email, setEmail] = useState('')
@@ -20,16 +21,20 @@ function RegisterForm({ iconClick, refreshUser }) {
     const [password, setPassword] = useState('')
 
     const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
 
     const userToSave = { email: email, name: firstName, surname: secondName, phone: phone, password: password }
 
     const handleRegisterSubmit = async () => {
         try {
+            setIsLoading(true)
             const response = await saveUser(userToSave)
             localStorage.setItem('token', response.headers['x-auth-token'])
             window.location = '/'
+            setIsLoading(false)
         }
         catch (ex) {
+            setIsLoading(false)
             if (ex.response && ex.response.status === 400)
                 showToast('error', ex.response.data)
         }

@@ -15,7 +15,7 @@ function MainHeader({ props }) {
 
     const { setIsLoading } = useContext(LoadingContext)
 
-    if (!bckimage) setIsLoading(true);
+    // if (!bckimage) setIsLoading(true);
 
     return (
         <div className="navigation-main-header" style={{ backgroundImage: `url(${bckimage})` }}>

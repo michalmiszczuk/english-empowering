@@ -39,6 +39,7 @@ function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPag
             await refreshLessons()
             setIsLoading(false)
         } catch (ex) {
+            setIsLoading(false)
             if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
         }
 

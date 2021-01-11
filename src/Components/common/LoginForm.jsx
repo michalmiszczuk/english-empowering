@@ -13,6 +13,7 @@ import "../Home-Navigation/NavigationSite.css"
 import './register-login-forms.css'
 import { ToastContext } from '../../contexts/ToastContext';
 import Logo from './Logo';
+import { LoadingContext } from '../../contexts/LoadingContext';
 
 function LoginForm(props) {
 
@@ -20,17 +21,21 @@ function LoginForm(props) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
 
     const [emailError, passwordError] = validateLogin(email, password)
     const history = useHistory()
 
     const handleLoginSubmit = async () => {
         try {
+            setIsLoading(true)
             await auth.login(email, password)
             userContext.refreshUser();
             history.push('/main')
+            setIsLoading(false)
         }
         catch (ex) {
+            setIsLoading(false)
             if (ex.response && ex.response.status === 400) {
                 showToast("error", ex.response.data)
             }

@@ -14,7 +14,7 @@ function NavigationSite({ user, handleLogOut }) {
 
     const { setisLoading } = useContext(LoadingContext)
 
-    if (!book || !pictureMe) setisLoading(true);
+    // if (!book || !pictureMe) setisLoading(true);
 
     return (
 

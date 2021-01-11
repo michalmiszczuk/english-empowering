@@ -12,6 +12,7 @@ import { validateTime } from '../../Validation/joiValidation';
 
 import getYearMonthDay from '../../utils/getYearMonthDay';
 import "./AddDayForm.css";
+import { LoadingContext } from '../../contexts/LoadingContext';
 
 
 function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
@@ -19,11 +20,13 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
     const [inputHour, setInputHour] = useState("")
     const [inputMinutes, setInputMinutes] = useState("")
     const { showToast } = useContext(ToastContext)
+    const { setIsLoading } = useContext(LoadingContext)
 
     const [hoursError, minutesError] = validateTime(inputHour, inputMinutes)
 
     const submitAddLesson = async (e) => {
         try {
+            setIsLoading(true)
             e.preventDefault();
             const newLessonTime = getYearMonthDay(currentDay, inputHour, inputMinutes)
             const lessonSave = { date: newLessonTime, isReserved: false, isDisabled: false }
@@ -31,11 +34,11 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
             onAddLessonSubmit()
             const date = toMonthDayString(currentDay)
             showToast('success', `Dodano lekcję dnia ${date} na godzinę ${inputHour}.`)
+            setIsLoading(false)
         }
         catch (ex) {
-            if (ex.response && ex.response.status === 400) {
-                showToast('error', ex.response.data)
-            }
+            setIsLoading(false)
+            if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
         }
     }
 

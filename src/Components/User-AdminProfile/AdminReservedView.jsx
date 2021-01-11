@@ -18,12 +18,18 @@ function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, ref
     const lessonsToRender = showAllLessons ? setRenderedLessons(lessons) : setRenderedLessons(user.reservedLessons)
 
     const handleCancelLesson = async (item) => {
-        setIsLoading(true)
-        await cancelLesson(user, lessons, item)
-        showToast('success', `Lekcja dnia ${item.days} o godzinie ${item.time} została anulowana.`)
-        refreshUser()
-        refreshLessons()
-        setIsLoading(false)
+        try {
+            setIsLoading(true)
+            await cancelLesson(user, lessons, item)
+            showToast('success', `Lekcja dnia ${item.days} o godzinie ${item.time} została anulowana.`)
+            refreshUser()
+            refreshLessons()
+            setIsLoading(false)
+        }
+        catch (ex) {
+            setIsLoading(false)
+            if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
+        }
     }
 
     return (

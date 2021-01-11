@@ -30,14 +30,21 @@ function Day({ classes, date, refreshLessons }) {
     sortTime(lessonsToRender)
 
     const handleReserve = async () => {
-        setIsLoading(true)
-        await reserveLesson(classes, lessonId, user)
-        setRotated(false)
-        const date = toMonthDayString(currentDay)
-        showToast('success', `Zarezerwowałeś lekcję na ${lessonTime} dnia ${date}.`)
-        refreshLessons()
-        refreshUser()
-        setIsLoading(false)
+        try {
+            setIsLoading(true)
+            await reserveLesson(classes, lessonId, user)
+            setRotated(false)
+            const date = toMonthDayString(currentDay)
+            showToast('success', `Zarezerwowałeś lekcję na ${lessonTime} dnia ${date}.`)
+            refreshLessons()
+            refreshUser()
+            setIsLoading(false)
+        }
+        catch (ex) {
+            setIsLoading(false)
+            if (ex.response && ex.response.status === 404)
+                showToast('error', ex.response.data)
+        }
     };
 
     const handleShowAddDay = () => {

@@ -19,6 +19,7 @@ function DeleteUser({ onSubmitNo, user, refreshUsers }) {
             showToast('success', `Użytkownik ${user.name} ${user.surname} został usunięty.`)
             setIsLoading(false)
         } catch (ex) {
+            setIsLoading(false)
             if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
         }
     }

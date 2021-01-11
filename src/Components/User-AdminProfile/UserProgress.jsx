@@ -18,6 +18,7 @@ function UserProgress({ user, noPointer, refreshUser }) {
             refreshUser()
             setIsLoading(false)
         } catch (ex) {
+            setIsLoading(false)
             if (ex.response && ex.response.status === 400) showToast('error', ex.response.data)
         }
     }

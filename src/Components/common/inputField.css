@@ -61,12 +61,18 @@
     width: 90%;
     margin: 10px;
     color: white;
+    height: 2.7rem;
     font-size: 0.7rem;
-    padding: 0.5rem 0rem 0.8rem 0rem;
+    padding: 0rem 0rem 0.3rem 0rem;
+    background-color: #777;
   }
 
   .input-field {
-    font-size: 0.7rem;
+    font-size: 0.4rem;
+  }
+
+  .input-label {
+    font-size: 0.5rem;
   }
 
   .error-message {
