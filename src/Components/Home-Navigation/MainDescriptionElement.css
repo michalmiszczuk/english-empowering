@@ -45,7 +45,7 @@
   height: 12rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .description-row {
     padding: 0rem 1rem;
     margin-bottom: 1rem;
@@ -63,6 +63,13 @@
 
   .picture-container {
     margin-top: 0.5rem;
+  }
+  .row {
+    border: 1px solid red;
+  }
+
+  .row-reversed {
+    flex-flow: row;
   }
 
   .book-me-pic {

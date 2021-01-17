@@ -29,7 +29,7 @@ th {
   border: 1px groove white;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .progress-bar-div {
     flex-flow: column wrap;
     justify-content: center;

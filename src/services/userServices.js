@@ -1,10 +1,8 @@
 import http from "../services/httpServices";
 import getYearMonthDay from "../utils/getYearMonthDay";
-import {getJwt} from "./authServices";
 import {saveLesson, updateLessons} from "./lessonServices";
 
 const apiEndpoint = "/users";
-const token = getJwt();
 
 export function userUrl(id) {
   return `${apiEndpoint}/${id}`;
@@ -19,7 +17,7 @@ export function getUser(userId) {
 }
 
 export function updateUser(userId, user) {
-  return http.put(userUrl(userId), user, {headers: {"x-auth-token": token}});
+  return http.put(userUrl(userId), user);
 }
 
 export function deleteUser(userId) {
@@ -27,7 +25,7 @@ export function deleteUser(userId) {
 }
 
 export function saveUser(user) {
-  return http.post(apiEndpoint, user, {headers: {"x-auth-token": token}});
+  return http.post(apiEndpoint, user);
 }
 
 export async function cancelLesson(user, lessons, item) {

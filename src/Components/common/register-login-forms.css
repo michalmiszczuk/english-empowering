@@ -50,7 +50,7 @@
   background-color: salmon;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .register-login-container {
     margin: 2rem 0rem;
     padding: 0rem 2rem;

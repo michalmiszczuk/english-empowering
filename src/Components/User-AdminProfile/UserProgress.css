@@ -19,7 +19,7 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .progress-container {
     width: 100%;
   }

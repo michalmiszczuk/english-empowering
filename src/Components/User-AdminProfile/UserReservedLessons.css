@@ -17,7 +17,7 @@
   font-family: Roboto;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .reserved-lessons-container {
     background-color: #333;
   }

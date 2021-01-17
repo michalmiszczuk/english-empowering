@@ -73,7 +73,7 @@
   transition: 200ms ease-in;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   #add-lesson-title {
     font-size: 1.2rem;
   }

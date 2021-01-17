@@ -2,7 +2,6 @@ import axios from "axios";
 import {toast} from "react-toastify";
 
 axios.defaults.baseURL = process.env.REACT_APP_ENG_EMPOWERING_BACKEND;
-console.log(process.env);
 
 axios.interceptors.response.use(null, error => {
   const expectedError = error.response && error.response.status >= 400 && error.response.status < 500;

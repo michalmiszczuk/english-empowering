@@ -22,7 +22,7 @@
   transition: 150ms all ease;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .nav-card {
     font: bold 0.8rem Indie Flower, cursive;
     width: 5rem;

@@ -33,7 +33,7 @@
   background-color: salmon;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .delete-icon-container {
     height: 1.5rem;
     width: 1.5rem;

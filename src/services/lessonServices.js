@@ -13,7 +13,7 @@ export function getLessons() {
 }
 
 export function saveLesson(lesson) {
-  return http.post(apiEndpoint, lesson, {headers: {"x-auth-token": token}});
+  return http.post(apiEndpoint, lesson);
 }
 // if (lesson._id) {
 //   const body = {...lesson};
@@ -22,11 +22,11 @@ export function saveLesson(lesson) {
 // }
 
 export function deleteLesson(movieId) {
-  return http.delete(lessonUrl(movieId), {headers: {"x-auth-token": token}});
+  return http.delete(lessonUrl(movieId));
 }
 
 export function updateLessons(lessonId, lesson) {
-  return http.put(lessonUrl(lessonId), lesson, {headers: {"x-auth-token": token}});
+  return http.put(lessonUrl(lessonId), lesson);
 }
 
 // export async function refreshLessons(setLessons) {

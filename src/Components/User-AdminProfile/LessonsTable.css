@@ -43,7 +43,7 @@
   font-family: Roboto;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .res-lessons {
     display: flex;
   }

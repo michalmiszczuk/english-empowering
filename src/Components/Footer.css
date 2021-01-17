@@ -85,6 +85,36 @@
   #footer-container-desktop {
     display: none;
   }
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    width: 10rem;
+    height: 5rem;
+    border-radius: 10px;
+    transition: 1s ease;
+    color: white;
+    background-color: grey;
+  }
+  .contact-info-hidden {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20%;
+    left: 30%;
+    opacity: 0;
+    transform: translateY(10rem);
+    width: 10rem;
+    height: 5rem;
+    border-radius: 10px;
+    background-color: grey;
+    transition: 1s ease;
+  }
 }
 
 @media (min-width: 1800px) {

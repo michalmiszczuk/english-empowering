@@ -79,7 +79,7 @@
   transition: 200ms ease-in;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .user-selector-container {
     display: flex;
     flex-flow: column;

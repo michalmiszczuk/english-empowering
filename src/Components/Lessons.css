@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+  margin-top: 0.7rem;
 }
 
 #quote {
@@ -20,10 +21,10 @@
 .lessons-description-row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0rem 2rem;
+  padding: 0rem 0rem;
   margin-bottom: 2rem;
 }
 
@@ -37,6 +38,7 @@
   color: white;
   text-align: center;
   font-size: 1rem;
+  margin-right: 4rem;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -47,6 +49,8 @@
 
 .text-reversed {
   padding: 0rem 0rem 0rem 2rem;
+  margin-right: 0rem;
+  margin-left: 4rem;
 }
 
 @keyframes sea-change {
@@ -58,12 +62,13 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .main-sea-photo {
     background-image: url(../static/Sea/sea2.jpg);
     height: 7rem;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+    margin-top: 0rem;
   }
 
   .lessons-description-row {
@@ -72,6 +77,11 @@
 
   .text-reversed {
     padding: 0rem;
+    margin-left: 0rem;
+  }
+
+  .lesson-row-reversed {
+    flex-flow: column;
   }
 
   .lessons-description-text {
@@ -79,6 +89,8 @@
     text-align: justify;
     font-style: italic;
     font-size: 0.6rem;
+    margin-right: 0rem;
+    padding: 0rem 2rem;
   }
 }
 

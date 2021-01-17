@@ -34,7 +34,7 @@
   font-family: Roboto;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .main-content-users {
     flex-flow: column wrap;
     padding-bottom: 1rem;

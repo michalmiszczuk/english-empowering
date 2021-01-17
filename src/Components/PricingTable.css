@@ -33,7 +33,7 @@
   padding-left: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .pricing-table {
     width: 60%;
     font: italic 0.7rem Roboto, cursive;

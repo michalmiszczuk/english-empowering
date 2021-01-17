@@ -26,7 +26,7 @@
   transform: rotateY(-180deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .day-card {
     height: 15rem;
     width: 8rem;

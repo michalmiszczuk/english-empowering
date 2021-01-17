@@ -7,14 +7,10 @@ import book from '../../static/newbook.jpg'
 import pictureMe from '../../static/profilePic.jpg'
 import MainContainer from '../common/MainContainer'
 import "./NavigationSite.css"
-import { LoadingContext } from '../../contexts/LoadingContext';
+
 
 
 function NavigationSite({ user, handleLogOut }) {
-
-    const { setisLoading } = useContext(LoadingContext)
-
-    // if (!book || !pictureMe) setisLoading(true);
 
     return (
 

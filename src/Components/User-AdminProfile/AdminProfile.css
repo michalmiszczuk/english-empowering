@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .admin-lessons-container {
     width: 100%;
     justify-content: center;

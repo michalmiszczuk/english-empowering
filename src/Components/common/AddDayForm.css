@@ -49,7 +49,7 @@
   border-radius: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .close-icon-add-day {
     right: 0.5rem;
     top: -0.5rem;

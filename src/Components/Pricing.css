@@ -14,7 +14,7 @@
   height: 15rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .main-pricing-pic {
     height: 7rem;
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
@@ -8,6 +8,11 @@ import { Link } from 'react-router-dom';
 import "./Footer.css"
 
 function Footer({ props }) {
+    const [showContactInfo, setShowContactInfo] = useState(false)
+    const [message, setMessage] = useState()
+    console.log(showContactInfo)
+
+    const setShowInfo = () => showContactInfo ? setShowContactInfo(false) : setShowContactInfo(true)
 
     return (
         <>
@@ -20,10 +25,11 @@ function Footer({ props }) {
             </div >
             <div id="footer-container-phone">
                 <a href="https://www.facebook.com/athlarster" data-tooltip="facebook" className="footer-icon"><FontAwesomeIcon icon={faFacebookSquare} className="fa-lg" /></a>
-                <Link className="footer-icon" to="./contact" ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></Link>
-                <Link className="footer-icon" to="./contact" ><FontAwesomeIcon icon={faPhone} className="fa-lg" /></Link>
+                <div className="footer-icon" onClick={() => setShowInfo()}  ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
+                <div className="footer-icon" onClick={() => setShowInfo()} > <FontAwesomeIcon icon={faPhone} className="fa-lg" /></div>
                 <Link className="footer-links" to="./termsconditions" ><FooterText text="Regulamin" /></Link>
                 <Link className="footer-links" to="./privacypolicy" ><FooterText text="Polityka Prywatności" /></Link>
+                <div className={showContactInfo ? "contact-info" : "contact-info-hidden"}>{message}</div>
             </div >
         </>
     );

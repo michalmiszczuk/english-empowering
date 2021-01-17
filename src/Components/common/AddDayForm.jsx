@@ -33,7 +33,7 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
             await saveLesson(lessonSave)
             onAddLessonSubmit()
             const date = toMonthDayString(currentDay)
-            showToast('success', `Dodano lekcję dnia ${date} na godzinę ${inputHour}.`)
+            showToast('success', `Dodano lekcję dnia ${date} na godzinę ${inputHour} ${inputMinutes}.`)
             setIsLoading(false)
         }
         catch (ex) {
