@@ -93,8 +93,9 @@
     position: absolute;
     bottom: 20%;
     left: 30%;
-    width: 10rem;
+    width: 12rem;
     height: 5rem;
+    font-size: 0.7rem;
     border-radius: 10px;
     transition: 1s ease;
     color: white;
@@ -107,6 +108,7 @@
     align-items: center;
     bottom: 20%;
     left: 30%;
+    font-size: 1rem;
     opacity: 0;
     transform: translateY(10rem);
     width: 10rem;

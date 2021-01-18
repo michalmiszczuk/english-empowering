@@ -16,7 +16,7 @@
   display: none;
 }
 
-.res-lessons-container {
+/* .res-lessons-container {
   width: 39.5%;
   color: white;
   display: flex;
@@ -24,8 +24,8 @@
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  /* border: 1px solid blue; */
-}
+  border: 1px solid blue;
+} */
 
 .res-header {
   font-size: 1.2rem;

@@ -7,7 +7,9 @@ function PrivacyPolicy(props) {
     return (
         <MainContainer navBar title="Polityka Prywatności">
             <div className="terms-and-privacy">
-                <img src={privacyPolicy} alt="" />
+                <div className="terms-and-privacy-picture">
+                    <img src={privacyPolicy} alt="" />
+                </div>
             </div>
         </MainContainer>
     );
