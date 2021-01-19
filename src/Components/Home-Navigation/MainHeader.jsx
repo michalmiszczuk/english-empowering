@@ -1,21 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import flags from '../../static/flags.png'
 import HeaderText from './HeaderText';
 import bckimage from '../../static/new1.jpg'
 
 import './MainHeader.css'
-import { LoadingContext } from '../../contexts/LoadingContext';
-
-const firstLine = 'Learn English effortlessy.'
-const secondLine = 'Master communication.'
-const thirdLine = 'Empower yourself.'
-
 
 function MainHeader({ props }) {
-
-    const { setIsLoading } = useContext(LoadingContext)
-
-    // if (!bckimage) setIsLoading(true);
 
     return (
         <div className="navigation-main-header" style={{ backgroundImage: `url(${bckimage})` }}>
@@ -28,3 +18,7 @@ function MainHeader({ props }) {
 }
 
 export default MainHeader;
+
+const firstLine = 'Learn English effortlessy.'
+const secondLine = 'Master communication.'
+const thirdLine = 'Empower yourself.'

@@ -7,7 +7,8 @@
   align-items: center;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
+  background-color: #333;
 }
 
 .footer-icon {
@@ -110,7 +111,6 @@
     left: 30%;
     font-size: 1rem;
     opacity: 0;
-    transform: translateY(10rem);
     width: 10rem;
     height: 5rem;
     border-radius: 10px;

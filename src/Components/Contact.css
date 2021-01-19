@@ -2,6 +2,7 @@
   width: 100%;
   background-position-y: 40%;
   height: 26rem;
+  background-position-y: center;
   background-size: cover;
   background-image: url(../static/Blog/blog8.jpg);
 }
@@ -18,11 +19,23 @@
 
 .contact-info {
   padding: 1rem 0rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 767px) {
   #contact-photo {
     height: 12rem;
+  }
+
+  .contact-info {
+    padding: 0.7rem 0rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  #contact-photo {
+    height: 30rem;
+    background-position-y: center;
   }
 
   .contact-info {

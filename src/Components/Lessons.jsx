@@ -15,7 +15,7 @@ function Lessons(props) {
             </div>
             <div className="phone-main-text">
                 <MainDescriptionElement picture={joy} text={lessonsText} flowDirection="lessons-description-row" descriptionText="lessons-description-text" />
-                <MainDescriptionElement picture={books} text={lessonsTextTwo} flowDirection="lessons-description-row lesson-row-reversed" descriptionText="lessons-description-text text-reversed" />
+                <MainDescriptionElement picture={books} text={lessonsTextTwo} flowDirection="lessons-description-row lessons-row-reversed" descriptionText="lessons-description-text text-reversed" />
             </div>
         </MainContainer>
     );

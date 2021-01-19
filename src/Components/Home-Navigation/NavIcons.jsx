@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import books from '../../static/books.jpg'
@@ -9,11 +9,8 @@ import dollar from '../../static/dollars.jpg'
 import NavCard from './NavCard';
 import profilePic from '../../static/profilePic.jpg'
 import './NavIcons.css'
-import { LoadingContext } from '../../contexts/LoadingContext';
 
 function NavIcons({ menu }) {
-
-    const { setisLoading } = useContext(LoadingContext)
 
     return (
         <div className={menu ? "icons-container" : "icons-container hidden"}>

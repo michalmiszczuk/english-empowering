@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import NavBottomButtons from './NavBottomButtons';
 import MainDescriptionElement from './MainDescriptionElement';
 import MainHeader from './MainHeader';
