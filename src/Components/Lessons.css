@@ -47,7 +47,7 @@
     "Helvetica Neue", sans-serif;
 }
 
-.text-reversed {
+.lessons-text-reversed {
   padding: 0rem 0rem 0rem 2rem;
   margin-right: 0rem;
   margin-left: 4rem;
@@ -75,12 +75,12 @@
     margin: 0.5rem 0rem 0.5rem 0rem;
   }
 
-  .text-reversed {
+  .lessons-text-reversed {
     padding: 0rem;
     margin-left: 0rem;
   }
 
-  .lesson-row-reversed {
+  .lessons-row-reversed {
     flex-flow: column;
   }
 
