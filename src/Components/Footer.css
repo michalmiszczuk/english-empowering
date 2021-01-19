@@ -59,7 +59,7 @@
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   #footer-container-phone {
     width: 100%;
     color: white;
@@ -87,7 +87,7 @@
     display: none;
   }
 
-  .contact-info {
+  .contact-info-footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,23 +96,23 @@
     left: 30%;
     width: 12rem;
     height: 5rem;
-    font-size: 0.7rem;
     border-radius: 10px;
     transition: 1s ease;
     color: white;
     background-color: grey;
+    font-size: 1rem;
   }
-  .contact-info-hidden {
+  .contact-info-footer-hidden {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 20%;
     left: 30%;
-    font-size: 1rem;
     opacity: 0;
     width: 10rem;
     height: 5rem;
+    font-size: 0.5rem;
     border-radius: 10px;
     background-color: grey;
     transition: 1s ease;

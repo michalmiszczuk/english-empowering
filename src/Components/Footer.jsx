@@ -27,7 +27,7 @@ function Footer({ props }) {
                 <div className="footer-icon" onClick={() => { setShowContactInfo(!showContactInfo); setMessage("579 870 405") }} > <FontAwesomeIcon icon={faPhone} className="fa-lg" /></div>
                 <Link className="footer-links" to="./termsconditions" ><FooterText text="Regulamin" /></Link>
                 <Link className="footer-links" to="./privacypolicy" ><FooterText text="Polityka Prywatności" /></Link>
-                <div className={showContactInfo ? "contact-info" : "contact-info-hidden"}>{message}</div>
+                <div className={showContactInfo ? "contact-info-footer" : "contact-info-footer-hidden"}>{message}</div>
             </div >
         </>
     );
