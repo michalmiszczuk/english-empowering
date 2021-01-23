@@ -32,7 +32,7 @@ function Calendar(props) {
         if (lessons.length === 0) setIsLoading(true)
         else setIsLoading(false)
         return () => setIsLoading(false)
-    }, [lessons.length])
+    }, [lessons.length, setIsLoading])
 
 
     return (

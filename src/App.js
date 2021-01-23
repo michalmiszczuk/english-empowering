@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Route, Redirect, Switch, BrowserRouter} from "react-router-dom";
 
 import NavigationSite from "./Components/Home-Navigation/NavigationSite";
@@ -22,8 +22,13 @@ import ErrorBoundary from "./Components/common/ErrorBoundary";
 import ToastProvider from "./contexts/ToastProvider";
 import {ToastContainer} from "react-toastify";
 import LoadingProvider from "./contexts/LoadingProvider";
+import Aos from "aos";
 
 function App() {
+  useEffect(() => {
+    Aos.init({duration: 1000});
+  }, []);
+
   return (
     <BrowserRouter>
       <ErrorBoundary>

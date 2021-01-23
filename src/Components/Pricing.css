@@ -6,7 +6,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  animation: blurPic 2s ease;
 }
 
 .main-pricing-pic {
@@ -17,14 +16,5 @@
 @media (max-width: 767px) {
   .main-pricing-pic {
     height: 7rem;
-  }
-}
-
-@keyframes blurPic {
-  0% {
-    filter: blur(6px);
-  }
-  100% {
-    filter: blur(none);
   }
 }

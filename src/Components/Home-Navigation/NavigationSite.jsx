@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBottomButtons from './NavBottomButtons';
 import MainDescriptionElement from './MainDescriptionElement';
 import MainHeader from './MainHeader';
@@ -6,20 +6,31 @@ import MainHeader from './MainHeader';
 import book from '../../static/newbook.jpg'
 import pictureMe from '../../static/profilePic.jpg'
 import MainContainer from '../common/MainContainer'
+import Aos from "aos"
+import 'aos/dist/aos.css'
 import "./NavigationSite.css"
 
 
 
 function NavigationSite({ user, handleLogOut }) {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, [])
 
     return (
 
         <MainContainer upperBar user={user} handleLogOut={handleLogOut}>
             <MainHeader />
-            <MainDescriptionElement picture={book} text={sampleText} flowDirection="description-row" descriptionText="description-text" />
-            <MainDescriptionElement picture={pictureMe} text={sampleText2} flowDirection="description-row row-reversed" descriptionText="description-text text-reversed" />
-            <NavBottomButtons />
-        </MainContainer>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                <MainDescriptionElement picture={book} text={sampleText} flowDirection="description-row" descriptionText="description-text" />
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <MainDescriptionElement picture={pictureMe} text={sampleText2} flowDirection="description-row row-reversed" descriptionText="description-text text-reversed" />
+            </div>
+            <div >
+                <NavBottomButtons />
+            </div>
+        </MainContainer >
     );
 }
 

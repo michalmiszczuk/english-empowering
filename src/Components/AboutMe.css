@@ -47,6 +47,9 @@
   .main-pic {
     height: 20vh;
   }
+  .main-pic-top {
+    height: 16vh;
+  }
 
   .profil-pic {
     display: none;
@@ -63,11 +66,11 @@
     margin: 0rem;
   }
   .phone-photos {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
+
   .phone-photos-bottom {
     width: 100%;
     display: flex;

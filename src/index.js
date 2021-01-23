@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import "./fonts/Roboto-Regular.ttf";
+import "aos/dist/aos.css";
 
 import * as serviceWorker from "./serviceWorker";
 

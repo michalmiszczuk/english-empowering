@@ -3,10 +3,13 @@ import joy from '../static/joy.jpg';
 import books from '../static/books.jpg';
 import MainContainer from './common/MainContainer';
 import MainDescriptionElement from './Home-Navigation/MainDescriptionElement';
+import useScrollUp from '../hooks/useScroller';
 import "./Lessons.css";
 
 
 function Lessons(props) {
+    useScrollUp()
+
 
     return (
         <MainContainer navBar title="O zajęciach">
@@ -14,8 +17,12 @@ function Lessons(props) {
                 <p id="quote">“Smooth seas do not make skillful sailors.” ― African Proverb</p>
             </div>
             <div className="phone-main-text">
-                <MainDescriptionElement picture={joy} text={lessonsText} flowDirection="lessons-description-row" descriptionText="lessons-description-text" />
-                <MainDescriptionElement picture={books} text={lessonsTextTwo} flowDirection="lessons-description-row lessons-row-reversed" descriptionText="lessons-description-text text-reversed" />
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                    <MainDescriptionElement picture={joy} text={lessonsText} flowDirection="lessons-description-row" descriptionText="lessons-description-text" />
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
+                    <MainDescriptionElement picture={books} text={lessonsTextTwo} flowDirection="lessons-description-row lessons-row-reversed" descriptionText="lessons-description-text text-reversed" />
+                </div>
             </div>
         </MainContainer>
     );

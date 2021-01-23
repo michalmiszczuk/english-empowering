@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Footer from '../Footer';
 import NavBar from './NavBar';
@@ -7,6 +7,7 @@ import NavUpperBar from '../Home-Navigation/NavUpperBar';
 import ShiftingDiv from './ShiftingDiv';
 import useToggle from '../../hooks/toggler';
 import './MainContainer.css'
+
 
 function MainContainer({ children, upperBar, navBar, title }) {
 

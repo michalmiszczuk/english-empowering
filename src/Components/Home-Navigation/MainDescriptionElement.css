@@ -69,7 +69,7 @@
   }
 
   .row-reversed {
-    flex-flow: row;
+    flex-flow: row-reverse;
   }
 
   .book-me-pic {

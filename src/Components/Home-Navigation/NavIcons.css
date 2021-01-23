@@ -4,6 +4,7 @@
   justify-content: space-around;
   margin-top: 0.5rem;
   width: 100%;
+  height: 11rem;
   overflow: hidden;
   transition: 1.5s ease;
   background-color: #333;
@@ -13,10 +14,16 @@
   opacity: 0;
   transition: 1s ease;
   flex-flow: nowrap;
+  height: 0;
 }
 
 @media (max-width: 767px) {
   .icons-container {
     flex-flow: wrap;
+    height: 12rem;
+  }
+
+  .hidden {
+    height: 0;
   }
 }
