@@ -1,6 +1,6 @@
 .admin-users-info {
   width: 60%;
-  color: white;
+  color: #333;
 }
 
 @media (max-width: 767px) {

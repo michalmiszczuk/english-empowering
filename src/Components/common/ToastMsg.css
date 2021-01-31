@@ -12,7 +12,6 @@
   background-color: rgb(252, 97, 80);
   /* background-color: #555; */
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.2rem;
 }
 
@@ -27,9 +26,8 @@
   height: 12%;
   z-index: 1;
   animation: slide-in 1s;
-  background-color: green;
+  background-color: rgb(89, 212, 89);
   color: white;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 1.2rem;
 }
 

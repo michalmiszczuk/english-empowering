@@ -1,6 +1,9 @@
 .users-info-main-left {
   width: 100%;
-  color: white;
+  color: #333;
+  background-color: #eee;
+  margin: 2rem 0 0 2rem;
+  padding-right: 1rem;
 }
 
 @media (max-width: 767px) {

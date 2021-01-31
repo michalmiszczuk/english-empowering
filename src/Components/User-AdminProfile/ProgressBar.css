@@ -1,19 +1,20 @@
 .progress-bar-div {
   width: 50%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   align-content: flex-start;
-  font-family: Roboto;
-  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 1rem;
   box-sizing: border-box;
   padding-left: 20px;
   margin-bottom: 5px;
 }
 
 .progress-bar-table {
-  border: 1px solid white;
+  border: 1px solid #333;
   width: 10rem;
   border-collapse: collapse;
   cursor: pointer;
@@ -26,7 +27,8 @@
 
 th {
   height: 2.6rem;
-  border: 1px groove white;
+  border: 1px solid grey;
+  color: #555;
 }
 
 @media (max-width: 767px) {

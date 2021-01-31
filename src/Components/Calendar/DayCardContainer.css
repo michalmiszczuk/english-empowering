@@ -10,17 +10,17 @@
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  color: black;
+  color: #222;
   padding-top: 0.3rem;
   background-color: white;
 }
 
 .sobota {
-  background-color: #d5e6ff;
+  background-color: var(--sobota);
 }
 
 .niedziela {
-  background-color: #ffd5d5;
+  background-color: var(--niedziela);
 }
 
 .day-date {

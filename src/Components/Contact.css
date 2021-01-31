@@ -7,14 +7,23 @@
   background-image: url(../static/Blog/blog8.jpg);
 }
 
-.contact-text-container {
+.contact-container {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #222;
+  font-weight: bold;
   padding: 4rem 0rem 4rem 0rem;
+}
+
+.contact-text-container {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  flex-flow: column nowrap;
+  box-shadow: 0 0 30px 15px #eee;
 }
 
 .contact-info {
@@ -26,6 +35,10 @@
 @media (max-width: 767px) {
   #contact-photo {
     height: 12rem;
+  }
+
+  .contact-text-container {
+    width: 100%;
   }
 
   .contact-info {

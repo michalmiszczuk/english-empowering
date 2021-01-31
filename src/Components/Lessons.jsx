@@ -1,7 +1,6 @@
 import React from 'react';
 import joy from '../static/joy.jpg';
 import books from '../static/books.jpg';
-import MainContainer from './common/MainContainer';
 import MainDescriptionElement from './Home-Navigation/MainDescriptionElement';
 import useScrollUp from '../hooks/useScroller';
 import "./Lessons.css";
@@ -12,19 +11,20 @@ function Lessons(props) {
 
 
     return (
-        <MainContainer navBar title="O zajęciach">
-            <div className="main-sea-photo">
+        <>
+            <h1 data-aos="fade-up">O zajęciach</h1>
+            <div className="main-sea-photo" data-aos="fade-up" >
                 <p id="quote">“Smooth seas do not make skillful sailors.” ― African Proverb</p>
             </div>
             <div className="phone-main-text">
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="bottom-bottom">
+                <div data-aos="fade-up">
                     <MainDescriptionElement picture={joy} text={lessonsText} flowDirection="lessons-description-row" descriptionText="lessons-description-text" />
                 </div>
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
-                    <MainDescriptionElement picture={books} text={lessonsTextTwo} flowDirection="lessons-description-row lessons-row-reversed" descriptionText="lessons-description-text text-reversed" />
+                <div data-aos="fade-up">
+                    <MainDescriptionElement picture={books} text={lessonsTextTwo} flowDirection="lessons-description-row lessons-row-reversed" descriptionText="lessons-description-text lessons-text-reversed" />
                 </div>
             </div>
-        </MainContainer>
+        </>
     );
 }
 

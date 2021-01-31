@@ -109,9 +109,10 @@
     transform: translateY(-10rem);
     justify-content: center;
     align-items: center;
-    bottom: -20vh;
+    bottom: 25vh;
     left: 30%;
     opacity: 0;
+    transform: scale(0.2);
     width: 10rem;
     height: 5rem;
     font-size: 0.5rem;

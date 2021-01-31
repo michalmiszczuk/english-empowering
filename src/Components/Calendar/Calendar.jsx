@@ -8,8 +8,10 @@ import { getLessons } from "../../services/lessonServices"
 import get14days from "../../utils/getDates"
 import "./Calendar.css"
 import { LoadingContext } from '../../contexts/LoadingContext';
+import useScrollUp from '../../hooks/useScroller'
 
 function Calendar(props) {
+    useScrollUp()
 
     const { refreshUser } = useContext(UserContext)
     const { setIsLoading } = useContext(LoadingContext)

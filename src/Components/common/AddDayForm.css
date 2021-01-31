@@ -1,10 +1,10 @@
 .add-day-form-cont {
   display: flex;
   flex-flow: column wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   width: fit-content;
-  background-color: white;
+  background-color: #eee;
   border-radius: 10px;
   position: relative;
   margin-top: 0.5rem;
@@ -13,11 +13,11 @@
 }
 
 .sobota {
-  background-color: #d5e6ff;
+  background-color: var(--sobota);
 }
 
 .niedziela {
-  background-color: #ffd5d5;
+  background-color: var(--niedziela);
 }
 
 .close-icon-add-day {

@@ -10,10 +10,11 @@
 .user-selector {
   width: 25%;
   height: 3rem;
-  background-color: #333;
+  background-color: #eee;
   font-size: 1rem;
-  color: white;
+  color: #333;
   margin-left: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -25,23 +26,15 @@
 }
 
 .user-selector-full {
-  width: 25%;
   height: 12rem;
-  background-color: #555;
-  font-size: 1rem;
-  color: white;
   margin-left: 2rem;
-  display: flex;
-  flex-flow: column;
   align-items: center;
-  transition: 500ms ease-in;
-  cursor: pointer;
-  padding: 10px;
-  overflow-y: scroll;
+  border-radius: 0;
+  overflow-y: auto;
 }
 
 :hover.user-selector {
-  background-color: #555;
+  background-color: #ccc;
 }
 
 .users-list {
@@ -70,6 +63,7 @@
 
 .one-user-select {
   width: 100%;
+  padding: 0.2rem 0;
   transition: 200ms ease-in;
 }
 
@@ -110,7 +104,7 @@
   }
 
   :hover.user-selector {
-    background-color: #333;
+    background-color: none;
   }
 
   .one-user-select {

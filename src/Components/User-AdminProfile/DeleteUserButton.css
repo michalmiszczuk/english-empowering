@@ -7,8 +7,11 @@
 
 #delete-button {
   background-color: crimson;
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s ease;
+  color: white;
 }
 
 #delete-button:hover {

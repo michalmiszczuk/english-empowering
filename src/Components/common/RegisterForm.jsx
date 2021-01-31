@@ -54,7 +54,7 @@ function RegisterForm({ iconClick, refreshUser }) {
                     <Logo logoClass="forms-logo" />
                 </div>
                 <div className="form-title">Zarejestruj</div>
-                <InputField name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"}></InputField>
+                <InputField autoFocus name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"}></InputField>
                 <InputField name={"phone"} label={"Telefon :"} onChange={(event) => setPhone(event.target.value)} error={phoneError} value={"phone"}></InputField>
                 <InputField name={"first name"} label={"Imię :"} onChange={(event) => setFirstName(event.target.value)} error={firstNameError} value={"firstName"}></InputField>
                 <InputField name={"second name"} label={"Nazwisko :"} onChange={(event) => setSecondName(event.target.value)} error={secondNameError} value={"secondName"}></InputField>

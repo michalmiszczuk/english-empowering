@@ -5,7 +5,7 @@ import "./register-login-forms.css"
 function Logo({ logoClass }) {
     return (
         <div className={logoClass}>
-            <img id="logo" src={logo} alt="" style={{ width: "100%", height: "100%" }} />
+            <img id="logo" src={logo} alt="" />
         </div>
 
     );

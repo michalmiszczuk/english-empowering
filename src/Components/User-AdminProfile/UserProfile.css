@@ -1,6 +1,6 @@
 .main-content-users {
   width: 100%;
-  color: white;
+  color: #333;
   display: flex;
   flex-flow: row wrap;
 }

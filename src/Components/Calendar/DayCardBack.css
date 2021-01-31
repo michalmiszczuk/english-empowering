@@ -11,6 +11,15 @@
   align-content: flex-start;
   color: black;
   padding-top: 0.3rem;
+  background-color: #eee;
+}
+
+.sobota {
+  background-color: var(--sobota);
+}
+
+.niedziela {
+  background-color: var(--niedziela);
 }
 
 .day-card-back {

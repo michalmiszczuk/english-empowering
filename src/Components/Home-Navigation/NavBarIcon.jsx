@@ -3,9 +3,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './NavBarIcon.css'
 
-function NavBarIcon(props) {
+function NavBarIcon({ onClick }) {
     return (
-        <div>
+        <div onClick={onClick}>
             <FontAwesomeIcon icon={faBars} id="navbar-menu-icon" />
         </div>
     );

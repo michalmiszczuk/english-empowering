@@ -52,8 +52,8 @@ function LoginForm(props) {
                 </div>
                 <Link to="/"><FontAwesomeIcon className="close-icon" icon={faTimes} /></Link>
                 <div className="form-title">Logowanie</div>
-                <InputField name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"} />
-                <InputField name={"password"} label={"Password :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"} />
+                <InputField autoFocus name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"} />
+                <InputField name={"hasło"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"} />
                 <Button text="Zaloguj !" btnClass="login-register-buttons" onClick={checkErrors ? null : handleLoginSubmit} validError={checkErrors} />
             </div>
         </div>

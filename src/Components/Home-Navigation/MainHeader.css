@@ -6,6 +6,7 @@
   padding: 5rem 0rem;
   color: cornsilk;
   display: flex;
+  opacity: 0.85;
   flex-flow: row wrap;
   justify-content: flex-start;
   font: 2rem Indie Flower, cursive;
@@ -32,7 +33,7 @@
   .navigation-main-header {
     padding: 2.5rem 0rem;
     font: 1rem Indie Flower, cursive;
-    margin-top: 0.5rem;
+    margin-top: 4rem;
     margin-bottom: 1.5rem;
   }
 

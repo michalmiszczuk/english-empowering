@@ -1,16 +1,12 @@
-.navigation-learn-more {
+.navigation-main-photo {
   background-image: url(../../static/london3.jpg);
-  background-size: 80%;
   background-position: center;
-  background-position-y: 30%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: space-evenly;
-  width: 100%;
+  /* background-size: 100%; */
+  /* background-position-y: 30%; */
+  background-size: contain;
+  width: 100vw;
   height: 30rem;
-  margin-top: 2rem;
+  background-repeat: no-repeat;
 }
 
 .nav-bottom-buttons-container {
@@ -28,16 +24,9 @@
 }
 
 @media (max-width: 767px) {
-  .navigation-learn-more {
-    background-position-x: 0%;
+  .navigation-main-photo {
     background-size: contain;
-  }
-
-  .navigation-learn-more {
-    height: 14rem;
-  }
-  .nav-bottom-buttons-text {
-    color: #000;
-    font-size: 1rem;
+    background-position-y: 30%;
+    height: 12rem;
   }
 }

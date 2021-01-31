@@ -1,7 +1,7 @@
 import React from 'react';
 import "./inputField.css"
 
-function InputField({ name, label, error, type, onChange, value, addDayForm }) {
+function InputField({ name, label, error, type, onChange, value, addDayForm, autoFocus }) {
 
     const checkError = () => {
         if (error) {
@@ -18,7 +18,7 @@ function InputField({ name, label, error, type, onChange, value, addDayForm }) {
     return (
         <div className={addDayForm ? "input-field-container add-day-form" : "input-field-container"}>
             <label id="input-label" className={msg ? "error-background" : 'input-label'} htmlFor={name}>{label}</label>
-            <input autoFocus
+            <input autoFocus={autoFocus ? true : false}
                 className="input-field"
                 id={name}
                 name={name}

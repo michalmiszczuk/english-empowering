@@ -1,29 +1,44 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Footer from '../Footer';
 import NavBar from './NavBar';
-import NavIcons from '../Home-Navigation/NavIcons';
 import NavUpperBar from '../Home-Navigation/NavUpperBar';
-import ShiftingDiv from './ShiftingDiv';
 import useToggle from '../../hooks/toggler';
 import './MainContainer.css'
+import SideBar from '../Home-Navigation/SideBar';
 
 
-function MainContainer({ children, upperBar, navBar, title }) {
+function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons, onPricing, onContact }) {
 
     const [showMenu, toggleShowMenu] = useToggle(false)
 
     return (
 
         <div className="main-container">
-            {upperBar && <NavUpperBar onSetMenu={toggleShowMenu} />}
-            {navBar && <NavBar name={title} onSetMenu={toggleShowMenu} />}
-            <NavIcons menu={showMenu} />
-            <ShiftingDiv showMenu={showMenu}>
+            <div>
+                {upperBar && <NavUpperBar
+                    onAboutMe={onAboutMe}
+                    onLessons={onLessons}
+                    onPricing={onPricing}
+                    onContact={onContact}
+                    onSetMenu={toggleShowMenu} />}
+                {navBar && <NavBar name={title} />}
+            </div>
+            <SideBar menu={showMenu}
+                onAboutMe={() => (onAboutMe(), toggleShowMenu(false))}
+                onLessons={() => (onLessons(), toggleShowMenu(false))}
+                onPricing={() => (onPricing(), toggleShowMenu(false))}
+                onContact={() => (onContact(), toggleShowMenu(false))} />
+            {/* <NavIcons menu={showMenu}
+                onAboutMe={() => (onAboutMe(), toggleShowMenu(false))}
+                onLessons={() => (onLessons(), toggleShowMenu(false))}
+                onPricing={() => (onPricing(), toggleShowMenu(false))}
+                onContact={() => (onContact(), toggleShowMenu(false))} /> */}
+            <div className="main-body">
                 {children}
                 <Footer />
-            </ShiftingDiv>
-        </div>
+            </div>
+        </div >
     );
 }
 

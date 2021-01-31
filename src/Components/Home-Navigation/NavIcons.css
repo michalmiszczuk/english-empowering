@@ -1,49 +1,28 @@
 .icons-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: end;
+  position: fixed;
+  bottom: 50%;
   flex-flow: row wrap;
   justify-content: space-around;
-  margin-top: 0.5rem;
   width: 100%;
+  z-index: 1;
   height: 11rem;
   overflow: hidden;
   transition: 1.5s ease;
-  background-color: #333;
+  background-color: transparent;
+  border: 1px solid peru;
 }
 
 .hidden {
+  width: 0;
   opacity: 0;
-  transition: 1s ease;
-  flex-flow: nowrap;
-  height: 0;
 }
 
-@media (max-width: 597px) {
+@media (max-width: 768px) {
   .icons-container {
-    flex-flow: row wrap;
-    height: 12rem;
-  }
-
-  .hidden {
-    height: 0;
-  }
-}
-@media (min-width: 597px) and (max-width: 767px) {
-  .icons-container {
-    flex-flow: row wrap;
-    height: 7rem;
-  }
-
-  .hidden {
-    height: 0;
-  }
-}
-@media (min-width: 767px) and (max-width: 1055px) {
-  .icons-container {
-    flex-flow: row wrap;
-    height: 24rem;
-  }
-
-  .hidden {
-    height: 0;
+    height: 12.5rem;
   }
 }
