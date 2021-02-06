@@ -18,8 +18,6 @@ import { Link } from 'react-router-dom';
 function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, onContact }) {
 
     const { user, logOut } = useContext(UserContext)
-    const menuUser = user ? "menu-button" : "menu-button-phone"
-    const menuNoUser = !user ? "menu-button" : "menu-button-phone"
 
     return (
         <>
@@ -30,11 +28,11 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                         <div className="main-text">NAUKA JĘZYKA ANGIELSKIEGO</div>
                     </div>
                     <div className="upper-bar-buttons">
-                        {user && <div id="welcome-msg"> Witaj {user.name} ! </div>}
+                        {/* {user && <div id="welcome-msg" > Witaj {user.name} ! </div>} */}
                         <Button text="O mnie" onClick={onAboutMe} />
                         <Button text="Zajęcia" onClick={onLessons} />
                         <Button text="Cennik" onClick={onPricing} />
-                        <Link to="calendar"><Button text="Kalendarz" onClick={onCalendar} /></Link>
+                        {(!user || user.isAdmin) && <Link to="calendar"><Button text="Kalendarz" onClick={onCalendar} /></Link>}
                         <Button text="Kontakt" onClick={onContact} />
                         {!user && <LoginButton />}
                         {!user && <RegisterButton />}
@@ -49,17 +47,16 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                 <div className="upper-bar">
                     <div className="upper-bar-1line">
                         <Logo logoClass="main-logo" />
-                        <div className="upper-buttons">
-                            {user && <div id="welcome-msg"> Witaj {user.name} ! </div>}
+                        <div className="upper-buttons-phone">
                             {!user && <LoginButton />}
                             {!user && <RegisterButton />}
                             {user && user.isAdmin && <AdminButton />}
                             {user && !user.isAdmin && <MyAccountButton />}
                             {user && <LogOutButton onLogOut={logOut} />}
                             {user && !user.isAdmin && <ReserveLessonButton />}
-                            <div className="menu-button-phone">
-                                <NavBarIcon onClick={onSetMenu} />
-                            </div>
+                        </div>
+                        <div className="menu-button-phone">
+                            <NavBarIcon onClick={onSetMenu} />
                         </div>
                     </div>
                 </div>

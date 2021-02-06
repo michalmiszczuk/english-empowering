@@ -4,7 +4,7 @@ import Button from '../../common/Button';
 
 function RegisterButton({ handleRegisterForm }) {
     return (
-        <Link to="/register"><Button text="Zarejestruj" onClick={handleRegisterForm} /></Link>
+        <Link to="/register"><Button text="Zarejestruj" btnClass="btn-navbar-high" onClick={handleRegisterForm} /></Link>
     );
 }
 

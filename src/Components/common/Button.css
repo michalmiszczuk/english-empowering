@@ -8,13 +8,19 @@
   justify-content: center;
   align-items: center;
   width: 5.5rem;
-  height: 3rem;
+  height: 2.5rem;
   color: black;
   font-size: 0.8rem;
   transition: 0.5s ease;
   cursor: pointer;
   outline: none;
   border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.btn-navbar-high {
+  background-color: var(--button-highlighted);
+  color: white;
 }
 
 .main-button:hover {
@@ -22,46 +28,55 @@
   transition: 0.5s ease;
 }
 
+.btn-navbar-high:hover {
+  background-color: var(--button-highlighted-hover);
+}
+
 .login-register-buttons {
   font-size: 1rem;
-  background-color: rgb(255, 220, 185);
+  background-color: var(--button-highlighted);
   height: 3rem;
   width: 6rem;
+  color: white;
 }
 
 .secondary {
-  background-color: rgb(255, 220, 185);
+  background-color: var(--button-highlighted);
   width: 5rem;
   height: 2.5rem;
+  color: white;
 }
 
 .secondary:hover {
-  background-color: rgb(236, 114, 26);
+  background-color: var(--button-highlighted-hover);
 }
 
 .admin-add-buttons {
-  background-color: peru;
+  background-color: var(--button-highlighted);
   margin-top: 1rem;
+  color: white;
 }
 
 .admin-add-buttons:hover {
-  background-color: rgb(236, 114, 26);
+  background-color: var(--button-highlighted-hover);
 }
 
 .login-register-buttons:hover {
-  background-color: rgb(236, 114, 26);
+  background-color: var(--button-highlighted-hover);
 }
 
 .yes-button {
   background-color: green;
   font-size: 1rem;
   width: 5rem;
+  color: white;
 }
 
 .no-button {
   background-color: crimson;
   font-size: 1rem;
   width: 5rem;
+  color: white;
 }
 
 .yes-button:hover {
@@ -81,42 +96,41 @@
   background-color: transparent;
 }
 
-.nav-bottom-buttons {
-  width: 10rem;
-  height: 4rem;
-  font-size: 1rem;
-  background-color: #444;
-}
-
-.nav-bottom-buttons:hover {
-  background-color: peru;
-}
-
 .log-res {
+  color: white;
   width: 5rem;
   height: 2rem;
   font-size: 0.7rem;
-  background-color: peru;
+  background-color: var(--button-highlighted);
 }
 
 .reserve-button {
-  border: 1px solid white;
-  border-right: 0px;
-  border-left: 0px;
-  border-radius: 10px;
+  background-color: var(--button-highlighted);
+  color: White;
+}
+
+.reserve-button:hover {
+  background-color: var(--button-highlighted-hover);
+  color: White;
 }
 
 @media (max-width: 767px) {
   .main-button {
     width: 3.5rem;
     height: 1.5rem;
-    font-size: 0.7rem;
-    margin-right: 1rem;
-    /* background-color: #eee; */
+    font-size: 0.5rem;
+    margin-right: 0;
+    background-color: #eee;
+    margin: 0 0.7rem;
+  }
+
+  .btn-navbar-high {
+    color: white;
+    background-color: var(--button-highlighted);
   }
 
   .main-button:hover {
-    background-color: #222;
+    background-color: var(--button-highlighted-hover);
   }
 
   .main-button-disabled {
@@ -128,6 +142,7 @@
     font-size: 0.7rem;
     height: 2rem;
     width: 4rem;
+    background-color: var(--button-highlighted);
   }
 
   .secondary {
@@ -137,30 +152,20 @@
   }
 
   .admin-add-buttons {
-    background-color: peru;
+    background-color: var(--button-highlighted);
     border-radius: 10px;
     height: 3rem;
     width: 5rem;
     font-size: 0.8rem;
   }
 
-  .nav-bottom-buttons {
-    width: 5rem;
-    height: 3rem;
-    font-size: 1rem;
-    background-color: #444;
-    font-size: 0.7rem;
-    border-radius: 10px;
-  }
-
   .log-res {
     font-size: 0.5rem;
-    background-color: peru;
+    background-color: var(--button-highlighted);
   }
 
   .reserve-button {
-    border-top: 0.5px solid white;
-    border-bottom: 0.5px solid white;
-    border-radius: 7px;
+    background-color: var(--button-highlighted);
+    color: white;
   }
 }

@@ -1,35 +1,24 @@
 .side-bar-container {
   position: fixed;
   z-index: 1;
-  top: 10%;
+  top: 0;
   right: 0;
   width: 12rem;
-  height: 27rem;
+  height: 100vh;
   border-radius: 5px;
-  background-color: #999;
+  background-color: white;
   transition: 0.5s ease-in;
   padding: 1rem 0 0 1rem;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
-  /* transform: translateX(-5rem); */
+  border: 1px solid #eee;
+  transform: translateX(0rem);
 }
 
 .side-bar-hidden {
-  position: fixed;
-  z-index: 1;
-  transform: translateX(5rem);
-  top: 10%;
-  right: 0;
-  transition: 0.5s ease-in;
-  width: 0;
-  opacity: 0;
-  height: 25rem;
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: center;
+  transform: translateX(15rem);
 }
 
 .nav-logo {
@@ -38,9 +27,9 @@
 }
 
 .side-bar-item {
-  color: white;
+  color: #222;
   margin-bottom: 1.5rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: "Raleway";
   font-weight: 100;
   font-style: italic;

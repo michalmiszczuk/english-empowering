@@ -13,6 +13,10 @@
   background-size: cover;
 }
 
+.main-blury {
+  opacity: 0.2;
+}
+
 .main-body {
   width: 100%;
 }

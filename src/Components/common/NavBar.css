@@ -14,8 +14,9 @@
   left: 50%;
   margin-left: -5rem;
   font-family: "Raleway";
+  font-weight: normal;
   font-style: italic;
-  color: #222;
+  color: #333;
 }
 
 .nav-bar-icon {

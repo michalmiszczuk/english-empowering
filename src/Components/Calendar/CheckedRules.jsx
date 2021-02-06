@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckSquare, faSquare } from '@fortawesome/free-solid-svg-icons'
 import './CheckedRules.css'
+import { Link } from 'react-router-dom';
 
 function CheckedRules({ markedError, checkedRules, handleSetCheckRules }) {
 
@@ -12,7 +13,7 @@ function CheckedRules({ markedError, checkedRules, handleSetCheckRules }) {
                 color="#333"
                 onClick={handleSetCheckRules}
                 style={{ marginRight: 5 }} />
-                - zapoznałem się z regulaminem
+                - zapoznałem się z <Link className="link-to-terms" to="/termsconditions">regulaminem</Link>
         </div>
     );
 }

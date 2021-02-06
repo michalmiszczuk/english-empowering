@@ -14,7 +14,6 @@
 }
 
 .progress-bar-table {
-  border: 1px solid #333;
   width: 10rem;
   border-collapse: collapse;
   cursor: pointer;
@@ -27,8 +26,8 @@
 
 th {
   height: 2.6rem;
-  border: 1px solid grey;
   color: #555;
+  box-shadow: 0px 0px 20px 5px #ddd;
 }
 
 @media (max-width: 767px) {

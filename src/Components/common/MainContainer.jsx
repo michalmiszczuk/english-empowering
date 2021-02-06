@@ -13,32 +13,29 @@ function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons
     const [showMenu, toggleShowMenu] = useToggle(false)
 
     return (
-
-        <div className="main-container">
-            <div>
-                {upperBar && <NavUpperBar
-                    onAboutMe={onAboutMe}
-                    onLessons={onLessons}
-                    onPricing={onPricing}
-                    onContact={onContact}
-                    onSetMenu={toggleShowMenu} />}
-                {navBar && <NavBar name={title} />}
-            </div>
+        <>
+            <div className={showMenu ? "main-container main-blury" : "main-container"}>
+                <div>
+                    {upperBar && <NavUpperBar
+                        onAboutMe={onAboutMe}
+                        onLessons={onLessons}
+                        onPricing={onPricing}
+                        onContact={onContact}
+                        onSetMenu={toggleShowMenu} />}
+                    {navBar && <NavBar name={title} />}
+                </div>
+                <div className="main-body">
+                    {children}
+                    <Footer />
+                </div>
+            </div >
             <SideBar menu={showMenu}
-                onAboutMe={() => (onAboutMe(), toggleShowMenu(false))}
-                onLessons={() => (onLessons(), toggleShowMenu(false))}
-                onPricing={() => (onPricing(), toggleShowMenu(false))}
-                onContact={() => (onContact(), toggleShowMenu(false))} />
-            {/* <NavIcons menu={showMenu}
-                onAboutMe={() => (onAboutMe(), toggleShowMenu(false))}
-                onLessons={() => (onLessons(), toggleShowMenu(false))}
-                onPricing={() => (onPricing(), toggleShowMenu(false))}
-                onContact={() => (onContact(), toggleShowMenu(false))} /> */}
-            <div className="main-body">
-                {children}
-                <Footer />
-            </div>
-        </div >
+                onCloseIcon={() => toggleShowMenu(false)}
+                onAboutMe={() => { onAboutMe(); toggleShowMenu(false) }}
+                onLessons={() => { onLessons(); toggleShowMenu(false) }}
+                onPricing={() => { onPricing(); toggleShowMenu(false) }}
+                onContact={() => { onContact(); toggleShowMenu(false) }} />
+        </>
     );
 }
 

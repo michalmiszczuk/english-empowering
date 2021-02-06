@@ -4,6 +4,11 @@
   margin: 1rem;
 }
 
+.link-to-terms {
+  color: blue;
+  text-decoration: underline;
+}
+
 .mark-error {
   background-color: salmon;
 }

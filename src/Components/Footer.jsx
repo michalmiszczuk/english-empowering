@@ -14,7 +14,7 @@ function Footer({ props }) {
 
     return (
         <>
-            <div data-aos="fade-down" data-aos-duration="1500" data-aos-anchor-placement="center-bottom" id="footer-container-desktop">
+            <div id="footer-container-desktop">
                 <a href="https://www.facebook.com/athlarster" data-tooltip="facebook" className="footer-icon"><FontAwesomeIcon icon={faFacebookSquare} className="fa-lg" /></a>
                 <div className="footer-icon" data-tooltip="athlarster@gmail.com" ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
                 <a className="footer-icon" data-tooltip="579 870 405" ><FontAwesomeIcon icon={faPhone} className="fa-lg" /></a>

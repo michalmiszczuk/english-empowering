@@ -50,7 +50,7 @@ function UserProfile(props) {
     };
 
     return (
-        <MainContainer navBar title="Mój profil">
+        <MainContainer navBar title="Moje konto">
             <div className="main-content-users">
                 <div className="left-user-profile-desktop">
                     <PersonalInfo user={user} />

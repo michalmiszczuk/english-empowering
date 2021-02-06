@@ -16,8 +16,10 @@ code {
 }
 
 :root {
-  --sobota: #ffedd5;
+  --sobota: #fae5ca;
   --niedziela: #ffd5d5;
+  --button-highlighted: #f0b17c;
+  --button-highlighted-hover: #e97d25;
 }
 
 .link-button {
@@ -53,7 +55,7 @@ h1 {
   font-size: 2.8rem;
   margin-top: 3rem;
   font-style: italic;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 @media (max-width: 767px) {

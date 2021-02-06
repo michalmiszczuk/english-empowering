@@ -41,18 +41,18 @@
 }
 
 .spinner-sector-blue {
-  border-top: 0.3rem solid lightblue;
+  border-top: 0.3rem solid var(--sobota);
   animation: rotate 2s ease-out infinite;
 }
 
 .spinner-sector-red {
   animation: rotate 2.5s ease-in infinite;
-  border-top: 0.3rem solid lightcoral;
+  border-top: 0.3rem solid #e8cafa;
 }
 
 .spinner-sector-green {
   animation: rotate 1.5s ease-in-out infinite;
-  border-top: 0.3rem solid lightgreen;
+  border-top: 0.3rem solid #caeefa;
 }
 
 @media (max-width: 767px) {
@@ -74,17 +74,17 @@
   }
   .spinner-sector-green {
     animation: rotate 1.5s ease-in-out infinite;
-    border-top: 0.2rem solid lightgreen;
+    border-top: 0.2rem solid var(--sobota);
   }
 
   .spinner-sector-blue {
-    border-top: 0.2rem solid lightblue;
+    border-top: 0.2rem solid #e8cafa;
     animation: rotate 2s ease-out infinite;
   }
 
   .spinner-sector-red {
     animation: rotate 2.5s ease-in infinite;
-    border-top: 0.2rem solid lightcoral;
+    border-top: 0.2rem solid #caeefa;
   }
 }
 
