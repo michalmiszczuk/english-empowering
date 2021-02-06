@@ -17,7 +17,7 @@ function Pricing(props) {
                 <img src={books} alt="" className="main-pricing-pic" />
                 <img src={london2} alt="" className="main-pricing-pic" />
             </div>
-            <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+            <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
                 <div className="pricing-cards-container">
                     <InfoCard containerClass="pricing-card" header="Rozwój ogólny" mainText="70zł" headerClass="pricing-header" mainTextClass="pricing-text" />
                     <InfoCard containerClass="pricing-card" header="Przygotowanie do egzaminów na poziomie do B2" mainText="70zł" headerClass="pricing-header" mainTextClass="pricing-text" />
