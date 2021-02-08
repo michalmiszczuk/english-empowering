@@ -8,9 +8,9 @@ function LogResButtons(props) {
     }
 
     return (
-        <div className="yes-no-buttons ">
-            <Link style={noTextDec} to='/login'><Button text="ZALOGUJ" btnClass="log-res" /></Link>
-            <Link style={noTextDec} to='/register'><Button text="ZAREJESTRUJ" btnClass="log-res" /></Link>
+        <div className="yes-no-buttons log-res-buttons ">
+            <Link style={noTextDec} to='/login'><Button text="Zaloguj" btnClass="log-res" /></Link>
+            <Link style={noTextDec} to='/register'><Button text="Zarejestruj" btnClass="log-res" /></Link>
         </div>
     );
 }

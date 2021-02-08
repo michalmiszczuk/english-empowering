@@ -7,7 +7,7 @@
 
 .main-pic {
   height: 41vh;
-  box-shadow: 1rem 1rem 1.5rem 0 rgb(167, 166, 166);
+  box-shadow: 5px 5px 20px 5px rgb(167, 166, 166);
 }
 
 .first-row {

@@ -9,7 +9,15 @@
 
 @media (max-width: 767px) {
   .yes-no-buttons {
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
+    flex-flow: column;
+    height: 25%;
+    margin-bottom: 1rem;
+  }
+
+  .log-res-buttons {
+    height: 40%;
   }
 }

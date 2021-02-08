@@ -30,7 +30,7 @@ function NavigationSite({ user, handleLogOut }) {
 
     return (
         <MainContainer upperBar user={user} handleLogOut={handleLogOut} onAboutMe={handleAboutME} onLessons={handleLessons} onPricing={handlePricing} onContact={handleContact}>
-            <div className="main-text-phone" data-aos="slide-down" >Nauka języka angielskiego</div>
+            <div className="main-text-phone" data-aos="slide-down" >NAUKA JĘZYKA ANGIELSKIEGO</div>
             <div data-aos="slide-down" >
                 <MainHeader />
             </div>
