@@ -15,8 +15,8 @@ function Footer({ props }) {
     return (
         <>
             <div id="footer-container-desktop">
-                <a href="https://www.facebook.com/athlarster" data-tooltip="facebook" className="footer-icon"><FontAwesomeIcon icon={faFacebookSquare} className="fa-lg" /></a>
-                <div className="footer-icon" data-tooltip="athlarster@gmail.com" ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
+                <a href="https://www.facebook.com/English-Empowering-105936414259466" data-tooltip="facebook" className="footer-icon"><FontAwesomeIcon icon={faFacebookSquare} className="fa-lg" /></a>
+                <div className="footer-icon" data-tooltip="eng.empowering@gmail.com" ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
                 <a className="footer-icon" data-tooltip="579 870 405" ><FontAwesomeIcon icon={faPhone} className="fa-lg" /></a>
                 <Link className="footer-links" to="./termsconditions" ><FooterText text="Regulamin" /></Link>
                 <Link className="footer-links" to="./privacypolicy" ><FooterText text="Polityka Prywatności" /></Link>

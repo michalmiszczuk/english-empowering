@@ -1,14 +1,15 @@
 #footer-container-desktop {
   width: 100%;
+  position: fixed;
+  bottom: 0;
   color: white;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   box-sizing: border-box;
   text-decoration: none;
-  padding: 1.5rem 0rem;
+  padding: 0.7rem 0rem;
   background-color: #333;
-  height: 3.5rem;
 }
 
 .footer-icon {
