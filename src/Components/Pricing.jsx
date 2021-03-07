@@ -19,10 +19,10 @@ function Pricing(props) {
             </div>
             <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
                 <div className="pricing-cards-container">
-                    <InfoCard containerClass="pricing-card" header="Rozwój ogólny" mainText="70zł" headerClass="pricing-header" mainTextClass="pricing-text" />
-                    <InfoCard containerClass="pricing-card" header="Przygotowanie do egzaminów na poziomie do B2" mainText="70zł" headerClass="pricing-header" mainTextClass="pricing-text" />
-                    <InfoCard containerClass="pricing-card" header="Przygotowanie do Job Interview" mainText="80zł" headerClass="pricing-header" mainTextClass="pricing-text" />
-                    <InfoCard containerClass="pricing-card" header="Przygotowanie do egzaminów na poziomie C1 i C2" mainText="80zł" headerClass="pricing-header" mainTextClass="pricing-text" />
+                    <InfoCard containerClass="pricing-card" header="Rozwój ogólny" mainText="70zł" headerClass="pricing-header" mainTextClass="pricing-text" pricing />
+                    <InfoCard containerClass="pricing-card" header="Przygotowanie do egzaminów na poziomie do B2" mainText="70zł" headerClass="pricing-header" pricing mainTextClass="pricing-text" />
+                    <InfoCard containerClass="pricing-card" header="Przygotowanie do Job Interview" mainText="80zł" headerClass="pricing-header" mainTextClass="pricing-text" pricing />
+                    <InfoCard containerClass="pricing-card" header="Przygotowanie do egzaminów na poziomie C1 i C2" mainText="80zł" headerClass="pricing-header" pricing mainTextClass="pricing-text" />
                 </div>
             </div>
         </ >
