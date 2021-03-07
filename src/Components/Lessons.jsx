@@ -30,18 +30,19 @@ function Lessons(props) {
 
 export default Lessons;
 
-const lessonsText = <p> Tak jak głosi to afrykańskie przysłowie nigdy się nie rozwiniemy jeśli nie
+const lessonsText = <p> Tak jak głosi to afrykańskie przysłowie można przyjąć, że nigdy się nie rozwiniemy jeśli nie
 wyjdziemy ze swojej strefy komofortu. Dotyczy to wszystkich dziedzin życia, także nauki języków. Zajęcia u mnie
-nastawione są na wychodzenie poza strefę komfortu, lecz jednocześnie dbając o to by poziom nie był za wysoki.
-Dzięki wieloletniemu doświadczeniu już po kilku zajęciach wiem jak dobrze dobierać materiały i zadania pod
-indywidualne potrzeby. U mnie na zajęciach nie ma nudnego przerabiania jednego podręcznika przez rok czasu.
-Są ciągle nowe wyzwania, odkrywanie różnych tematów z najróżniejszych dziedzin.
+nastawione są na wychodzenie poza strefę komfortu, lecz jednocześnie dbając o to by ich poziom był dopasowany pod każdego ucznia.
+Dzięki wieloletniemu doświadczeniu już po kilku zajęciach potrafię ocenić jakie materiały i zadania dobrać pod
+indywidualne potrzeby. Na pewno nie doświadczysz nudnego przerabiania jednego podręcznika przez rok czasu.
+Natomiast będą ciągle nowe wyzwania i odkrywanie różnych tematów z najróżniejszych dziedzin.
 </p>
 
-const lessonsTextTwo = <p>  Pracując ze mną już na samym początku każdy wie gdzie się znajduje i ile mniej
-więcej pracy trzeba włożyć, żeby się dostać do upragnionego celu, bez różnicy czy to jest swobodna komunikacja
-bez błędów, wzorowe przejście rozmowy kwalifikacyjnej po angielsku czy też ogólny rozwój. Oczywiście to czy
-ten cel zostanie osiągnięty w ustalonych ramach czasowych, czy też później, a może szybciej, zależy tylko
-i wyłącznie od pracy własnej ucznia nad materiałami. Lektor jest tylko osobą, która prowadzi, poprawia błędy,
-motywuje do pracy tak aby w końcu uczeń rozwiną w pełni skrzydła i przewyższył mistrza :)
+const lessonsTextTwo = <p>  Rozpoczynając pracę ze mną, już na samym początku pomogę Ci dowiedzieć się, jaki jest poziom Twoich umiejętności,
+obierzemy cel, jaki chciałbyś osiągnąć, a następnie zaczniemy go realizować szacując, ile czasu zajmie nam zdobycie go.
+Tutaj nie ma różnicy, czy chcesz nauczyć się umiejętności swobodnej, bezbłędnej komunikacji, wzorowego przejścia rozmowy kwalifikacyjnej,
+czy po prostu – popchnąć do przodu swój rozwój. Na moich zajęciach, wszystko jest możliwe do zrealizowania. Ale już teraz pragnę podkreślić,
+że to, czy wyznaczony przez nas cel zostanie osiągnięty w ustalonych ramach czasowych, czy też później (a może szybciej!),
+zależy tylko i wyłącznie od Twojej własnej pracy nad powierzonymi Ci materiałami. Lektor jest osobą, która prowadzi, poprawia błędy,
+motywuje do pracy tak, aby uczeń mógł w pełni rozwinąć skrzydła i oczywiście – przewyższyć mistrza  :)
 </p>
