@@ -1,5 +1,5 @@
 .main-container {
-  width: 100vw;
+  width: 100%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +31,7 @@
 
 @media (max-width: 767px) {
   .main-container {
-    width: 100vw;
+    width: 100%;
   }
 
   .phone-visible {

@@ -17,19 +17,17 @@ import Contact from '../Contact';
 
 function NavigationSite({ user, handleLogOut }) {
 
-    const aboutMe = useRef(null);
+    const aboutMe = useRef();
     const lessons = useRef();
     const pricing = useRef();
-    const contact = useRef();
 
     const handleAboutME = () => aboutMe.current.scrollIntoView({ behavior: "smooth" });
     const handleLessons = () => lessons.current.scrollIntoView({ behavior: "smooth" });
     const handlePricing = () => pricing.current.scrollIntoView({ behavior: "smooth" });
-    const handleContact = () => contact.current.scrollIntoView({ behavior: "smooth" });
 
 
     return (
-        <MainContainer upperBar user={user} handleLogOut={handleLogOut} onAboutMe={handleAboutME} onLessons={handleLessons} onPricing={handlePricing} onContact={handleContact}>
+        <MainContainer upperBar user={user} handleLogOut={handleLogOut} onAboutMe={handleAboutME} onLessons={handleLessons} onPricing={handlePricing}>
             <div className="main-text-phone" data-aos="slide-down" >NAUKA JĘZYKA ANGIELSKIEGO</div>
             <div data-aos="slide-down" >
                 <MainHeader />
@@ -50,9 +48,6 @@ function NavigationSite({ user, handleLogOut }) {
                 </div>
                 <div ref={pricing}>
                     <Pricing />
-                </div>
-                <div ref={contact}>
-                    <Contact />
                 </div>
             </div>
         </MainContainer >

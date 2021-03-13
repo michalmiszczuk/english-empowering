@@ -88,7 +88,7 @@ function AdminProfile(props) {
                     </div>}
                 </div>
             </div>
-        </MainContainer>
+        </MainContainer >
 
     );
 }

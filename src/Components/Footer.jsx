@@ -6,6 +6,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import FooterText from './FooterText';
 import { Link } from 'react-router-dom';
 import "./Footer.css"
+import FooterToolTip from './FooterToolTip';
 
 function Footer({ props }) {
     const [showContactInfo, setShowContactInfo] = useState(false)
@@ -15,9 +16,9 @@ function Footer({ props }) {
     return (
         <>
             <div id="footer-container-desktop">
-                <a href="https://www.facebook.com/English-Empowering-105936414259466" data-tooltip="facebook" className="footer-icon"><FontAwesomeIcon icon={faFacebookSquare} className="fa-lg" /></a>
-                <div className="footer-icon" data-tooltip="eng.empowering@gmail.com" ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
-                <a className="footer-icon" data-tooltip="579 870 405" ><FontAwesomeIcon icon={faPhone} className="fa-lg" /></a>
+                <FooterToolTip href="https://www.facebook.com/English-Empowering-105936414259466" information="Facebook" icon={faFacebookSquare} />
+                <FooterToolTip href="mailto:eng.empowering@gmail.com" information="eng.empowering@gmail.com" icon={faEnvelope} />
+                <FooterToolTip href="tel:+48-579-870-405" information="579 870 405" icon={faPhone} />
                 <Link className="footer-links" to="./termsconditions" ><FooterText text="Regulamin" /></Link>
                 <Link className="footer-links" to="./privacypolicy" ><FooterText text="Polityka Prywatności" /></Link>
             </div >

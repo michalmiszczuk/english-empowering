@@ -47,8 +47,8 @@ function RegisterForm({ iconClick, refreshUser }) {
     const checkErrors = emailError.error || phoneError.error || firstNameError.error || secondNameError.error || passwordError.error
 
     return (
-        <div className="register-login-container">
-            <div className="register-login-forms register-form">
+        <div className="register-login-container" id="register-container">
+            <div className="register-login-forms" id="register-form">
                 <Link to="/"><FontAwesomeIcon className="close-icon" icon={faTimes} onClick={iconClick} /></Link>
                 <div className="logo-forms-container">
                     <Logo logoClass="forms-logo" />

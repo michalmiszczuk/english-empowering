@@ -45,8 +45,8 @@ function LoginForm(props) {
     const checkErrors = emailError.error || passwordError.error
 
     return (
-        <div className="register-login-container">
-            <div className="register-login-forms" >
+        <div className="register-login-container" id="login-container">
+            <div className="register-login-forms login-form" >
                 <div className="logo-forms-container">
                     <Logo logoClass="forms-logo" />
                 </div>

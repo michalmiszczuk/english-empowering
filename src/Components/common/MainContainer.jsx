@@ -8,7 +8,7 @@ import './MainContainer.css'
 import SideBar from '../Home-Navigation/SideBar';
 
 
-function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons, onPricing, onContact }) {
+function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons, onPricing }) {
 
     const [showMenu, toggleShowMenu] = useToggle(false)
 
@@ -20,7 +20,6 @@ function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons
                         onAboutMe={onAboutMe}
                         onLessons={onLessons}
                         onPricing={onPricing}
-                        onContact={onContact}
                         onSetMenu={toggleShowMenu} />}
                     {navBar && <NavBar name={title} />}
                 </div>
@@ -33,8 +32,7 @@ function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons
                 onCloseIcon={() => toggleShowMenu(false)}
                 onAboutMe={() => { onAboutMe(); toggleShowMenu(false) }}
                 onLessons={() => { onLessons(); toggleShowMenu(false) }}
-                onPricing={() => { onPricing(); toggleShowMenu(false) }}
-                onContact={() => { onContact(); toggleShowMenu(false) }} />
+                onPricing={() => { onPricing(); toggleShowMenu(false) }} />
         </>
     );
 }

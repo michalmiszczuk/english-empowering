@@ -3,7 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0rem;
+  background: url("../../static/BACKGROUND/new2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .register-login-forms {
@@ -13,11 +16,20 @@
   justify-content: center;
   align-items: center;
   width: 25rem;
-  height: fit-content;
   background-color: white;
   border-radius: 10px;
   padding: 3rem 0rem;
   border: 1px solid #222;
+  opacity: 0.8;
+  margin: 2rem 0rem;
+}
+
+#login-container {
+  height: 100vh;
+}
+
+#register-container {
+  height: fit-content;
 }
 
 .logo-forms-container {
@@ -52,7 +64,6 @@
 
 @media (max-width: 767px) {
   .register-login-container {
-    margin: 2rem 0rem;
     padding: 0rem 2rem;
   }
 
@@ -67,5 +78,11 @@
 
   .form-title {
     font-size: 1rem;
+  }
+}
+
+@media (min-height: 1000px) {
+  #register-container {
+    height: 100vh;
   }
 }
