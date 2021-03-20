@@ -36,3 +36,10 @@
     max-height: 42rem;
   }
 }
+
+@media (min-width: 767px) and (max-width: 1300px) {
+  .progress-tables {
+    width: 100%;
+    flex-flow: column;
+  }
+}
