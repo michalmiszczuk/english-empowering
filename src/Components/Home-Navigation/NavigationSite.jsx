@@ -11,7 +11,7 @@ import "./NavigationSite.css"
 import Lessons from '../Lessons';
 import Pricing from '../Pricing';
 import AboutMe from '../AboutMe';
-import Contact from '../Contact';
+import Reviews from '../Reviews';
 
 
 
@@ -19,15 +19,17 @@ function NavigationSite({ user, handleLogOut }) {
 
     const aboutMe = useRef();
     const lessons = useRef();
+    const reviews = useRef();
     const pricing = useRef();
 
     const handleAboutME = () => aboutMe.current.scrollIntoView({ behavior: "smooth" });
     const handleLessons = () => lessons.current.scrollIntoView({ behavior: "smooth" });
+    const handleReviews = () => reviews.current.scrollIntoView({ behavior: "smooth" });
     const handlePricing = () => pricing.current.scrollIntoView({ behavior: "smooth" });
 
 
     return (
-        <MainContainer upperBar user={user} handleLogOut={handleLogOut} onAboutMe={handleAboutME} onLessons={handleLessons} onPricing={handlePricing}>
+        <MainContainer upperBar user={user} handleLogOut={handleLogOut} onAboutMe={handleAboutME} onLessons={handleLessons} onPricing={handlePricing} onReviews={handleReviews}>
             <div className="main-text-phone" data-aos="slide-down" >NAUKA JĘZYKA ANGIELSKIEGO</div>
             <div data-aos="slide-down" >
                 <MainHeader />
@@ -45,6 +47,9 @@ function NavigationSite({ user, handleLogOut }) {
                 </div>
                 <div ref={aboutMe}>
                     <AboutMe />
+                </div>
+                <div ref={reviews}>
+                    <Reviews />
                 </div>
                 <div ref={pricing}>
                     <Pricing />

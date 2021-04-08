@@ -32,6 +32,17 @@
   height: fit-content;
 }
 
+#register-info {
+  border: 1px solid grey;
+  text-align: center;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.link-to-privacy {
+  color: blue;
+}
+
 .logo-forms-container {
   position: absolute;
   left: 1rem;

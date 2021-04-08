@@ -59,7 +59,8 @@ function RegisterForm({ iconClick, refreshUser }) {
                 <InputField name={"first name"} label={"Imię :"} onChange={(event) => setFirstName(event.target.value)} error={firstNameError} value={"firstName"}></InputField>
                 <InputField name={"second name"} label={"Nazwisko :"} onChange={(event) => setSecondName(event.target.value)} error={secondNameError} value={"secondName"}></InputField>
                 <InputField name={"password"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"}></InputField>
-                <Button text="Zarejestruj !" btnClass="login-register-buttons" onClick={checkErrors ? null : handleRegisterSubmit} validError={checkErrors} />
+                <div id="register-info">Kilkając "Zarejestruj" wyrażasz zgodę na przetwarzanie Twoich danych osobowych zgodnie z <Link className="link-to-privacy" to="/privacypolicy">polityką prywatności.</Link></div>
+                <Button text="Zarejestruj" btnClass="login-register-buttons" onClick={checkErrors ? null : handleRegisterSubmit} validError={checkErrors} />
             </div>
         </div>
     );

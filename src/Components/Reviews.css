@@ -1,0 +1,16 @@
+.reviews-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 2rem 4rem 1rem 4rem;
+  gap: 1rem;
+  width: 100%;
+  background-color: #eee;
+}
+
+.link-to-reviews {
+  /* background-color: yellowgreen; */
+  text-align: center;
+  grid-column: 1 / -1;
+}

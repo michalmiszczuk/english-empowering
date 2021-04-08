@@ -15,7 +15,7 @@ import '../common/MainContainer.css';
 import { Link } from 'react-router-dom';
 
 
-function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, onContact }) {
+function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, onReviews }) {
 
     const { user, logOut } = useContext(UserContext)
 
@@ -31,9 +31,9 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                         {/* {user && <div id="welcome-msg" > Witaj {user.name} ! </div>} */}
                         <Button text="O mnie" onClick={onAboutMe} />
                         <Button text="Zajęcia" onClick={onLessons} />
+                        <Button text="Opinie" onClick={onReviews} />
                         <Button text="Cennik" onClick={onPricing} />
                         {(!user || user.isAdmin) && <Link to="calendar"><Button text="Kalendarz" onClick={onCalendar} /></Link>}
-                        <Button text="Kontakt" onClick={onContact} />
                         {!user && <LoginButton />}
                         {!user && <RegisterButton />}
                         {user && user.isAdmin && <AdminButton />}

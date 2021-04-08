@@ -18,12 +18,19 @@ export function validateLogin(email, password) {
   const emailSchema = Joi.object({
     email: Joi.string()
       .email({tlds: {allow: false}})
+      .message("Email musi być właściwym adresem e-mail.")
       .required()
       .label("Email"),
   });
 
   const passwordSchema = Joi.object({
-    password: Joi.string().min(3).max(28).required().label("Hasło"),
+    password: Joi.string()
+      .min(3)
+      .message("Hasło musi mieć przynajmniej 3 znaki")
+      .max(28)
+      .message("Hasło może mieć maksimum 28 znaków.")
+      .required()
+      .label("Hasło"),
   });
 
   const emailError = emailSchema.validate({email});
@@ -39,16 +46,40 @@ export function validateRegister(email, phone, firstName, secondName, password) 
       .label("Email"),
   });
   const phoneSchema = Joi.object({
-    phone: Joi.string().min(9).max(9).required().label("Telefon"),
+    phone: Joi.string()
+      .min(9)
+      .message("Nr telefonu musi zawierać 9 cyfr.")
+      .max(9)
+      .message("Nr telefonu musi zawierać 9 cyfr.")
+      .required()
+      .label("Telefon"),
   });
   const firstNameSchema = Joi.object({
-    firstName: Joi.string().min(3).max(30).required().label("Imię"),
+    firstName: Joi.string()
+      .min(3)
+      .message("Imię musi zawierać co najmniej 3 znaki.")
+      .max(30)
+      .message("Imię może zawierać maksymalnie 30 znaków.")
+      .required()
+      .label("Imię"),
   });
   const secondNameSchema = Joi.object({
-    secondName: Joi.string().min(3).max(30).required().label("Nazwisko"),
+    secondName: Joi.string()
+      .min(3)
+      .message("Nazwisko musi zawierać co najmniej 3 znaki.")
+      .max(30)
+      .message("Nazwisko może zawierać maksymalnie 30 znaków.")
+      .required()
+      .label("Nazwisko"),
   });
   const passwordSchema = Joi.object({
-    password: Joi.string().min(3).max(28).required().label("Hasło"),
+    password: Joi.string()
+      .min(3)
+      .message("Hasło musi mieć przynajmniej 3 znaki")
+      .max(28)
+      .message("Hasło może mieć maksimum 28 znaków.")
+      .required()
+      .label("Hasło"),
   });
 
   const emailError = emailSchema.validate({email});
