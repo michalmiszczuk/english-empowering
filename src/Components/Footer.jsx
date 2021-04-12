@@ -24,7 +24,7 @@ function Footer({ props }) {
             </div >
             <div id="footer-container-phone" className="footer-icon">
                 <a href="https://www.facebook.com/athlarster" className="footer-icon"><FontAwesomeIcon icon={faFacebookSquare} className="fa-lg" /></a>
-                <div className="footer-icon" onClick={() => { setShowContactInfo(!showContactInfo); setMessage("athlarster@gmail.com") }}  ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
+                <div className="footer-icon" onClick={() => { setShowContactInfo(!showContactInfo); setMessage("eng.empowering@gmail.com") }}  ><FontAwesomeIcon icon={faEnvelope} className="fa-lg" /></div>
                 <a className="footer-icon" href="tel:+48-579-870-405" > <FontAwesomeIcon icon={faPhone} className="fa-lg" /></a>
                 <Link className="footer-links" to="./termsconditions" ><FooterText text="Regulamin" /></Link>
                 <Link className="footer-links" to="./privacypolicy" ><FooterText text="Polityka Prywatności" /></Link>

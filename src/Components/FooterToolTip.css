@@ -22,3 +22,9 @@
   transform: rotate(180deg);
   transition: 500ms ease;
 }
+
+@media (max-width: 767px) {
+  .footer-icon {
+    font-size: 0.8rem;
+  }
+}
