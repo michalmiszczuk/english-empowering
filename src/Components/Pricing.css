@@ -1,16 +1,13 @@
 #pricing-main-photo {
-  background-size: contain;
   width: 100%;
-  color: black;
-  font-family: Indie Flower, cursive;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
 }
 
 .main-pricing-pic {
-  width: 33.3%;
-  height: 15rem;
+  height: 16rem;
 }
 
 .pricing-cards-container {
@@ -32,6 +29,27 @@
     flex-flow: column wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 5rem 0;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1050px) {
+  .pricing-cards-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 970px) {
+  .main-pricing-pic {
+    height: 9rem;
+  }
+}
+
+@media (min-width: 970px) and (max-width: 1200px) {
+  .main-pricing-pic {
+    height: 12rem;
   }
 }

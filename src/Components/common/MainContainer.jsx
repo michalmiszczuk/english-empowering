@@ -15,15 +15,13 @@ function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons
     return (
         <>
             <div className={showMenu ? "main-container main-blury" : "main-container"}>
-                <div>
-                    {upperBar && <NavUpperBar
-                        onAboutMe={onAboutMe}
-                        onLessons={onLessons}
-                        onPricing={onPricing}
-                        onReviews={onReviews}
-                        onSetMenu={toggleShowMenu} />}
-                    {navBar && <NavBar name={title} />}
-                </div>
+                {upperBar && <NavUpperBar
+                    onAboutMe={onAboutMe}
+                    onLessons={onLessons}
+                    onPricing={onPricing}
+                    onReviews={onReviews}
+                    onSetMenu={toggleShowMenu} />}
+                {navBar && <NavBar name={title} />}
                 <div className="main-body">
                     {children}
                     <Footer />
@@ -33,7 +31,9 @@ function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons
                 onCloseIcon={() => toggleShowMenu(false)}
                 onAboutMe={() => { onAboutMe(); toggleShowMenu(false) }}
                 onLessons={() => { onLessons(); toggleShowMenu(false) }}
-                onPricing={() => { onPricing(); toggleShowMenu(false) }} />
+                onPricing={() => { onPricing(); toggleShowMenu(false) }}
+                onReviews={() => { onReviews(); toggleShowMenu(false) }}
+            />
         </>
     );
 }

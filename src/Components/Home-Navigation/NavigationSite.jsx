@@ -42,11 +42,11 @@ function NavigationSite({ user, handleLogOut }) {
             </div>
             <div >
                 <NavBottomButtons />
-                <div ref={lessons}>
-                    <Lessons />
-                </div>
                 <div ref={aboutMe}>
                     <AboutMe />
+                </div>
+                <div ref={lessons}>
+                    <Lessons />
                 </div>
                 <div ref={reviews}>
                     <Reviews />

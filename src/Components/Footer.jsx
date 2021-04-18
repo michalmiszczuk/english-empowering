@@ -19,7 +19,7 @@ function Footer({ props }) {
                 <FooterToolTip href="https://www.facebook.com/English-Empowering-105936414259466" information="Facebook" icon={faFacebookSquare} />
                 <FooterToolTip href="mailto:eng.empowering@gmail.com" information="eng.empowering@gmail.com" icon={faEnvelope} />
                 <FooterToolTip href="tel:+48-579-870-405" information="579 870 405" icon={faPhone} />
-                <Link className="footer-links" to="./termsconditions" ><FooterText text="Regulamin" /></Link>
+                <Link to="./termsconditions" ><FooterText text="Regulamin" /></Link>
                 <Link className="footer-links" to="./privacypolicy" ><FooterText text="Polityka Prywatności" /></Link>
             </div >
             <div id="footer-container-phone" className="footer-icon">

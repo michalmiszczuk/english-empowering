@@ -17,7 +17,7 @@
 
 .tooltipOff {
   position: absolute;
-  bottom: 5rem;
+  bottom: -5rem;
   opacity: 0;
   transform: rotate(180deg);
   transition: 500ms ease;

@@ -32,6 +32,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin-top: 10px;
+  backface-visibility: hidden;
 }
 
 @media (max-width: 767px) {

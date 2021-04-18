@@ -2,6 +2,12 @@
   color: white;
   font-size: 1rem;
   font-family: "Marcellus SC";
+  transition: 300ms;
+}
+
+.footer-text:hover {
+  color: #777;
+  transition: 300ms;
 }
 
 @media (max-width: 767px) {

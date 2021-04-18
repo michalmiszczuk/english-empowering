@@ -23,7 +23,7 @@ function LoginForm(props) {
     const { showToast } = useContext(ToastContext)
     const { setIsLoading } = useContext(LoadingContext)
 
-    const [emailError, passwordError] = validateLogin(email, password)
+    const [emailError] = validateLogin(email)
     const history = useHistory()
 
     const handleLoginSubmit = async () => {
@@ -42,7 +42,7 @@ function LoginForm(props) {
         }
 
     }
-    const checkErrors = emailError.error || passwordError.error
+    const checkErrors = emailError.error
 
     return (
         <div className="register-login-container" id="login-container">
@@ -53,7 +53,7 @@ function LoginForm(props) {
                 <Link to="/"><FontAwesomeIcon className="close-icon" icon={faTimes} /></Link>
                 <div className="form-title">Logowanie</div>
                 <InputField autoFocus name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"} />
-                <InputField name={"hasło"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"} />
+                <InputField name={"hasło"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} value={"password"} />
                 <Button text="Zaloguj" btnClass="login-register-buttons" onClick={checkErrors ? null : handleLoginSubmit} validError={checkErrors} />
             </div>
         </div>

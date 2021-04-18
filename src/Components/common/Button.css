@@ -104,6 +104,10 @@
   background-color: var(--button-highlighted);
 }
 
+.log-res:hover {
+  background-color: var(--button-highlighted-hover);
+}
+
 .reserve-button {
   background-color: var(--button-highlighted);
   color: White;

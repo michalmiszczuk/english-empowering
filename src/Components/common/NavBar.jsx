@@ -6,7 +6,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import './NavBar.css'
 
 
-function NavBar({ name, onSetMenu }) {
+function NavBar({ name }) {
 
     return (
         <div className="nav-bar">

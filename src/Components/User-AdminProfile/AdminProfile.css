@@ -1,5 +1,5 @@
 .admin-lessons-container {
-  width: 39.5%;
+  width: 50%;
   color: #333;
   display: flex;
   flex-flow: column wrap;
@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: flex-start;
     background-color: #ddd;
-    margin-top: 2rem;
+    margin: 2rem 0 4rem 0;
     padding: 0.5rem 0rem;
   }
 }

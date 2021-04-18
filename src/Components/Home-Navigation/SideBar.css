@@ -33,9 +33,7 @@
   font-family: "Raleway";
   font-weight: 100;
   font-style: italic;
-  /* border: 1px solid grey;
-  padding: 0.5rem;
-  border-radius: 5px; */
+  cursor: pointer;
 }
 
 .nav-item {
