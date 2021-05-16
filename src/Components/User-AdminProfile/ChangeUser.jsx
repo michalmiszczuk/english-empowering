@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ChangeUser.css'
+import './AdminProfile.css'
 
 function ChangeUser({ users, user, onChangeUser, }) {
 

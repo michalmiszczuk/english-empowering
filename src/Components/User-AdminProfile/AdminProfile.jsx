@@ -51,7 +51,7 @@ function AdminProfile(props) {
 
     return (
         <MainContainer navBar title="Admin">
-            <div className="main-content-users">
+            <div className="main-content-admin">
                 <AdminUsersInfo
                     user={user}
                     users={users}

@@ -1,7 +1,7 @@
 import React from 'react';
 import CancelLessonInfo from './CancelLessonInfo';
 import LessonsTable from './LessonsTable';
-import './UserReservedLessons.css'
+import './UserProfile.css'
 
 function ReservedLessonsView({ onDelete }) {
     return (

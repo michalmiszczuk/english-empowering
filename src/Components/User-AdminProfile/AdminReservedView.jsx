@@ -6,6 +6,7 @@ import Button from '../common/Button';
 import setRenderedLessons from '../../utils/setRenderedLessons';
 import { cancelLesson } from '../../services/userServices';
 import './AdminReservedView.css'
+import './AdminProfile.css'
 import { ToastContext } from '../../contexts/ToastContext';
 import { LoadingContext } from '../../contexts/LoadingContext';
 

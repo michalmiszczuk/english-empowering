@@ -1,11 +1,11 @@
 import React from 'react';
 import UserProgress from './UserProgress';
-import './UserInfo.css'
+import './UserProfile.css'
 
 
 function UserInfo({ user, handleSetLevel, noPointer }) {
     return (
-        <div key={user._id} className="users-info-main-left">
+        <div key={user._id} className="users-info">
             <UserProgress user={user} handleSetLevel={handleSetLevel} noPointer={noPointer} />
         </div>
     );

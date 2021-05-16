@@ -9,8 +9,8 @@ function FooterToolTip({ href, icon, information }) {
         <>
             <div onMouseEnter={() => setToolTip(true)} onMouseLeave={() => setToolTip(false)} >
                 <a href={href} className="footer-icon"><FontAwesomeIcon icon={icon} className="fa-lg" /></a>
-                <div className={tooltip ? "tooltipOn" : "tooltipOff"}>{information}</div>
             </div>
+            <div className={tooltip ? "tooltipOn" : "tooltipOff"}>{information}</div>
         </>
     );
 }

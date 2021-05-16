@@ -1,5 +1,6 @@
 import React from 'react';
 import "./DeleteUserButton.css"
+import "./AdminProfile.css"
 
 function DeleteUserButton({ onClick }) {
     return (

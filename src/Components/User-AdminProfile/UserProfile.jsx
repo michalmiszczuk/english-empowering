@@ -52,18 +52,9 @@ function UserProfile(props) {
     return (
         <MainContainer navBar title="Moje konto">
             <div className="main-content-users">
-                <div className="left-user-profile-desktop">
-                    <PersonalInfo user={user} />
-                    <UserInfo user={user} noPointer />
-                </div>
-                <div className="left-user-profile-phone">
-                    <PersonalInfo user={user} />
-                    <UserReservedLessons onDelete={handleCancelLesson} />
-                    <UserInfo user={user} noPointer />
-                </div>
-                <div className="reserved-lessons-desktop">
-                    <UserReservedLessons onDelete={handleCancelLesson} />
-                </div>
+                <PersonalInfo user={user} />
+                <UserInfo user={user} noPointer />
+                <UserReservedLessons onDelete={handleCancelLesson} />
             </div>
         </MainContainer>
     );

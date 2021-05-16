@@ -4,7 +4,7 @@ import ChangeUser from './ChangeUser';
 import DeleteUserButton from './DeleteUserButton';
 import UserProgress from './UserProgress';
 import PersonalInfo from './PersonalUserInfo';
-import './AdminUsersInfo.css'
+import './AdminProfile.css'
 
 function AdminUsersInfo({ user, users, onShowDeletePage, onChangeUser, refreshUser }) {
     return (
@@ -14,8 +14,8 @@ function AdminUsersInfo({ user, users, onShowDeletePage, onChangeUser, refreshUs
                 users={users}
                 onChangeUser={onChangeUser}
             />
-            <PersonalInfo user={user} />
-            <UserProgress user={user} refreshUser={refreshUser} />
+            <PersonalInfo admin user={user} />
+            <UserProgress admin user={user} refreshUser={refreshUser} />
             <DeleteUserButton onClick={onShowDeletePage} />
         </div>
     );

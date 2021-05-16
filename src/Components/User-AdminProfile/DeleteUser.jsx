@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import Button from '../common/Button';
 import { deleteUser } from '../../services/userServices';
 import "./DeleteUser.css"
+import "./AdminProfile.css"
 import { ToastContext } from '../../contexts/ToastContext';
 import { LoadingContext } from '../../contexts/LoadingContext';
 

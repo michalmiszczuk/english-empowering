@@ -1,11 +1,3 @@
-#delete-button-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0rem;
-  margin-bottom: 2rem;
-}
-
 #delete-button {
   background-color: crimson;
   display: flex;

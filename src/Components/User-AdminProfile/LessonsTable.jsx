@@ -19,6 +19,7 @@ function LessonsTable({ onDelete }) {
                     <DeleteIcon disabled={item.isDisabled} onDelete={item.isDisabled ? null : () => onDelete(item)} />
                 </div>
             )}
+            {renderedLessons.length === 0 && <div className="nolessons-info">Nie masz żadnych zarezerwowanych lekcji</div>}
         </div>
     );
 }

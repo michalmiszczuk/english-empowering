@@ -1,5 +1,5 @@
 import React from 'react';
-import "./ProgressBar.css"
+import "./UserProgress.css"
 
 function progressBar({ title, setLevel, currentLevel, noPointer }) {
     return (
@@ -8,10 +8,10 @@ function progressBar({ title, setLevel, currentLevel, noPointer }) {
             <table className={noPointer ? "progress-bar-table no-pointer" : "progress-bar-table"}>
                 <thead>
                     <tr>
-                        <th onClick={() => setLevel(1)} style={{ backgroundColor: currentLevel >= 1 ? "#f0b17c" : "#eee", }}>1</th>
-                        <th onClick={() => setLevel(2)} style={{ backgroundColor: currentLevel >= 2 ? "#f0b17c" : "#eee", }}>2</th>
-                        <th onClick={() => setLevel(3)} style={{ backgroundColor: currentLevel >= 3 ? "#f0b17c" : "#eee", }}>3</th>
-                        <th onClick={() => setLevel(4)} style={{ backgroundColor: currentLevel >= 4 ? "#f0b17c" : "#eee", }}>4</th>
+                        <td className="progress-icons" onClick={() => setLevel(1)} style={{ backgroundColor: currentLevel >= 1 ? "#f0b17c" : "#eee", }}>1</td>
+                        <td className="progress-icons" onClick={() => setLevel(2)} style={{ backgroundColor: currentLevel >= 2 ? "#ec9f5f" : "#eee", }}>2</td>
+                        <td className="progress-icons" onClick={() => setLevel(3)} style={{ backgroundColor: currentLevel >= 3 ? "#e78332" : "#eee", }}>3</td>
+                        <td className="progress-icons" onClick={() => setLevel(4)} style={{ backgroundColor: currentLevel >= 4 ? "#cd6a18" : "#eee", }}>4</td>
                     </tr>
                 </thead>
             </table>

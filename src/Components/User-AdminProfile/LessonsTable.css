@@ -11,6 +11,7 @@
   box-sizing: border-box;
   padding: 2rem 0rem;
   overflow-y: auto;
+  position: relative;
 }
 
 .each-lesson-container {
@@ -43,6 +44,18 @@
     "Helvetica Neue", sans-serif;
 }
 
+.nolessons-info {
+  display: flex;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: whitesmoke;
+  top: 50%;
+  height: 5rem;
+  margin-top: -3rem;
+  position: absolute;
+}
+
 @media (max-width: 767px) {
   .res-lessons {
     display: flex;
@@ -58,5 +71,11 @@
     height: 2.5rem;
     padding: 0rem 1rem;
     border-radius: 10px;
+  }
+
+  .nolessons-info {
+    font-size: 1rem;
+    padding: 0rem 2rem;
+    align-items: center;
   }
 }

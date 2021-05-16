@@ -5,7 +5,7 @@ import { setProgressLevel } from '../../services/userServices';
 import ProgressBar from './ProgressBar';
 import './UserProgress.css'
 
-function UserProgress({ user, noPointer, refreshUser }) {
+function UserProgress({ user, noPointer, refreshUser, admin }) {
 
     const { showToast } = useContext(ToastContext)
     const { setIsLoading } = useContext(LoadingContext)
@@ -24,7 +24,7 @@ function UserProgress({ user, noPointer, refreshUser }) {
     }
 
     return (
-        <div className="progress-container">
+        <div className="progress-container" id={admin ? "progress-admin-container" : null}>
             <div className="progress-header"> Mój postęp: </div >
             <div className="progress-tables">
                 {user.progress.map(bar =>

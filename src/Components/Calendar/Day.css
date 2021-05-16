@@ -8,11 +8,6 @@
   transition: 0.3s ease;
 }
 
-:hover.day-card {
-  transform: scale(1.1);
-  transition: 0.3s ease;
-}
-
 .day-card-inner {
   position: relative;
   width: 100%;

@@ -1,9 +1,9 @@
 import React from 'react';
-import './PersonalUserInfo.css'
+import './UserProfile.css'
 
-function PersonalInfo({ user }) {
+function PersonalInfo({ user, admin }) {
     return (
-        <div className="personal-info">
+        <div className={admin ? "personal-info-admin" : "personal-info"}>
             Imię: {user.name} <br />
             Nazwisko: {user.surname} <br />
             Telefon: {user.phone} <br />
