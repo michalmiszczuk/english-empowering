@@ -12,11 +12,16 @@ import { LoadingContext } from '../../contexts/LoadingContext';
 
 function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, refreshLessons, setShowAddPage }) {
 
+
     const [showAllLessons, setShowAllLessons] = useState(false);
     const { showToast } = useContext(ToastContext)
     const { setIsLoading } = useContext(LoadingContext)
 
+    if (!users || !user || !lessons) return <div>No users or lessons in the database.</div>
+
     const lessonsToRender = showAllLessons ? setRenderedLessons(lessons) : setRenderedLessons(user.reservedLessons)
+
+
 
     const handleCancelLesson = async (item) => {
         try {

@@ -10,7 +10,9 @@ function TermsAndConditions(props) {
     return (
         <MainContainer navBar title="Regulamin">
             <div className="terms-and-privacy">
-                <img className="terms-and-privacy-picture" src={regulamin} alt="" />
+                <div className="terms-and-privacy-picture">
+                    <img className="terms-and-privacy-picture" src={regulamin} alt="" />
+                </div>
             </div>
         </MainContainer>
     );

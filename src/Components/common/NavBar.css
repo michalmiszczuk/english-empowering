@@ -6,12 +6,13 @@
   font-size: 2rem;
   padding-top: 1rem;
   padding-bottom: 1.5rem;
+  /* border: 1px solid red; */
 }
 
 .nav-bar-text {
   position: absolute;
   width: fit-content;
-  left: 50%;
+  left: 50vw;
   margin-left: -5rem;
   font-family: "Raleway";
   font-weight: normal;

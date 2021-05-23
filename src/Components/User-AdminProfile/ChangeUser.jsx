@@ -4,9 +4,9 @@ import './AdminProfile.css'
 
 function ChangeUser({ users, user, onChangeUser, }) {
 
-    const usersToRender = users.filter(user => !user.isAdmin)
-
     const [showUsersList, setShowUsersList] = useState(false);
+    if (!users || !user) return <div>NoUsers</div>
+    const usersToRender = users.filter(user => !user.isAdmin)
 
     return (
         <div className="user-selector-container">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import AddLesson from './AddLesson';
 import AdminReservedView from './AdminReservedView';
@@ -9,6 +9,7 @@ import MainContainer from '../common/MainContainer';
 
 import { getUsers, getUser } from "../../services/userServices"
 import { getLessons } from '../../services/lessonServices'
+import { LoadingContext } from '../../contexts/LoadingContext.js';
 import "./AdminProfile.css"
 
 
@@ -21,11 +22,14 @@ function AdminProfile(props) {
 
     const [showAddPage, setShowAddPage] = useState(false);
     const [showDeletePage, setShowDeletePage] = useState(false);
+    const { setIsLoading } = useContext(LoadingContext)
 
     async function refreshUsers() {
+        setIsLoading(true)
         const { data } = await getUsers()
         setUsers(data)
         setUser(data[1])
+        setIsLoading(false)
     }
 
     async function refreshUser() {
@@ -43,11 +47,6 @@ function AdminProfile(props) {
         refreshLessons(setLessons)
         refreshUsers()
     }, [])
-
-
-    if (!lessons || !users || !user) {
-        return <LoadingAnimation />
-    }
 
     return (
         <MainContainer navBar title="Admin">

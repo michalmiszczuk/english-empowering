@@ -10,6 +10,8 @@ function UserProgress({ user, noPointer, refreshUser, admin }) {
     const { showToast } = useContext(ToastContext)
     const { setIsLoading } = useContext(LoadingContext)
 
+    if (!user) return <div>No users in the database.</div>
+
     const handleSetLevel = async (title, level) => {
         try {
             if (noPointer) return;
