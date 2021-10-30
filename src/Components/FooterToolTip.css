@@ -4,22 +4,19 @@
 }
 
 .tooltipOn {
-  background-color: #777;
+  background-color: #333;
   position: absolute;
   bottom: 5rem;
   transition: 500ms ease;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1rem 1rem;
   border-radius: 10px;
-  transform: rotate(0deg);
-  font-family: "Indie Flower";
 }
 
 .tooltipOff {
   position: absolute;
   bottom: -5rem;
   opacity: 0;
-  transform: rotate(180deg);
   transition: 500ms ease;
 }
 
