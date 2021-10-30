@@ -16,7 +16,7 @@ function DayCardContainer({ date, children, direction }) {
         < div className={checkWeekend}>
             <div className="day-date">{dayMonth}</div>
             <div className="day-name">{dayName}</div>
-            { children}
+            {children}
         </div >
     );
 }

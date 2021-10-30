@@ -1,7 +1,7 @@
 .day-card {
   background-color: transparent;
   height: 20rem;
-  width: 12rem;
+  width: 11rem;
   box-sizing: border-box;
   margin-bottom: 1rem;
   perspective: 1000px;
@@ -31,15 +31,5 @@
 @media (min-width: 1800px) {
   .day-card {
     margin: 1rem 1rem;
-  }
-}
-
-@keyframes dayBig {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.2);
   }
 }
