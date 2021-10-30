@@ -1,25 +1,14 @@
 .day-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   transform: perspective(1px) translateZ(0);
   backface-visibility: hidden;
-  /* -moz-backface-visibility: hidden; */
-  border-radius: 5px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  color: black;
-  padding-top: 0.3rem;
-  background-color: #eee;
+  -moz-backface-visibility: hidden;
+  transform: rotateY(180deg);
 }
 
 .reserve-text {
   backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  transform: perspective(1px) translateZ(0);
+  /* transform: perspective(1px) translateZ(0); */
 }
 
 .sobota {
@@ -30,8 +19,10 @@
   background-color: var(--niedziela);
 }
 
-.day-card-back {
-  transform: rotateY(180deg);
+.test {
+  width: 100%;
+  height: 100%;
+  background-color: cornflowerblue;
 }
 
 @media (max-width: 767px) {

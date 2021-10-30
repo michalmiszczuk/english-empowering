@@ -24,7 +24,7 @@ function DayCardBack({ currentDay, handleShowAddDay, lessonTime, onReserve, setR
     }
 
     return (
-        <div>
+        <>
             {user && !showAddDay && <DayCardContainer date={currentDay} direction="back">
                 <div className="reserve-text">Rezerwujesz lekcję na godzinę {lessonTime} Czy jesteś pewny ?</div>
                 <YesNoButtons onReserve={onReserveLesson} checkedRules={checkedRules} setRotatedFalse={setRotated} />
@@ -36,15 +36,16 @@ function DayCardBack({ currentDay, handleShowAddDay, lessonTime, onReserve, setR
                     <LogResButtons />
                 </div >
             </DayCardContainer>}
-            {showAddDay && <DayCardContainer date={currentDay} direction="back">
-                <AddDayForm
-                    iconClick={handleShowAddDay}
-                    currentDay={currentDay}
-                    onAddLessonSubmit={onAddLessonSubmit}
-                    date={currentDay}
-                />
-            </DayCardContainer>}
-        </div>
+            {showAddDay &&
+                <DayCardContainer date={currentDay} direction="back">
+                    <AddDayForm
+                        iconClick={handleShowAddDay}
+                        currentDay={currentDay}
+                        onAddLessonSubmit={onAddLessonSubmit}
+                        date={currentDay}
+                    />
+                </DayCardContainer>}
+        </>
     );
 }
 

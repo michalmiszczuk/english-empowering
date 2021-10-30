@@ -22,6 +22,7 @@ function LessonsContainer({ lessonsToRender, onLessonClick, refreshLessons }) {
             await deleteLesson(item._id)
             refreshLessons()
             setIsLoading(false)
+            showToast('success', "Lekcja została usunięta.")
         } catch (ex) {
             setIsLoading(false)
             if (ex.response && ex.response.status === 404)
