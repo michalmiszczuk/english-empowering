@@ -27,8 +27,7 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                         <Logo logoClass="main-logo" />
                         <div className="main-text">NAUKA JĘZYKA ANGIELSKIEGO</div>
                     </div>
-                    <div className="upper-bar-buttons">
-                        {/* {user && <div id="welcome-msg" > Witaj {user.name} ! </div>} */}
+                    <nav className="upper-bar-buttons">
                         <Button text="O mnie" onClick={onAboutMe} />
                         <Button text="Zajęcia" onClick={onLessons} />
                         <Button text="Opinie" onClick={onReviews} />
@@ -40,21 +39,21 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                         {user && !user.isAdmin && <MyAccountButton />}
                         {user && <LogOutButton onLogOut={logOut} />}
                         {user && !user.isAdmin && <ReserveLessonButton />}
-                    </div>
+                    </nav>
                 </div>
             </div >
             <div className="phone-visible">
                 <div className="upper-bar">
                     <div className="upper-bar-1line">
                         <Logo logoClass="main-logo" />
-                        <div className="upper-buttons-phone">
+                        <nav className="upper-buttons-phone">
                             {!user && <LoginButton />}
                             {!user && <RegisterButton />}
                             {user && user.isAdmin && <AdminButton />}
                             {user && !user.isAdmin && <MyAccountButton />}
                             {user && <LogOutButton onLogOut={logOut} />}
                             {user && !user.isAdmin && <ReserveLessonButton />}
-                        </div>
+                        </nav>
                         <div className="menu-button-phone">
                             <NavBarIcon onClick={onSetMenu} />
                         </div>

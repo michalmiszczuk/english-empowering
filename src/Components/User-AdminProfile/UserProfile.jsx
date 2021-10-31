@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from "../../contexts/UserContext"
-import { ToastContext } from '../../contexts/ToastContext';
 
-import MainContainer from '../common/MainContainer';
 import LoadingAnimation from '../common/LoadingAnimation';
-import PersonalInfo from './PersonalUserInfo';
+import MainContainer from '../common/MainContainer';
 import UserReservedLessons from './UserReservedLessons';
 import UserInfo from './UserInfo';
+import PersonalInfo from './PersonalUserInfo';
 
+import { UserContext } from "../../contexts/UserContext"
+import { ToastContext } from '../../contexts/ToastContext';
 import { getLessons } from '../../services/lessonServices';
 import { cancelLesson } from '../../services/userServices';
-import "./UserProfile.css"
 import { LoadingContext } from '../../contexts/LoadingContext';
+import "./UserProfile.css"
 
 function UserProfile(props) {
 

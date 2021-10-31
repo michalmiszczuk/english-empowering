@@ -46,7 +46,7 @@ function LoginForm(props) {
 
     return (
         <div className="register-login-container" id="login-container">
-            <div className="register-login-forms login-form" >
+            <form className="register-login-forms login-form" >
                 <div className="logo-forms-container">
                     <Logo logoClass="forms-logo" />
                 </div>
@@ -55,7 +55,7 @@ function LoginForm(props) {
                 <InputField autoFocus name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"} />
                 <InputField name={"hasło"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} value={"password"} />
                 <Button text="Zaloguj" btnClass="login-register-buttons" onClick={checkErrors ? null : handleLoginSubmit} validError={checkErrors} />
-            </div>
+            </form>
         </div>
     );
 }

@@ -7,7 +7,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 function SideBar({ menu, onAboutMe, onLessons, onPricing, onCloseIcon, onReviews }) {
     return (
-        <div className={menu ? "side-bar-container" : " side-bar-container side-bar-hidden"}>
+        <nav className={menu ? "side-bar-container" : " side-bar-container side-bar-hidden"}>
             <FontAwesomeIcon onClick={onCloseIcon} className="close-icon" icon={faTimes} />
             <div className="nav-logo" ><Logo /></div>
             <div className="side-bar-item" onClick={onAboutMe}>O mnie</div>
@@ -15,7 +15,7 @@ function SideBar({ menu, onAboutMe, onLessons, onPricing, onCloseIcon, onReviews
             <div className="side-bar-item" onClick={onReviews}>Opinie</div>
             <div className="side-bar-item" onClick={onPricing}>Cennik</div>
             <Link to="/calendar"><div className="side-bar-item">Kalendarz</div></Link>
-        </div >
+        </nav >
     );
 }
 

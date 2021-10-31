@@ -49,15 +49,13 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
         `add-day-form-cont niedziela` : `add-day-form-cont`;
 
     return (
-        <>
-            <div className={checkWeekend}>
-                <FontAwesomeIcon icon={faTimes} onClick={iconClick} className="close-icon-add-day" />
-                <div className="add-dayform-title"> Dodaj lekcję</div>
-                <InputField addDayForm name={"Godzina:"} label={"Godzina:"} onChange={(event) => setInputHour(event.target.value)} error={hoursError} value={"inputHour"}></InputField>
-                <InputField addDayForm name={"Minuty:"} label={"Minuty:"} onChange={(event) => setInputMinutes(event.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
-                <Button text="Dodaj!" btnClass="secondary" onClick={submitAddLesson} />
-            </div>
-        </>
+        <form className={checkWeekend}>
+            <FontAwesomeIcon icon={faTimes} onClick={iconClick} className="close-icon-add-day" />
+            <div className="add-dayform-title"> Dodaj lekcję</div>
+            <InputField addDayForm name={"Godzina:"} label={"Godzina:"} onChange={(event) => setInputHour(event.target.value)} error={hoursError} value={"inputHour"}></InputField>
+            <InputField addDayForm name={"Minuty:"} label={"Minuty:"} onChange={(event) => setInputMinutes(event.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
+            <Button text="Dodaj!" btnClass="secondary" onClick={submitAddLesson} />
+        </form>
     );
 }
 

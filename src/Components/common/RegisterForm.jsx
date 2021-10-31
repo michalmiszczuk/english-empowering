@@ -48,7 +48,7 @@ function RegisterForm({ iconClick, refreshUser }) {
 
     return (
         <div className="register-login-container" id="register-container">
-            <div className="register-login-forms" id="register-form">
+            <form className="register-login-forms" id="register-form">
                 <Link to="/"><FontAwesomeIcon className="close-icon" icon={faTimes} onClick={iconClick} /></Link>
                 <div className="logo-forms-container">
                     <Logo logoClass="forms-logo" />
@@ -61,7 +61,7 @@ function RegisterForm({ iconClick, refreshUser }) {
                 <InputField name={"password"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"}></InputField>
                 <div id="register-info">Kilkając "Zarejestruj" wyrażasz zgodę na przetwarzanie Twoich danych osobowych zgodnie z <Link className="link-to-privacy" to="/privacypolicy">polityką prywatności.</Link></div>
                 <Button text="Zarejestruj" btnClass="login-register-buttons" onClick={checkErrors ? null : handleRegisterSubmit} validError={checkErrors} />
-            </div>
+            </form>
         </div>
     );
 }

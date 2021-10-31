@@ -46,7 +46,7 @@ function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPag
     }
 
     return (
-        <div className="add-lesson-container">
+        <form className="add-lesson-container">
             <FontAwesomeIcon icon={faTimes} id="close-icon" onClick={iconClick} />
             <AddLessonScrollBar
                 dayMonth={chosenDate}
@@ -57,7 +57,7 @@ function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPag
             <InputField name={"Godzina:"} label={"Godzina:"} onChange={(event) => setInputHour(event.target.value)} error={hoursError} value={"inputHour"}></InputField>
             <InputField name={"Minuty:"} label={"Minuty:"} onChange={(event) => setInputMinutes(event.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
             <Button text="Dodaj !" btnClass="admin-add-buttons" onClick={submitAddLesson} validError={!chosenDate || hoursError.error || minutesError.error} />
-        </div>
+        </form>
     );
 }
 

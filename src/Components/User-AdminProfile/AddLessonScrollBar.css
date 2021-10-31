@@ -1,16 +1,14 @@
 #add-lesson-title {
-  color: black;
-  font-family: Roboto, cursive;
+  color: #222;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .dates-selector {
   width: 60%;
-  background-color: #333;
+  background-color: #eee;
   font-size: 1rem;
-  height: 3.5rem;
-  color: white;
+  height: 3rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -25,9 +23,8 @@
 .dates-selector-full {
   width: 60%;
   height: 18rem;
-  background-color: #333;
+  background-color: #eee;
   font-size: 1rem;
-  color: white;
   display: flex;
   flex-flow: column;
   justify-content: center;
