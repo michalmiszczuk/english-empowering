@@ -1,3 +1,20 @@
+.navigation-main-photo {
+  background-image: url(../../static/london3.jpg);
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 30rem;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .navigation-main-photo {
+    background-size: contain;
+    background-position-y: 30%;
+    height: 12rem;
+  }
+}
+
 @keyframes header-appear {
   0% {
     opacity: 0;

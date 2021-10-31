@@ -2,9 +2,9 @@ import React from 'react';
 import 'aos/dist/aos.css'
 import './Reviews.css'
 
-function Reviews(props) {
+function Reviews({ reviews }) {
     return (
-        < >
+        <section ref={reviews}>
             <h1 data-aos="fade-up" id="reviews-title">Opinie</h1>
             <div id="reviews-parent">
                 <div className="reviews-container" data-aos="fade-up">
@@ -27,7 +27,7 @@ function Reviews(props) {
                     <div className="link-to-reviews">Przeczytaj wszystkie opinie <a id="link-reviews-clickable" href="https://www.facebook.com/English-Empowering-105936414259466/reviews/">tutaj:</a> </div>
                 </div>
             </div>
-        </>
+        </section>
     );
 }
 

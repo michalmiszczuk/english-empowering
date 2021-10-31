@@ -1,19 +1,14 @@
 .navigation-main-header {
-  background: url(../../static/new1.jpg);
-  background-size: cover;
-  background-position: center;
+  background: url(../../static/new1.jpg) center / cover;
   width: 100%;
-  padding: 5rem 0rem;
-  color: cornsilk;
+  padding: 5rem 0rem 3rem;
+  color: var(--main-text);
   display: flex;
   opacity: 0.85;
   flex-flow: row wrap;
   justify-content: flex-start;
   font: 2rem Indie Flower, cursive;
-  box-sizing: border-box;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  transition: 2s ease;
+  margin: 2rem 0;
 }
 
 #flag-cont {
@@ -29,6 +24,40 @@
   opacity: 0.8;
 }
 
+#headers-container {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-1-line,
+#header-2-line,
+#header-3-line {
+  width: 60%;
+  opacity: 0;
+}
+
+#header-1-line {
+  text-align: start;
+  animation: header-appear 2s ease-in 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#header-2-line {
+  text-align: center;
+  animation: header-appear 2s ease-in 1s;
+  animation-fill-mode: forwards;
+}
+
+#header-3-line {
+  width: 45%;
+  text-align: end;
+  animation: header-appear 2s ease-in 1.5s;
+  animation-fill-mode: forwards;
+}
+
 @media (max-width: 767px) {
   .navigation-main-header {
     padding: 2.5rem 0rem;
@@ -40,5 +69,25 @@
   .main-header-flag {
     width: 2.6rem;
     height: 1.8rem;
+  }
+  #header-1-line {
+    width: 70%;
+    text-align: start;
+    animation: header-appear 2s ease-in 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  #header-2-line {
+    width: 60%;
+    text-align: center;
+    animation: header-appear 2s ease-in 1s;
+    animation-fill-mode: forwards;
+  }
+
+  #header-3-line {
+    margin-left: 3rem;
+    text-align: end;
+    animation: header-appear 2s ease-in 1.5s;
+    animation-fill-mode: forwards;
   }
 }

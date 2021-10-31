@@ -1,16 +1,16 @@
 import React from 'react';
 import "./Pricing.css"
 
+import InfoCard from './common/InfoCard';
 import london1 from "../static/london4.jpg"
 import books from "../static/books.jpg"
 import london2 from "../static/london3.jpg"
 
 import 'aos/dist/aos.css'
-import InfoCard from './common/InfoCard';
 
-function Pricing(props) {
+function Pricing({ pricing }) {
     return (
-        < >
+        <section ref={pricing}>
             <h1 data-aos="fade-up">Cennik</h1>
             <div id="pricing-main-photo" data-aos="fade-up" data-aos-duration="1000">
                 <img src={london1} alt="" className="main-pricing-pic" />
@@ -25,7 +25,7 @@ function Pricing(props) {
                     <InfoCard containerClass="pricing-card" header="Przygotowanie do egzaminów na poziomie C1 i C2" mainText="80zł" headerClass="pricing-header" pricing mainTextClass="pricing-text" />
                 </div>
             </div>
-        </ >
+        </ section>
     );
 }
 

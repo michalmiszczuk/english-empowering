@@ -16,6 +16,7 @@ code {
 }
 
 :root {
+  --main-text: #fff8db;
   --sobota: #fae5ca;
   --niedziela: #ffd5d5;
   --button-highlighted: #f0b17c;
@@ -38,7 +39,6 @@ code {
 
 h1 {
   text-align: center;
-  font-family: "Raleway";
   font-size: 2.8rem;
   margin-top: 3rem;
   font-style: italic;
