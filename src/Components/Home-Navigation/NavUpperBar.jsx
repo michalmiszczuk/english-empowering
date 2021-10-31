@@ -1,18 +1,12 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../contexts/UserContext';
 
-import AdminButton from './Buttons/AdminButton';
 import Button from '../common/Button';
 import Logo from '../common/Logo';
-import LoginButton from './Buttons/LoginButton';
-import LogOutButton from './Buttons/LogOutButton';
-import MyAccountButton from './Buttons/MyAccountButton';
 import NavBarIcon from './NavBarIcon';
-import RegisterButton from './Buttons/RegisterButton';
-import ReserveLessonButton from './Buttons/ReserveLessonButton';
-import './NavUpperBar.css';
-import '../common/MainContainer.css';
 import { Link } from 'react-router-dom';
+import '../common/MainContainer.css';
+import './NavUpperBar.css';
 
 
 function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, onReviews }) {
@@ -33,12 +27,12 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                         <Button text="Opinie" onClick={onReviews} />
                         <Button text="Cennik" onClick={onPricing} />
                         {(!user || user.isAdmin) && <Link to="calendar"><Button text="Kalendarz" onClick={onCalendar} /></Link>}
-                        {!user && <LoginButton />}
-                        {!user && <RegisterButton />}
-                        {user && user.isAdmin && <AdminButton />}
-                        {user && !user.isAdmin && <MyAccountButton />}
-                        {user && <LogOutButton onLogOut={logOut} />}
-                        {user && !user.isAdmin && <ReserveLessonButton />}
+                        {!user && <Link to="/login"><Button text="Zaloguj" btnClass="btn-navbar-high" /></Link>}
+                        {!user && <Link to="/register"><Button text="Zarejestruj" btnClass="btn-navbar-high" /></Link>}
+                        {user && user.isAdmin && <Link to="/adminprofile"><Button text="Admin" /></Link>}
+                        {user && !user.isAdmin && <Link to="/userprofile"><Button text="Moje konto" /></Link>}
+                        {user && <Button text="Wyloguj" onClick={logOut} />}
+                        {user && !user.isAdmin && <Link to="calendar"><Button text={!user.isAdmin ? "Zapisz mnie" : "Kalendarz"} btnClass="reserve-button" /></Link>}
                     </nav>
                 </div>
             </div >
@@ -47,12 +41,12 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                     <div className="upper-bar-1line">
                         <Logo logoClass="main-logo" />
                         <nav className="upper-buttons-phone">
-                            {!user && <LoginButton />}
-                            {!user && <RegisterButton />}
-                            {user && user.isAdmin && <AdminButton />}
-                            {user && !user.isAdmin && <MyAccountButton />}
-                            {user && <LogOutButton onLogOut={logOut} />}
-                            {user && !user.isAdmin && <ReserveLessonButton />}
+                            {!user && <Link to="/login"><Button text="Zaloguj" btnClass="btn-navbar-high" /></Link>}
+                            {!user && <Link to="/register"><Button text="Zarejestruj" btnClass="btn-navbar-high" /></Link>}
+                            {user && user.isAdmin && <Link to="/adminprofile"><Button text="Admin" /></Link>}
+                            {user && !user.isAdmin && <Link to="/userprofile"><Button text="Moje konto" /></Link>}
+                            {user && <Button text="Wyloguj" onClick={logOut} />}
+                            {user && !user.isAdmin && <Link to="calendar"><Button text={!user.isAdmin ? "Zapisz mnie" : "Kalendarz"} btnClass="reserve-button" /></Link>}
                         </nav>
                         <div className="menu-button-phone">
                             <NavBarIcon onClick={onSetMenu} />

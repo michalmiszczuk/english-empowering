@@ -2,8 +2,8 @@ import React from 'react';
 
 import ChangeUser from './ChangeUser';
 import DeleteUserButton from './DeleteUserButton';
-import UserProgress from './UserProgress';
 import PersonalInfo from './PersonalUserInfo';
+import UserProgress from './UserProgress';
 import './AdminProfile.css'
 
 function AdminUsersInfo({ user, users, onShowDeletePage, onChangeUser, refreshUser }) {

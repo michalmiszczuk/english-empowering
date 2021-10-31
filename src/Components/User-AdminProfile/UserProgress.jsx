@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
+
 import { LoadingContext } from '../../contexts/LoadingContext';
-import { ToastContext } from '../../contexts/ToastContext';
 import { setProgressLevel } from '../../services/userServices';
+import { ToastContext } from '../../contexts/ToastContext';
 import ProgressBar from './ProgressBar';
 import './UserProgress.css'
 

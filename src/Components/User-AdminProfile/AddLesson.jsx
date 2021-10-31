@@ -5,13 +5,13 @@ import Button from '../common/Button';
 import InputField from '../common/InputField';
 
 import { addLessonToUser } from '../../services/userServices';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { LoadingContext } from '../../contexts/LoadingContext';
+import { ToastContext } from '../../contexts/ToastContext';
 import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
 import { validateTime } from '../../Validation/joiValidation';
 import "./AddLesson.css"
-import { ToastContext } from '../../contexts/ToastContext';
-import { LoadingContext } from '../../contexts/LoadingContext';
 
 
 function AddLesson({ iconClick, user, refreshLessons, refreshUser, setShowAddPage }) {

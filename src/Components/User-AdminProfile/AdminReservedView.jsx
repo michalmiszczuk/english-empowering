@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react';
 
-import DeleteIcon from '../common/DeleteIcon';
 import Button from '../common/Button';
+import DeleteIcon from '../common/DeleteIcon';
 
-import setRenderedLessons from '../../utils/setRenderedLessons';
 import { cancelLesson } from '../../services/userServices';
-import './AdminReservedView.css'
-import './AdminProfile.css'
-import { ToastContext } from '../../contexts/ToastContext';
 import { LoadingContext } from '../../contexts/LoadingContext';
+import { ToastContext } from '../../contexts/ToastContext';
+import setRenderedLessons from '../../utils/setRenderedLessons';
+import './AdminProfile.css'
+import './AdminReservedView.css'
 
 function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, refreshLessons, setShowAddPage }) {
 
@@ -20,8 +20,6 @@ function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, ref
     if (!users || !user || !lessons) return <div>No users or lessons in the database.</div>
 
     const lessonsToRender = showAllLessons ? setRenderedLessons(lessons) : setRenderedLessons(user.reservedLessons)
-
-
 
     const handleCancelLesson = async (item) => {
         try {

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import Logo from '../common/Logo';
-import "./SideBar.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom';
+import "./SideBar.css"
 
 function SideBar({ menu, onAboutMe, onLessons, onPricing, onCloseIcon, onReviews }) {
     return (

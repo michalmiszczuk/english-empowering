@@ -4,7 +4,6 @@ import AddLesson from './AddLesson';
 import AdminReservedView from './AdminReservedView';
 import AdminUsersInfo from './AdminUsersInfo';
 import DeleteUser from './DeleteUser';
-import LoadingAnimation from '../common/LoadingAnimation'
 import MainContainer from '../common/MainContainer';
 
 import { getUsers, getUser } from "../../services/userServices"
