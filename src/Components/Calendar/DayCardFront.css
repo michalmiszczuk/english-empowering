@@ -1,5 +1,6 @@
 .day-card-front {
   background-color: #eee;
+  backface-visibility: hidden;
 }
 
 .lessons-container {

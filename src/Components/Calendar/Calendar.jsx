@@ -4,11 +4,11 @@ import { UserContext } from "../../contexts/UserContext"
 import Day from './Day';
 import MainContainer from '../common/MainContainer';
 
-import { getLessons } from "../../services/lessonServices"
 import get14days from "../../utils/getDates"
-import "./Calendar.css"
+import { getLessons } from "../../services/lessonServices"
 import { LoadingContext } from '../../contexts/LoadingContext';
 import useScrollUp from '../../hooks/useScroller'
+import "./Calendar.css"
 
 function Calendar(props) {
     useScrollUp()

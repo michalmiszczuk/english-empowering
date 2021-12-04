@@ -12,7 +12,14 @@
   align-content: flex-start;
   color: #222;
   padding-top: 0.3rem;
-  -moz-backface-visibility: hidden;
+}
+
+.day-card-front {
+  transform: rotateY(0deg);
+}
+
+.day-card-back {
+  background-color: #eee;
 }
 
 .sobota {
