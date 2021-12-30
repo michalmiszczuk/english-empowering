@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import FooterText from './FooterText';
 import { Link } from 'react-router-dom';
-import "./Footer.css"
+import FooterText from './FooterText';
 import FooterToolTip from './FooterToolTip';
+import "./Footer.css"
 
 function Footer({ props }) {
     const [showContactInfo, setShowContactInfo] = useState(false)
