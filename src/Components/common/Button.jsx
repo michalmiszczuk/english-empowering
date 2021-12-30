@@ -1,17 +1,19 @@
 import React from 'react';
 import "./Button.css"
 
-function Button({ validError, text, onClick, children, btnClass, enable }) {
+function Button({ validError, text, onClick, children, btnClass, enable, link }) {
 
 
     return (
-        <div className={validError ? `main-button  ${btnClass} disabled` : `main-button ${btnClass}`}
+
+        <button className={validError ? `main-button  ${btnClass} disabled` : `main-button ${btnClass}`}
             style={{ cursor: !validError ? "pointer" : "default" }}
             onClick={!validError || enable ? onClick : null}
         >
             {text}
             {children}
-        </div>
+        </button>
+
     );
 }
 
