@@ -8,12 +8,12 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import { validateLogin } from '../../Validation/joiValidation';
 import { UserContext } from '../../contexts/UserContext';
-import auth from "../../services/authServices"
-import "../Home-Navigation/NavigationSite.css"
-import './register-login-forms.css'
 import { ToastContext } from '../../contexts/ToastContext';
-import Logo from './Logo';
 import { LoadingContext } from '../../contexts/LoadingContext';
+import auth from "../../services/authServices"
+import Logo from './Logo';
+import './register-login-forms.css'
+import "../home-navigation/NavigationSite.css"
 
 function LoginForm(props) {
 

@@ -3,9 +3,6 @@ a {
   text-decoration: none;
   border: none;
   background: none;
-}
-
-.main-button {
   display: flex;
   flex-flow: row;
   justify-content: center;

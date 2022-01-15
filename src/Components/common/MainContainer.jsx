@@ -2,10 +2,10 @@ import React from 'react';
 
 import Footer from '../Footer';
 import NavBar from './NavBar';
-import NavUpperBar from '../Home-Navigation/NavUpperBar';
+import NavUpperBar from '../home-navigation/NavUpperBar';
 import useToggle from '../../hooks/toggler';
 import './MainContainer.css'
-import SideBar from '../Home-Navigation/SideBar';
+import SideBar from '../home-navigation/SideBar';
 
 
 function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons, onPricing, onReviews }) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import joy from '../static/joy.jpg';
 import books from '../static/books.jpg';
-import MainDescriptionElement from './Home-Navigation/MainDescriptionElement';
+import MainDescriptionElement from './home-navigation/MainDescriptionElement';
 import "./Lessons.css";
 import { lessonsText, lessonsText2 } from '../static/Txt/texts';
 

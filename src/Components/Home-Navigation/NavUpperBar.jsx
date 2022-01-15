@@ -26,13 +26,13 @@ function NavUpperBar({ onSetMenu, onAboutMe, onLessons, onPricing, onCalendar, o
                         <Button text="Zajęcia" onClick={onLessons} />
                         <Button text="Opinie" onClick={onReviews} />
                         <Button text="Cennik" onClick={onPricing} />
-                        {(!user || user.isAdmin) && <Link to="calendar"><Button text="Kalendarz" onClick={onCalendar} /></Link>}
-                        {!user && <Link to="/login"><Button text="Zaloguj" btnClass="btn-navbar-high" /></Link>}
-                        {!user && <Link to="/register"><Button text="Zarejestruj" btnClass="btn-navbar-high" /></Link>}
-                        {user && user.isAdmin && <Link to="/adminprofile"><Button text="Admin" /></Link>}
-                        {user && !user.isAdmin && <Link to="/userprofile"><Button text="Moje konto" /></Link>}
+                        {(!user || user.isAdmin) && <Link to="calendar" onClick={onCalendar}>Kalendarz</Link>}
+                        {!user && <Link to="/login" className="btn-navbar-high">Zaloguj</Link>}
+                        {!user && <Link to="/register" className="btn-navbar-high" >Zarejestruj</Link>}
+                        {user && user.isAdmin && <Link to="/adminprofile">Admin</Link>}
+                        {user && !user.isAdmin && <Link to="/userprofile">Moje Konto</Link>}
                         {user && <Button text="Wyloguj" onClick={logOut} />}
-                        {user && !user.isAdmin && <Link to="calendar"><Button text={!user.isAdmin ? "Zapisz mnie" : "Kalendarz"} btnClass="reserve-button" /></Link>}
+                        {user && !user.isAdmin && <Link to="calendar" className='reserve-button'>{!user.isAdmin ? "Zapisz mnie" : "Kalendarz"}</Link>}
                     </nav>
                 </div>
             </div >

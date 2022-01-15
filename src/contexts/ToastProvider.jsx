@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ToastMsg from '../Components/common/ToastMsg';
+import ToastMsg from '../components/common/ToastMsg';
 import { ToastContext } from './ToastContext';
 
 function ToastProvider({ children }) {

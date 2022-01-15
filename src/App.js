@@ -1,18 +1,18 @@
 import React, {useEffect} from "react";
 import {Route, Redirect, Switch, BrowserRouter} from "react-router-dom";
 
-import AdminProfile from "./Components/User-AdminProfile/AdminProfile";
-import Calendar from "./Components/Calendar/Calendar";
-import NavigationSite from "./Components/Home-Navigation/NavigationSite";
-import LoginForm from "./Components/common/LoginForm";
-import PrivacyPolicy from "./Components/PrivacyPolicy";
-import RegisterForm from "./Components/common/RegisterForm";
-import UserProfile from "./Components/User-AdminProfile/UserProfile";
+import AdminProfile from "./components/user-adminProfile/AdminProfile";
+import Calendar from "./components/calendar/Calendar";
+import NavigationSite from "./components/home-navigation/NavigationSite";
+import LoginForm from "./components/common/LoginForm";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import RegisterForm from "./components/common/RegisterForm";
+import UserProfile from "./components/user-adminProfile/UserProfile";
 import UserProvider from "./contexts/UserProvider";
-import TermsAndConditions from "./Components/TermsAndConditions";
+import TermsAndConditions from "./components/TermsAndConditions";
 
-import ProtectedRoute from "./Components/common/ProtectedRoute";
-import ErrorBoundary from "./Components/common/ErrorBoundary";
+import ProtectedRoute from "./components/common/ProtectedRoute";
+import ErrorBoundary from "./components/common/ErrorBoundary";
 import ToastProvider from "./contexts/ToastProvider";
 import LoadingProvider from "./contexts/LoadingProvider";
 import {ToastContainer} from "react-toastify";

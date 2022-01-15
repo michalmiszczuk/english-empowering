@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoadingAnimation from '../Components/common/LoadingAnimation';
+import LoadingAnimation from '../components/common/LoadingAnimation';
 import { LoadingContext } from './LoadingContext';
 
 function LoadingProvider({ children }) {

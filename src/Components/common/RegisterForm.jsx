@@ -8,7 +8,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { saveUser } from '../../services/userServices'
 import { validateRegister } from '../../Validation/joiValidation';
 import './register-login-forms.css'
-import "../Home-Navigation/NavigationSite.css"
+import "../home-navigation/NavigationSite.css"
 import { ToastContext } from '../../contexts/ToastContext';
 import Logo from './Logo';
 import { LoadingContext } from '../../contexts/LoadingContext';
