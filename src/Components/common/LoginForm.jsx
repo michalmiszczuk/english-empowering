@@ -26,8 +26,9 @@ function LoginForm(props) {
     const [emailError] = validateLogin(email)
     const history = useHistory()
 
-    const handleLoginSubmit = async () => {
+    const handleLoginSubmit = async (e) => {
         try {
+            e.preventDefault()
             setIsLoading(true)
             await auth.login(email, password)
             userContext.refreshUser();
@@ -54,7 +55,7 @@ function LoginForm(props) {
                 <div className="form-title">Logowanie</div>
                 <InputField autoFocus name={"email"} label={"Email :"} onChange={(event) => setEmail(event.target.value)} error={emailError} value={"email"} />
                 <InputField name={"hasło"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} value={"password"} />
-                <Button text="Zaloguj" btnClass="login-register-buttons" onClick={checkErrors ? null : handleLoginSubmit} validError={checkErrors} />
+                <Button text="Zaloguj" btnClass="login-register-buttons" onClick={(e) => checkErrors ? null : handleLoginSubmit(e)} validError={checkErrors} />
             </form>
         </div>
     );

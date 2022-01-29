@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Button.css"
 
-function Button({ validError, text, onClick, children, btnClass, enable, link }) {
+function Button({ validError, text, onClick, children, btnClass, enable }) {
 
 
     return (
