@@ -49,6 +49,12 @@
     padding: 0 0;
   }
 
+  .link-to-reviews {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
   #reviews-title {
     padding: 0.5rem 0rem;
   }

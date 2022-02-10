@@ -30,8 +30,10 @@ function NavigationSite({ user, handleLogOut }) {
         <MainContainer upperBar user={user} handleLogOut={handleLogOut} onAboutMe={handleAboutME} onLessons={handleLessons} onPricing={handlePricing} onReviews={handleReviews}>
             <div className="main-text-phone" data-aos="slide-down" >NAUKA JĘZYKA ANGIELSKIEGO</div>
             <MainHeader />
-            <MainDescriptionElement picture={book} text={text1} flowDirection="description-row" descriptionText="description-text" />
-            <MainDescriptionElement picture={pictureMe} text={text2} flowDirection="description-row row-reversed" descriptionText="description-text text-reversed" />
+            <div className='main-text-container'>
+                <MainDescriptionElement picture={book} text={text1} flowDirection="description-row" descriptionText="description-text" />
+                <MainDescriptionElement picture={pictureMe} text={text2} flowDirection="description-row row-reversed" descriptionText="description-text text-reversed" />
+            </div>
             <div className="navigation-main-photo" data-aos="zoom-in" />
             <AboutMe aboutMe={aboutMe} />
             <Lessons lessons={lessons} />

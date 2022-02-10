@@ -74,6 +74,12 @@
 }
 
 @media (max-width: 767px) {
+  #register-info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
   .register-login-container {
     padding: 0rem 2rem;
   }

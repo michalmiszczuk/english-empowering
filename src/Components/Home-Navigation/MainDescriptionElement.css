@@ -1,10 +1,17 @@
+.main-text-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
 .description-row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 2rem 2rem;
+  width: 80%;
+  padding: 2rem 0rem;
   margin-bottom: 2rem;
 }
 
@@ -21,16 +28,17 @@
   width: 30%;
   color: #222;
   line-height: 1.5;
-  text-align: center;
   font-size: 1rem;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin-right: 10%;
 }
 
 .text-reversed {
-  padding: 0rem 0rem 0rem 2rem;
+  margin-right: 0%;
+  margin-left: 10%;
 }
 
 .picture-container {
@@ -49,30 +57,34 @@
 }
 
 @media (max-width: 767px) {
+  .main-text-container {
+    width: 100%;
+  }
+
   .description-row {
-    padding: 0rem 1rem;
+    width: 80%;
     margin-bottom: 1rem;
+    flex-flow: column;
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0.7rem;
   }
 
   .description-text {
     font-style: italic;
     font-size: 0.55rem;
     padding: 0rem;
-  }
-
-  .text-reversed {
-    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 0.7rem;
   }
 
   .picture-container {
     margin-top: 0.5rem;
   }
-  .row {
-    border: 1px solid red;
-  }
 
   .row-reversed {
-    flex-flow: row-reverse;
+    margin-bottom: 1rem;
   }
 
   .book-me-pic {
