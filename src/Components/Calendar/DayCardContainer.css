@@ -6,12 +6,10 @@
   backface-visibility: hidden;
   border-radius: 2px;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-flow: column;
+  align-items: center;
   color: #222;
-  padding-top: 0.3rem;
+  padding-top: 0.5rem;
 }
 
 .day-card-front {

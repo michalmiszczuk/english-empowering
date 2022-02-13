@@ -58,7 +58,7 @@
   display: flex;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .upper-bar {
     flex-flow: column;
     top: 0;
@@ -97,6 +97,10 @@
   .main-text,
   .desktop-visible {
     display: none;
+  }
+
+  .phone-visible {
+    display: inline-block;
   }
 
   .main-text-phone {

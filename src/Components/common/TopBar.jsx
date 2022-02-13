@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import './NavBar.css'
+import './TopBar.css'
 
 
-function NavBar({ name }) {
+function TopBar({ name }) {
 
     return (
         <div className="nav-bar">
@@ -19,4 +19,4 @@ function NavBar({ name }) {
 }
 
 
-export default NavBar;
+export default TopBar;

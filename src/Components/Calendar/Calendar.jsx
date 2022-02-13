@@ -38,7 +38,7 @@ function Calendar(props) {
 
 
     return (
-        <MainContainer navBar title="Kalendarz">
+        <MainContainer topBar title="Kalendarz">
             <div id="days-div">
                 {dates.map(date => <Day
                     key={date}

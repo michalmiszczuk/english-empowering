@@ -1,8 +1,7 @@
 .yes-no-buttons {
   width: 100%;
   display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 1rem;
   cursor: pointer;
 }

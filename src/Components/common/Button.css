@@ -67,14 +67,14 @@ a {
 .yes-button {
   background-color: green;
   font-size: 1rem;
-  width: 5rem;
+  width: 4rem;
   color: white;
 }
 
 .no-button {
   background-color: crimson;
   font-size: 1rem;
-  width: 5rem;
+  width: 4rem;
   color: white;
 }
 
@@ -92,7 +92,7 @@ a {
 }
 
 .disabled:hover {
-  background-color: transparent;
+  background-color: hsl(0, 0%, 50%, 0.5);
 }
 
 .log-res {
@@ -117,7 +117,7 @@ a {
   color: White;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .main-button {
     width: 3.5rem;
     height: 1.5rem;

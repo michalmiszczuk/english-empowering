@@ -6,6 +6,10 @@
 
 .reserve-text {
   backface-visibility: hidden;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .sobota {

@@ -48,7 +48,7 @@ function AdminProfile(props) {
     }, [])
 
     return (
-        <MainContainer navBar title="Admin">
+        <MainContainer topBar title="Admin">
             <div className="main-content-admin">
                 <AdminUsersInfo
                     user={user}

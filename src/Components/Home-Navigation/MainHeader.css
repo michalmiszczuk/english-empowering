@@ -58,7 +58,7 @@
   animation-fill-mode: forwards;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   .navigation-main-header {
     padding: 2.5rem 0rem;
     font: 1rem Indie Flower, cursive;

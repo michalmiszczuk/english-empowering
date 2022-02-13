@@ -50,7 +50,7 @@ function UserProfile(props) {
     };
 
     return (
-        <MainContainer navBar title="Moje konto">
+        <MainContainer topBar title="Moje konto">
             <div className="main-content-users">
                 <PersonalInfo user={user} />
                 <UserInfo user={user} noPointer />

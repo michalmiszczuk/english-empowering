@@ -1,10 +1,6 @@
-.reserve-text {
-  width: 100%;
-  text-align: center;
-  margin: 1rem;
-}
-
 .link-to-terms {
+  width: 100%;
+  font-size: 1rem;
   color: blue;
   text-decoration: underline;
 }

@@ -12,6 +12,9 @@
   border-radius: 0 20px 0 20px;
   transition: 150ms all ease;
   font-family: "Relway";
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 @media (max-width: 767px) {

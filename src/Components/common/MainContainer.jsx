@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Footer from '../Footer';
-import NavBar from './NavBar';
+import TopBar from './TopBar';
 import NavUpperBar from '../home-navigation/NavUpperBar';
 import useToggle from '../../hooks/toggler';
 import './MainContainer.css'
 import SideBar from '../home-navigation/SideBar';
 
 
-function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons, onPricing, onReviews }) {
+function MainContainer({ children, upperBar, onAboutMe, topBar, title, onLessons, onPricing, onReviews }) {
 
     const [showMenu, toggleShowMenu] = useToggle(false)
 
@@ -21,7 +21,7 @@ function MainContainer({ children, upperBar, onAboutMe, navBar, title, onLessons
                     onPricing={onPricing}
                     onReviews={onReviews}
                     onSetMenu={toggleShowMenu} />}
-                {navBar && <NavBar name={title} />}
+                {topBar && <TopBar name={title} />}
                 <div className="main-body">
                     {children}
                     <Footer />
