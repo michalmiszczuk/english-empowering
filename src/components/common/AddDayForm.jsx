@@ -9,7 +9,7 @@ import { LoadingContext } from '../../contexts/LoadingContext';
 import { saveLesson } from '../../services/lessonServices';
 import { ToastContext } from '../../contexts/ToastContext'
 import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
-import { validateTime } from '../../Validation/joiValidation';
+import { validateTime } from '../../validation/joiValidation';
 
 import getYearMonthDay from '../../utils/getYearMonthDay';
 import "./AddDayForm.css";

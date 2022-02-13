@@ -6,7 +6,7 @@ import Button from '../common/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { saveUser } from '../../services/userServices'
-import { validateRegister } from '../../Validation/joiValidation';
+import { validateRegister } from '../../validation/joiValidation';
 import './register-login-forms.css'
 import "../home-navigation/NavigationSite.css"
 import { ToastContext } from '../../contexts/ToastContext';

@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { LoadingContext } from '../../contexts/LoadingContext';
 import { ToastContext } from '../../contexts/ToastContext';
 import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
-import { validateTime } from '../../Validation/joiValidation';
+import { validateTime } from '../../validation/joiValidation';
 import "./AddLesson.css"
 
 

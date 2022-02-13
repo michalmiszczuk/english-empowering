@@ -6,7 +6,7 @@ import Button from '../common/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
-import { validateLogin } from '../../Validation/joiValidation';
+import { validateLogin } from '../../validation/joiValidation';
 import { UserContext } from '../../contexts/UserContext';
 import { ToastContext } from '../../contexts/ToastContext';
 import { LoadingContext } from '../../contexts/LoadingContext';
