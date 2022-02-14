@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Footer from '../Footer';
-import TopBar from './TopBar';
 import NavUpperBar from '../home-navigation/NavUpperBar';
+import SideBar from '../home-navigation/SideBar';
+import TopBar from './TopBar';
 import useToggle from '../../hooks/toggler';
 import './MainContainer.css'
-import SideBar from '../home-navigation/SideBar';
 
 
 function MainContainer({ children, upperBar, onAboutMe, topBar, title, onLessons, onPricing, onReviews }) {

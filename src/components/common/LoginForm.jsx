@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import InputField from './InputField';
-import Button from '../common/Button';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Button from '../common/Button';
+import InputField from './InputField';
+import Logo from './Logo';
+
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { LoadingContext } from '../../contexts/LoadingContext';
+import { ToastContext } from '../../contexts/ToastContext';
+import { UserContext } from '../../contexts/UserContext';
 import { useState } from 'react';
 import { validateLogin } from '../../validation/joiValidation';
-import { UserContext } from '../../contexts/UserContext';
-import { ToastContext } from '../../contexts/ToastContext';
-import { LoadingContext } from '../../contexts/LoadingContext';
 import auth from "../../services/authServices"
-import Logo from './Logo';
+
 import './register-login-forms.css'
 import "../home-navigation/NavigationSite.css"
 
@@ -46,7 +48,7 @@ function LoginForm(props) {
     const checkErrors = emailError.error
 
     return (
-        <div className="register-login-container" id="login-container">
+        <div className="register-login-container">
             <form className="register-login-forms login-form" >
                 <div className="logo-forms-container">
                     <Logo logoClass="forms-logo" />

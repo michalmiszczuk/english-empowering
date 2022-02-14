@@ -10,8 +10,8 @@ import { saveLesson } from '../../services/lessonServices';
 import { ToastContext } from '../../contexts/ToastContext'
 import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
 import { validateTime } from '../../validation/joiValidation';
-
 import getYearMonthDay from '../../utils/getYearMonthDay';
+
 import "./AddDayForm.css";
 
 
@@ -45,16 +45,16 @@ function AddDayForm({ iconClick, currentDay, onAddLessonSubmit }) {
     const dateObject = new Date(currentDay)
     const dayName = toWeekDayString(dateObject)
 
-    let checkWeekend = (dayName === "sobota") ? `add-day-form-cont sobota` : (dayName === "niedziela") ?
-        `add-day-form-cont niedziela` : `add-day-form-cont`;
+    let checkWeekend = (dayName === "sobota") ? 'sobota' : (dayName === "niedziela") ?
+        'niedziela' : '';
 
     return (
-        <form className={checkWeekend}>
+        <form className={`add-day-form-cont ${checkWeekend}`}>
             <FontAwesomeIcon icon={faTimes} onClick={iconClick} className="close-icon-add-day" />
             <div className="add-dayform-title"> Dodaj lekcję</div>
-            <InputField addDayForm name={"Godzina:"} label={"Godzina:"} onChange={(event) => setInputHour(event.target.value)} error={hoursError} value={"inputHour"}></InputField>
-            <InputField addDayForm name={"Minuty:"} label={"Minuty:"} onChange={(event) => setInputMinutes(event.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
-            <Button text="Dodaj!" btnClass="secondary" onClick={submitAddLesson} />
+            <InputField addDayForm name={"Godzina:"} label={"Godzina:"} onChange={(e) => setInputHour(e.target.value)} error={hoursError} value={"inputHour"}></InputField>
+            <InputField addDayForm name={"Minuty:"} label={"Minuty:"} onChange={(e) => setInputMinutes(e.target.value)} error={minutesError} value={"inputMinutes"}></InputField>
+            <Button text="Dodaj" btnClass="secondary" onClick={submitAddLesson} />
         </form>
     );
 }

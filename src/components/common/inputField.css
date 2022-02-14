@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  /* background-color: #ccc; */
   width: 90%;
   margin: 10px;
   color: #222;
@@ -60,11 +59,9 @@
   .input-field-container {
     width: 90%;
     margin: 10px;
-    color: white;
     font-size: 0.7rem;
-    padding: 0rem 0rem 0.3rem 0rem;
-    background-color: #777;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem;
+    background-color: unset;
   }
 
   .input-field {

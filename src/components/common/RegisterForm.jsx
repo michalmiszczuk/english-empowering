@@ -1,17 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import InputField from './InputField';
 import Button from '../common/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import InputField from './InputField';
+import Logo from './Logo';
+
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { LoadingContext } from '../../contexts/LoadingContext';
 import { saveUser } from '../../services/userServices'
+import { ToastContext } from '../../contexts/ToastContext';
 import { validateRegister } from '../../validation/joiValidation';
+
 import './register-login-forms.css'
 import "../home-navigation/NavigationSite.css"
-import { ToastContext } from '../../contexts/ToastContext';
-import Logo from './Logo';
-import { LoadingContext } from '../../contexts/LoadingContext';
 
 function RegisterForm({ iconClick, refreshUser }) {
     const [email, setEmail] = useState('')
@@ -25,8 +27,9 @@ function RegisterForm({ iconClick, refreshUser }) {
 
     const userToSave = { email: email, name: firstName, surname: secondName, phone: phone, password: password }
 
-    const handleRegisterSubmit = async () => {
+    const handleRegisterSubmit = async (e) => {
         try {
+            e.preventDefault()
             setIsLoading(true)
             const response = await saveUser(userToSave)
             localStorage.setItem('token', response.headers['x-auth-token'])
@@ -35,8 +38,9 @@ function RegisterForm({ iconClick, refreshUser }) {
         }
         catch (ex) {
             setIsLoading(false)
-            if (ex.response && ex.response.status === 400)
+            if (ex.response && ex.response.status === 400) {
                 showToast('error', ex.response.data)
+            }
         }
 
     }
@@ -48,7 +52,7 @@ function RegisterForm({ iconClick, refreshUser }) {
 
     return (
         <div className="register-login-container" id="register-container">
-            <form className="register-login-forms" id="register-form">
+            <form className="register-login-forms">
                 <Link to="/"><FontAwesomeIcon className="close-icon" icon={faTimes} onClick={iconClick} /></Link>
                 <div className="logo-forms-container">
                     <Logo logoClass="forms-logo" />
@@ -60,7 +64,7 @@ function RegisterForm({ iconClick, refreshUser }) {
                 <InputField name={"second name"} label={"Nazwisko :"} onChange={(event) => setSecondName(event.target.value)} error={secondNameError} value={"secondName"}></InputField>
                 <InputField name={"password"} label={"Hasło :"} type={"password"} onChange={(event) => setPassword(event.target.value)} error={passwordError} value={"password"}></InputField>
                 <div id="register-info">Kilkając "Zarejestruj" wyrażasz zgodę na przetwarzanie Twoich danych osobowych zgodnie z <Link className="link-to-privacy" to="/privacypolicy">polityką prywatności.</Link></div>
-                <Button text="Zarejestruj" btnClass="login-register-buttons" onClick={checkErrors ? null : handleRegisterSubmit} validError={checkErrors} />
+                <Button text="Zarejestruj" btnClass="login-register-buttons" enable onClick={handleRegisterSubmit} validError={checkErrors} />
             </form>
         </div>
     );

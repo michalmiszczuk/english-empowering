@@ -26,14 +26,8 @@
   position: absolute;
   width: 5rem;
   height: 1rem;
-  color: black;
+  color: #000;
   cursor: pointer;
-}
-
-.add-dayform-title {
-  color: black;
-  font-family: Marcellus SC;
-  font-size: 1rem;
 }
 
 .error-msg-day-form {
