@@ -76,12 +76,7 @@
   .upper-buttons-phone {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-  }
-
-  .main-logo {
-    width: 3rem;
-    height: 2.5rem;
+    align-items: center;
   }
 
   .menu-button-phone {
