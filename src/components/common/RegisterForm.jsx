@@ -42,7 +42,6 @@ function RegisterForm({ iconClick, refreshUser }) {
                 showToast('error', ex.response.data)
             }
         }
-
     }
 
     const [emailError, phoneError, firstNameError, secondNameError, passwordError]

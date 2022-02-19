@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../contexts/UserContext';
+import { Link } from 'react-router-dom';
 
 import Button from '../common/Button';
 import Logo from '../common/Logo';
 import NavBarIcon from './NavBarIcon';
-import { Link } from 'react-router-dom';
 import '../common/MainContainer.css';
 import './NavUpperBar.css';
 

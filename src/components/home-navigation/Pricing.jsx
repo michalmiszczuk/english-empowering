@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Pricing.css"
 
-import InfoCard from './common/InfoCard';
-import london1 from "../static/london4.jpg"
-import books from "../static/books.jpg"
-import london2 from "../static/london3.jpg"
+import InfoCard from '../common/InfoCard';
+import london1 from "../../static/london4.jpg"
+import books from "../../static/books.jpg"
+import london2 from "../../static/london3.jpg"
 
 import 'aos/dist/aos.css'
 

@@ -10,7 +10,8 @@ import { cancelLesson } from '../../services/userServices';
 import { getLessons } from '../../services/lessonServices';
 import { LoadingContext } from '../../contexts/LoadingContext';
 import { ToastContext } from '../../contexts/ToastContext';
-import { UserContext } from "../../contexts/UserContext"
+import { UserContext } from "../../contexts/UserContext";
+
 import "./UserProfile.css"
 
 function UserProfile(props) {

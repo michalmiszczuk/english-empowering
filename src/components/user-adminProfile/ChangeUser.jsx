@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+
 import './ChangeUser.css'
 import './AdminProfile.css'
 
 function ChangeUser({ users, user, onChangeUser, }) {
 
     const [showUsersList, setShowUsersList] = useState(false);
+
     if (!users || !user) return <div>NoUsers</div>
+
     const usersToRender = users.filter(user => !user.isAdmin)
 
     return (

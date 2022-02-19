@@ -1,7 +1,7 @@
 import React from 'react';
+import 'aos/dist/aos.css'
 import './NavigationSite.css'
 import './MainDescriptionElement.css'
-import 'aos/dist/aos.css'
 
 function MainDescriptionElement({ descriptionText, flowDirection, picture, text }) {
 

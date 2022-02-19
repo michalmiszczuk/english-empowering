@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import { UserContext } from "../../contexts/UserContext"
+
 import DeleteIcon from '../common/DeleteIcon';
 import setRenderedLessons from '../../utils/setRenderedLessons';
+import { UserContext } from "../../contexts/UserContext"
+
 import "./LessonsTable.css"
 
 

@@ -1,7 +1,9 @@
 import React from 'react';
-import useScrollUp from '../hooks/useScroller';
-import regulamin from '../static/regulamin.jpg'
+
 import MainContainer from './common/MainContainer';
+
+import regulamin from '../static/regulamin.jpg'
+import useScrollUp from '../hooks/useScroller';
 import './TermsAndPrivacy.css'
 
 function TermsAndConditions(props) {

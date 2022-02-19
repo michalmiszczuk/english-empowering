@@ -4,6 +4,7 @@ import ChangeUser from './ChangeUser';
 import DeleteUserButton from './DeleteUserButton';
 import PersonalInfo from './PersonalUserInfo';
 import UserProgress from './UserProgress';
+
 import './AdminProfile.css'
 
 function AdminUsersInfo({ user, users, onShowDeletePage, onChangeUser, refreshUser }) {

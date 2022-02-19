@@ -1,13 +1,13 @@
 import React from 'react';
 
-import book from "../static/I/beHappy.jpg"
-import I from "../static/I/zdjProfil.jpg"
-import inStudioPicture from "../static/I/meInStudio.jpg"
-import MeDrums from "../static/I/meDrums.jpg"
+import book from "../../static/I/beHappy.jpg"
+import I from "../../static/I/zdjProfil.jpg"
+import inStudioPicture from "../../static/I/meInStudio.jpg"
+import MeDrums from "../../static/I/meDrums.jpg"
 
 import "./AboutMe.css"
 import 'aos/dist/aos.css'
-import { aboutMeTextPl } from '../static/Txt/texts';
+import { aboutMeTextPl } from '../../static/Txt/texts';
 
 
 

@@ -19,8 +19,6 @@ function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, ref
 
     if (!users || !user || !lessons) return <div>No users or lessons in the database.</div>
 
-    const lessonsToRender = showAllLessons ? setRenderedLessons(lessons) : setRenderedLessons(user.reservedLessons)
-
     const handleCancelLesson = async (item) => {
         try {
             setIsLoading(true)
@@ -36,6 +34,8 @@ function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, ref
         }
     }
 
+    const lessonsToRender = showAllLessons ? setRenderedLessons(lessons) : setRenderedLessons(user.reservedLessons)
+
     return (
         <div>
             <div className={showAllLessons ? "admin-lessons-header" : "admin-lessons-header  reserved-marked"} onClick={() => setShowAllLessons(false)}>Zajęcia z danym uczeniem</div>
@@ -44,7 +44,8 @@ function AdminReservedView({ users, user, lessons, showAddPage, refreshUser, ref
                 {lessonsToRender.map(item =>
                     <div key={item._id} className="each-lesson-container-admin">
                         <div key={item._id} className="each-lesson-admin">{item.days} {item.time}
-                            {users.map(user => user.reservedLessons.map(lesson => lesson._id === item._id && showAllLessons ? <div key={lesson._id}>{user.name} {user.surname}</div> : null))}
+                            {users.map(user => user.reservedLessons.map(lesson => lesson._id === item._id && showAllLessons ?
+                                <div key={lesson._id}>{user.name} {user.surname}</div> : null))}
                         </div>
                         <DeleteIcon onDelete={() => handleCancelLesson(item)} />
                     </div>

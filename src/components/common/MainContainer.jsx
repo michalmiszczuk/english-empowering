@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Footer from '../Footer';
 import NavUpperBar from '../home-navigation/NavUpperBar';
+import Footer from '../home-navigation/Footer';
 import SideBar from '../home-navigation/SideBar';
 import TopBar from './TopBar';
 import useToggle from '../../hooks/toggler';

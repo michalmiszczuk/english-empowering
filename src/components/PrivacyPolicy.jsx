@@ -1,8 +1,10 @@
 import React from 'react';
+
 import MainContainer from './common/MainContainer';
 import privacyPolicy from '../static/politykaPrywatnosci.jpg'
-import './TermsAndPrivacy.css'
+
 import useScrollUp from '../hooks/useScroller';
+import './TermsAndPrivacy.css'
 
 function PrivacyPolicy(props) {
     useScrollUp()

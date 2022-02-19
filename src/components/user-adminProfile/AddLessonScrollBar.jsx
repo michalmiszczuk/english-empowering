@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import get14days from "../../utils/getDates"
+
 import { toMonthDayString, toWeekDayString } from '../../utils/toDateString';
+import get14days from "../../utils/getDates"
 import './AddLessonScrollBar.css'
 
 function AddLessonScrollBar({ dayMonth, dateName, dayName, dateChosen }) {

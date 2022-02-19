@@ -1,13 +1,12 @@
 import React from 'react';
 import flags from '../../static/flags.png'
-import bckimage from '../../static/new1.jpg'
 
 import './MainHeader.css'
 
 function MainHeader({ props }) {
 
     return (
-        <div className="navigation-main-header" style={{ backgroundImage: `url(${bckimage})` }}>
+        <div className="navigation-main-header">
             <div id="headers-container">
                 <div id="header-1-line" >Learn English effortlessy.</div>
                 <div id="header-2-line" >Master communication.</div>

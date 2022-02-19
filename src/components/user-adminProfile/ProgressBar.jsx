@@ -1,4 +1,5 @@
 import React from 'react';
+
 import "./UserProgress.css"
 
 function progressBar({ title, setLevel, currentLevel, noPointer }) {

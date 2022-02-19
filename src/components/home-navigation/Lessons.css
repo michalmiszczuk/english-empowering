@@ -1,5 +1,5 @@
 .main-sea-photo {
-  background-image: url(../static/Sea/sea2.jpg);
+  background-image: url(../../static/Sea/sea2.jpg);
   background-position-y: 65%;
   background-size: cover;
   width: 100%;
@@ -51,7 +51,7 @@
 
 @media (max-width: 767px) {
   .main-sea-photo {
-    background-image: url(../static/Sea/sea2.jpg);
+    background-image: url(../../static/Sea/sea2.jpg);
     height: 7rem;
     font-size: 0.8rem;
     margin-bottom: 1rem;

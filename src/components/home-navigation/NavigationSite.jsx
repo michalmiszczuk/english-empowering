@@ -1,15 +1,16 @@
 import React, { useRef } from 'react';
 
-import AboutMe from '../AboutMe';
-import Lessons from '../Lessons';
+import AboutMe from './AboutMe';
+import Lessons from './Lessons';
 import MainContainer from '../common/MainContainer'
 import MainDescriptionElement from './MainDescriptionElement';
 import MainHeader from './MainHeader';
-import Pricing from '../Pricing';
-import Reviews from '../Reviews';
+import Pricing from './Pricing';
+import Reviews from './Reviews';
 
 import book from '../../static/newbook.jpg'
 import pictureMe from '../../static/profilePic.jpg'
+
 import 'aos/dist/aos.css'
 import "./NavigationSite.css"
 import { text1, text2 } from '../../static/Txt/texts.jsx';

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import Button from '../common/Button';
+
 import { deleteUser } from '../../services/userServices';
 import { LoadingContext } from '../../contexts/LoadingContext';
 import { ToastContext } from '../../contexts/ToastContext';

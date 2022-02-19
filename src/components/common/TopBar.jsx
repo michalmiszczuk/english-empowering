@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import './TopBar.css'
 
+// component only for User/Admin Profil and Calendar
 
 function TopBar({ name }) {
 

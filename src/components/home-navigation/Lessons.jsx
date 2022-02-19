@@ -1,9 +1,9 @@
 import React from 'react';
-import joy from '../static/joy.jpg';
-import books from '../static/books.jpg';
-import MainDescriptionElement from './home-navigation/MainDescriptionElement';
+import joy from '../../static/joy.jpg';
+import books from '../../static/books.jpg';
+import MainDescriptionElement from '../home-navigation/MainDescriptionElement';
 import "./Lessons.css";
-import { lessonsText, lessonsText2 } from '../static/Txt/texts';
+import { lessonsText, lessonsText2 } from '../../static/Txt/texts';
 
 
 function Lessons({ lessons }) {

@@ -1,10 +1,9 @@
 import React from 'react';
-import './ToastMsg.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './ToastMsg.css'
 
 function ToastMsg({ message, onCloseToast, toastClass }) {
-    console.log(message, toastClass)
 
     return (
         <div className={toastClass}>
